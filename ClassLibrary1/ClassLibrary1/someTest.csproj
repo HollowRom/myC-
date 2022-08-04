@@ -65,6 +65,9 @@
     <Reference Include="Kingdee.K3.Core">
       <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.K3.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.MFG.PRD.App.ReportPlugIn">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.K3.MFG.PRD.App.ReportPlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -79,6 +82,8 @@
     <Compile Include="列表读取文件.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="生产订单取源单填写批号插件.cs" />
+    <Compile Include="生产订单执行明细表携带合同号-废弃.cs" />
+    <Compile Include="生产订单执行明细表携带合同号2.cs" />
     <Compile Include="用料清单手动携带生产订单批号字段.cs" />
     <Compile Include="采购订单输入查询报价单锁定部分字段.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
