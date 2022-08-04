@@ -13,6 +13,7 @@ using Kingdee.BOS.Core.Report;
 
 namespace Kingdee.K3.MFG.PRD.App.ReportPlugIn.MOExecute {
     [Description("生产订单执行明细表携带合同号2")]
+    [Kingdee.BOS.Util.HotUpdate]
     public class ReportService2 : MOExecuteDetailRpt {
         private string[] customRptTempTableNames;
         public override void BuilderReportSqlAndTempTable(IRptParams filter, string tableName)
