@@ -81,6 +81,7 @@
     <Compile Include="列表固定读取本地文件.cs" />
     <Compile Include="列表读取文件.cs" />
     <Compile Include="打开单据弹窗.cs" />
+    <Compile Include="树形插件.cs" />
     <Compile Include="生产订单取源单填写批号插件.cs" />
     <Compile Include="生产订单执行明细表携带合同号-废弃.cs" />
     <Compile Include="生产订单执行明细表携带合同号2.cs" />
