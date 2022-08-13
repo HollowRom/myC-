@@ -68,6 +68,9 @@
     <Reference Include="Kingdee.K3.MFG.PRD.App.ReportPlugIn">
       <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.K3.MFG.PRD.App.ReportPlugIn.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.SCM.App.Sal.Report">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.K3.SCM.App.Sal.Report.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -82,6 +85,9 @@
     <Compile Include="列表读取文件.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="树形插件.cs" />
+    <Compile Include="生产入库单转生产订单保存前更新工艺路线.cs" />
+    <Compile Include="生产入库单转生产订单保存按钮携带工艺路线插件.cs" />
+    <Compile Include="生产入库转生产订单携带工艺路线干预-废弃.cs" />
     <Compile Include="生产订单取源单填写批号插件.cs" />
     <Compile Include="生产订单执行明细表携带合同号-废弃.cs" />
     <Compile Include="生产订单执行明细表携带合同号2.cs" />
@@ -91,6 +97,7 @@
     <Compile Include="销售订单导入excel.cs" />
     <Compile Include="销售订单导入装箱单-o.cs" />
     <Compile Include="销售订单导入装箱单.cs" />
+    <Compile Include="销售订单执行汇总表增加字段干预插件.cs" />
     <Compile Include="销售订单转采购申请单取BOM包材材质工艺干预插件.cs" />
     <Compile Include="销售订单转采购申请单取BOM包材材质工艺插件.cs" />
   </ItemGroup>

@@ -295,3 +295,12 @@ D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.BOS.WeiXin.Core.dll
 D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.BOS.IK3Cloud.ServiceFacade.KDServiceClient.dll
 D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.BOS.Log.dll
 D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Newtonsoft.Json.Net20.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.App.Sal.Report.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.App.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.Contracts.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.BD.ServiceHelper.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.ServiceHelper.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.App.Core.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.Core.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.RPA.Core.dll
+D:\mySome\myC-\ClassLibrary1\ClassLibrary1\bin\Debug\Kingdee.K3.SCM.Common.BusinessEntity.dll
