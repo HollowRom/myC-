@@ -1,0 +1,15 @@
+﻿正在安装程序集“D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.dll”。
+受影响的参数是:
+   f = 
+   logtoconsole = 
+   logfile = D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.InstallLog
+   assemblypath = D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.dll
+没有 RunInstallerAttribute.Yes 的公共安装程序。在 D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.dll 程序集中应该可以找到“Yes”特性。
+正在提交程序集“D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.dll”。
+受影响的参数是:
+   f = 
+   logtoconsole = 
+   logfile = D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.InstallLog
+   assemblypath = D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.dll
+没有 RunInstallerAttribute.Yes 的公共安装程序。在 D:\Program Files (x86)\Kingdee\K3Cloud\website\bin\kingdee.bos.dll 程序集中应该可以找到“Yes”特性。
+没有安装程序，因此移除 InstallState 文件。

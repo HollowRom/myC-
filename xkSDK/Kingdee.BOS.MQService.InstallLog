@@ -1,0 +1,19 @@
+﻿正在安装程序集“D:\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.MQService.exe”。
+受影响的参数是:
+   svrdesc = K/3 Cloud MQService
+   i = 
+   logfile = D:\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.MQService.InstallLog
+   svrname = K3CloudMQService
+   assemblypath = D:\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.MQService.exe
+   logtoconsole = 
+正在安装服务 K3CloudMQService...
+已成功安装服务 K3CloudMQService。
+正在日志 Application 中创建 EventLog 源 K3CloudMQService...
+正在提交程序集“D:\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.MQService.exe”。
+受影响的参数是:
+   svrdesc = K/3 Cloud MQService
+   i = 
+   logfile = D:\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.MQService.InstallLog
+   svrname = K3CloudMQService
+   assemblypath = D:\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.MQService.exe
+   logtoconsole = 
