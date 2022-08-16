@@ -613,9 +613,9 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\ServiceStack.Common.pdb
 D:\mySome\myC-\myObject\myObject\bin\Debug\ServiceStack.Common.xml
 D:\mySome\myC-\myObject\myObject\bin\Debug\ServiceStack.Text.pdb
 D:\mySome\myC-\myObject\myObject\bin\Debug\ServiceStack.Text.xml
-D:\mySome\myC-\myObject\myObject\bin\Debug\DevExpress.XtraPrinting.v13.1.xml
 D:\mySome\myC-\myObject\myObject\obj\Debug\someTest.csprojAssemblyReference.cache
 D:\mySome\myC-\myObject\myObject\obj\Debug\someTest.csproj.CoreCompileInputs.cache
 D:\mySome\myC-\myObject\myObject\obj\Debug\someTest.csproj.CopyComplete
 D:\mySome\myC-\myObject\myObject\obj\Debug\myObject.dll
 D:\mySome\myC-\myObject\myObject\obj\Debug\myObject.pdb
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.App.Stock.Report.dll
