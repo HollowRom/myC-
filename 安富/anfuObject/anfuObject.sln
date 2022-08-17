@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.2017
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anfuObject", "anfuObject\anfuObject.csproj", "{FF6657FC-1235-4E40-9B8A-4089C6B1A393}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF6657FC-1235-4E40-9B8A-4089C6B1A393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6657FC-1235-4E40-9B8A-4089C6B1A393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6657FC-1235-4E40-9B8A-4089C6B1A393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6657FC-1235-4E40-9B8A-4089C6B1A393}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA759F16-3A24-40DA-BD1B-8D6020560937}
+	EndGlobalSection
+EndGlobal
