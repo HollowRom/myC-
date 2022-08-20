@@ -18,7 +18,7 @@ using SmartAssembly.HouseOfCards;
 [Serializable]
 [DebuggerDisplay("{DynamicObjectType.Name}")]
 [DebuggerTypeProxy(typeof(DynamicObjectDebugView))]
-public class DynamicObject : DataEntityBase, IDynamicMetaObjectProvider, ICustomTypeDescriptor
+public class DynamicObject11 : DataEntityBase, IDynamicMetaObjectProvider, ICustomTypeDescriptor
 {
     [Serializable]
     internal struct ArrayStorage : IDataStorage

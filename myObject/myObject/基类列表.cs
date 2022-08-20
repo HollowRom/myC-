@@ -12,7 +12,7 @@ using SmartAssembly.Delegates;
 using SmartAssembly.HouseOfCards;
 
 [Serializable]
-public class DynamicObjectCollection : DataEntityCollection<DynamicObject>, IListSource
+public class DynamicObjectCollection11 : DataEntityCollection<DynamicObject>, IListSource
 {
     //private sealed class DynamicObjectBindingList : BindingList<DynamicObject>, ITypedList
     //{
