@@ -23,17 +23,17 @@ public class DynamicObject : DataEntityBase, IDynamicMetaObjectProvider, ICustom
     [Serializable]
     internal struct ArrayStorage : IDataStorage
     {
-        private object[] _values;
+        //private object[] _values;
 
-        private ArrayStorage(object[] values)
-        {
-            _values = values;
-        }
+        //private ArrayStorage(object[] values)
+        //{
+        //    _values = values;
+        //}
 
-        public ArrayStorage(DynamicObjectType dt)
-        {
-            _values = new object[dt.Properties.Count];
-        }
+        //public ArrayStorage(DynamicObjectType dt)
+        //{
+        //    _values = new object[dt.Properties.Count];
+        //}
 
         public unsafe object GetLocalValue(DynamicProperty property)
         {
@@ -74,32 +74,32 @@ public class DynamicObject : DataEntityBase, IDynamicMetaObjectProvider, ICustom
             goto IL_0027;
         }
 
-        private void EnsureCapacity(DynamicProperty property)
-        {
-            //IL_0026: Incompatible stack heights: 0 vs 1
-            //IL_002d: Incompatible stack heights: 0 vs 1
-            //IL_0034: Incompatible stack heights: 0 vs 1
-            //IL_0037: Incompatible stack heights: 0 vs 1
-            //IL_003e: Incompatible stack heights: 0 vs 1
-            //IL_0045: Incompatible stack heights: 0 vs 1
-            //IL_004c: Incompatible stack heights: 0 vs 1
-            //IL_004f: Incompatible stack heights: 0 vs 1
-            //IL_0056: Incompatible stack heights: 0 vs 1
-            DynamicObjectType reflectedType = ((DynamicProperty)/*Error near IL_002d: Stack underflow*/).ReflectedType;
-            bool flag = (DynamicObjectType)/*Error near IL_0034: Stack underflow*/ == null;
-            if ((int)/*Error near IL_0009: Stack underflow*/ == 0)
-            {
-                DynamicObjectType reflectedType2 = ((DynamicProperty)/*Error near IL_003e: Stack underflow*/).ReflectedType;
-                DynamicPropertyCollection property2 = ((DynamicObjectType)/*Error near IL_0045: Stack underflow*/).Properties;
-                int count = ((ReadOnlyCollection<DynamicProperty>)/*Error near IL_004c: Stack underflow*/).Count;
-            }
-            else
-            {
-                int ordinal = ((DynamicProperty)/*Error near IL_0056: Stack underflow*/).Ordinal;
-            }
-            int newSize = (int)/*Error near IL_0018: Stack underflow*/;
-            Array.Resize(ref _values, newSize);
-        }
+        //private void EnsureCapacity(DynamicProperty property)
+        //{
+        //    //IL_0026: Incompatible stack heights: 0 vs 1
+        //    //IL_002d: Incompatible stack heights: 0 vs 1
+        //    //IL_0034: Incompatible stack heights: 0 vs 1
+        //    //IL_0037: Incompatible stack heights: 0 vs 1
+        //    //IL_003e: Incompatible stack heights: 0 vs 1
+        //    //IL_0045: Incompatible stack heights: 0 vs 1
+        //    //IL_004c: Incompatible stack heights: 0 vs 1
+        //    //IL_004f: Incompatible stack heights: 0 vs 1
+        //    //IL_0056: Incompatible stack heights: 0 vs 1
+        //    DynamicObjectType reflectedType = ((DynamicProperty)/*Error near IL_002d: Stack underflow*/).ReflectedType;
+        //    bool flag = (DynamicObjectType)/*Error near IL_0034: Stack underflow*/ == null;
+        //    if ((int)/*Error near IL_0009: Stack underflow*/ == 0)
+        //    {
+        //        DynamicObjectType reflectedType2 = ((DynamicProperty)/*Error near IL_003e: Stack underflow*/).ReflectedType;
+        //        DynamicPropertyCollection property2 = ((DynamicObjectType)/*Error near IL_0045: Stack underflow*/).Properties;
+        //        int count = ((ReadOnlyCollection<DynamicProperty>)/*Error near IL_004c: Stack underflow*/).Count;
+        //    }
+        //    else
+        //    {
+        //        int ordinal = ((DynamicProperty)/*Error near IL_0056: Stack underflow*/).Ordinal;
+        //    }
+        //    int newSize = (int)/*Error near IL_0018: Stack underflow*/;
+        //    Array.Resize(ref _values, newSize);
+        //}
 
         public unsafe void SetLocalValue(DynamicProperty property, object value)
         {
@@ -193,12 +193,12 @@ public class DynamicObject : DataEntityBase, IDynamicMetaObjectProvider, ICustom
     [Serializable]
     internal struct DictionaryDataStorage : IDataStorage
     {
-        private ConcurrentDictionary<DynamicProperty, object> _values;
+        //private ConcurrentDictionary<DynamicProperty, object> _values;
 
-        private DictionaryDataStorage(ConcurrentDictionary<DynamicProperty, object> values)
-        {
-            _values = values;
-        }
+        //private DictionaryDataStorage(ConcurrentDictionary<DynamicProperty, object> values)
+        //{
+        //    _values = values;
+        //}
 
         public DictionaryDataStorage(DynamicObjectType dt)
         {
@@ -270,9 +270,9 @@ public class DynamicObject : DataEntityBase, IDynamicMetaObjectProvider, ICustom
         }
     }
 
-    private readonly DynamicObjectType _dt;
+    //private readonly DynamicObjectType _dt;
 
-    private IDataStorage _dataStorage;
+    //private IDataStorage _dataStorage;
 
     [NonSerialized]
     internal static GetString \u001f;
@@ -529,97 +529,97 @@ public class DynamicObject : DataEntityBase, IDynamicMetaObjectProvider, ICustom
         return true;
     }
 
-    private unsafe bool TryGetMember(GetMemberBinder binder, out object result)
-    {
-        //IL_0030: Incompatible stack heights: 0 vs 1
-        //IL_0037: Incompatible stack heights: 0 vs 1
-        //IL_003a: Incompatible stack heights: 0 vs 1
-        //IL_0041: Incompatible stack heights: 0 vs 1
-        //IL_0048: Incompatible stack heights: 0 vs 1
-        //IL_004b: Incompatible stack heights: 0 vs 1
-        //IL_004e: Incompatible stack heights: 0 vs 1
-        //IL_0051: Incompatible stack heights: 0 vs 1
-        //IL_0058: Incompatible stack heights: 0 vs 1
-        int num;
-        if (0 == 0)
-        {
-            if (0 == 0)
-            {
-                DynamicPropertyCollection property = ((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_000d: Stack underflow*/)._dt.Properties;
-                string name = ((GetMemberBinder)/*Error near IL_0041: Stack underflow*/).Name;
-                DynamicProperty value;
-                ((KeyedCollectionBase<string, DynamicProperty>)/*Error near IL_0048: Stack underflow*/).TryGetValue((string)/*Error near IL_0048: Stack underflow*/, out value);
-                if ((int)/*Error near IL_0019: Stack underflow*/ == 0)
-                {
-                    goto IL_0027;
-                }
-            }
-            ((DynamicProperty)/*Error near IL_0058: Stack underflow*/).GetValueFast((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_0058: Stack underflow*/);
-            *(? *)(IntPtr)/*Error near IL_0022: Stack underflow*/ = /*Error near IL_0022: Stack underflow*/;
-            if (2u != 0)
-            {
-                num = 1;
-                goto IL_0026;
-            }
-            goto IL_0027;
-        }
-        goto IL_002a;
-    IL_0026:
-        return (byte)num != 0;
-    IL_002a:
-        num = 0;
-        if (num == 0)
-        {
-            return (byte)num != 0;
-        }
-        goto IL_0026;
-    IL_0027:
-        result = null;
-        goto IL_002a;
-    }
+    //private unsafe bool TryGetMember(GetMemberBinder binder, out object result)
+    //{
+    //    //IL_0030: Incompatible stack heights: 0 vs 1
+    //    //IL_0037: Incompatible stack heights: 0 vs 1
+    //    //IL_003a: Incompatible stack heights: 0 vs 1
+    //    //IL_0041: Incompatible stack heights: 0 vs 1
+    //    //IL_0048: Incompatible stack heights: 0 vs 1
+    //    //IL_004b: Incompatible stack heights: 0 vs 1
+    //    //IL_004e: Incompatible stack heights: 0 vs 1
+    //    //IL_0051: Incompatible stack heights: 0 vs 1
+    //    //IL_0058: Incompatible stack heights: 0 vs 1
+    //    int num;
+    //    if (0 == 0)
+    //    {
+    //        if (0 == 0)
+    //        {
+    //            DynamicPropertyCollection property = ((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_000d: Stack underflow*/)._dt.Properties;
+    //            string name = ((GetMemberBinder)/*Error near IL_0041: Stack underflow*/).Name;
+    //            DynamicProperty value;
+    //            ((KeyedCollectionBase<string, DynamicProperty>)/*Error near IL_0048: Stack underflow*/).TryGetValue((string)/*Error near IL_0048: Stack underflow*/, out value);
+    //            if ((int)/*Error near IL_0019: Stack underflow*/ == 0)
+    //            {
+    //                goto IL_0027;
+    //            }
+    //        }
+    //        ((DynamicProperty)/*Error near IL_0058: Stack underflow*/).GetValueFast((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_0058: Stack underflow*/);
+    //        *(? *)(IntPtr)/*Error near IL_0022: Stack underflow*/ = /*Error near IL_0022: Stack underflow*/;
+    //        if (2u != 0)
+    //        {
+    //            num = 1;
+    //            goto IL_0026;
+    //        }
+    //        goto IL_0027;
+    //    }
+    //    goto IL_002a;
+    //IL_0026:
+    //    return (byte)num != 0;
+    //IL_002a:
+    //    num = 0;
+    //    if (num == 0)
+    //    {
+    //        return (byte)num != 0;
+    //    }
+    //    goto IL_0026;
+    //IL_0027:
+    //    result = null;
+    //    goto IL_002a;
+    //}
 
-    private bool TrySetMember(SetMemberBinder binder, object dataEntity)
-    {
-        //IL_002c: Incompatible stack heights: 0 vs 1
-        //IL_0033: Incompatible stack heights: 0 vs 1
-        //IL_0036: Incompatible stack heights: 0 vs 1
-        //IL_003d: Incompatible stack heights: 0 vs 1
-        //IL_0044: Incompatible stack heights: 0 vs 1
-        //IL_0047: Incompatible stack heights: 0 vs 1
-        //IL_004a: Incompatible stack heights: 0 vs 1
-        //IL_004d: Incompatible stack heights: 0 vs 1
-        int num;
-        while (true)
-        {
-            DynamicPropertyCollection property = ((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_0007: Stack underflow*/)._dt.Properties;
-            string name = ((SetMemberBinder)/*Error near IL_003d: Stack underflow*/).Name;
-            DynamicProperty value;
-            ((KeyedCollectionBase<string, DynamicProperty>)/*Error near IL_0044: Stack underflow*/).TryGetValue((string)/*Error near IL_0044: Stack underflow*/, out value);
-            if ((int)/*Error near IL_0013: Stack underflow*/ != 0 && 3u != 0)
-            {
-                if (false)
-                {
-                    continue;
-                }
-                ((DynamicProperty)/*Error near IL_0054: Stack underflow*/).SetValueFast((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_0054: Stack underflow*/, (object)/*Error near IL_0054: Stack underflow*/);
-                if (false)
-                {
-                    continue;
-                }
-                num = 1;
-            }
-            else
-            {
-                num = 0;
-                if (num == 0)
-                {
-                    break;
-                }
-            }
-            return (byte)num != 0;
-        }
-        return (byte)num != 0;
-    }
+    //private bool TrySetMember(SetMemberBinder binder, object dataEntity)
+    //{
+    //    //IL_002c: Incompatible stack heights: 0 vs 1
+    //    //IL_0033: Incompatible stack heights: 0 vs 1
+    //    //IL_0036: Incompatible stack heights: 0 vs 1
+    //    //IL_003d: Incompatible stack heights: 0 vs 1
+    //    //IL_0044: Incompatible stack heights: 0 vs 1
+    //    //IL_0047: Incompatible stack heights: 0 vs 1
+    //    //IL_004a: Incompatible stack heights: 0 vs 1
+    //    //IL_004d: Incompatible stack heights: 0 vs 1
+    //    int num;
+    //    while (true)
+    //    {
+    //        DynamicPropertyCollection property = ((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_0007: Stack underflow*/)._dt.Properties;
+    //        string name = ((SetMemberBinder)/*Error near IL_003d: Stack underflow*/).Name;
+    //        DynamicProperty value;
+    //        ((KeyedCollectionBase<string, DynamicProperty>)/*Error near IL_0044: Stack underflow*/).TryGetValue((string)/*Error near IL_0044: Stack underflow*/, out value);
+    //        if ((int)/*Error near IL_0013: Stack underflow*/ != 0 && 3u != 0)
+    //        {
+    //            if (false)
+    //            {
+    //                continue;
+    //            }
+    //            ((DynamicProperty)/*Error near IL_0054: Stack underflow*/).SetValueFast((Kingdee.BOS.Orm.DataEntity.DynamicObject)/*Error near IL_0054: Stack underflow*/, (object)/*Error near IL_0054: Stack underflow*/);
+    //            if (false)
+    //            {
+    //                continue;
+    //            }
+    //            num = 1;
+    //        }
+    //        else
+    //        {
+    //            num = 0;
+    //            if (num == 0)
+    //            {
+    //                break;
+    //            }
+    //        }
+    //        return (byte)num != 0;
+    //    }
+    //    return (byte)num != 0;
+    //}
 
     DynamicMetaObject IDynamicMetaObjectProvider.GetMetaObject(Expression parameter)
     {

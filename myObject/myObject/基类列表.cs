@@ -14,87 +14,87 @@ using SmartAssembly.HouseOfCards;
 [Serializable]
 public class DynamicObjectCollection : DataEntityCollection<DynamicObject>, IListSource
 {
-    private sealed class DynamicObjectBindingList : BindingList<DynamicObject>, ITypedList
-    {
-        private DynamicObjectCollection _col;
+    //private sealed class DynamicObjectBindingList : BindingList<DynamicObject>, ITypedList
+    //{
+    //    private DynamicObjectCollection _col;
 
-        public DynamicObjectBindingList(DynamicObjectCollection col)
-            : base((IList<DynamicObject>)col)
-        {
-            _col = col;
-            _col.ListChanged += _col_ListChanged;
-            base.AllowNew = true;
-        }
+    //    public DynamicObjectBindingList(DynamicObjectCollection col)
+    //        : base((IList<DynamicObject>)col)
+    //    {
+    //        _col = col;
+    //        _col.ListChanged += _col_ListChanged;
+    //        base.AllowNew = true;
+    //    }
 
-        private void _col_ListChanged(object sender, ListChangedEventArgs e)
-        {
-            //IL_0008: Incompatible stack heights: 0 vs 1
-            //IL_000b: Incompatible stack heights: 0 vs 1
-            ((BindingList<DynamicObject>)/*Error near IL_0012: Stack underflow*/).OnListChanged((ListChangedEventArgs)/*Error near IL_0012: Stack underflow*/);
-        }
+    //    private void _col_ListChanged(object sender, ListChangedEventArgs e)
+    //    {
+    //        //IL_0008: Incompatible stack heights: 0 vs 1
+    //        //IL_000b: Incompatible stack heights: 0 vs 1
+    //        ((BindingList<DynamicObject>)/*Error near IL_0012: Stack underflow*/).OnListChanged((ListChangedEventArgs)/*Error near IL_0012: Stack underflow*/);
+    //    }
 
-        protected override void OnAddingNew(AddingNewEventArgs e)
-        {
-            //IL_002f: Incompatible stack heights: 0 vs 1
-            //IL_0032: Incompatible stack heights: 0 vs 1
-            //IL_003c: Incompatible stack heights: 0 vs 1
-            //IL_0043: Incompatible stack heights: 0 vs 1
-            //IL_0046: Incompatible stack heights: 0 vs 1
-            //IL_0049: Incompatible stack heights: 0 vs 1
-            //IL_0050: Incompatible stack heights: 0 vs 1
-            while (8u != 0 && 5u != 0)
-            {
-                if (3u != 0)
-                {
-                    ((BindingList<DynamicObject>)/*Error near IL_0039: Stack underflow*/).OnAddingNew((AddingNewEventArgs)/*Error near IL_0039: Stack underflow*/);
-                }
-                while (0 == 0)
-                {
-                    object newObject = ((AddingNewEventArgs)/*Error near IL_0043: Stack underflow*/).NewObject;
-                    if ((int)/*Error near IL_0018: Stack underflow*/ == 0)
-                    {
-                        if (2u != 0)
-                        {
-                            ((DynamicObjectBindingList)/*Error near IL_0024: Stack underflow*/)._col._collectionItemPropertyType.CreateInstance();
-                            ((AddingNewEventArgs)/*Error near IL_0057: Stack underflow*/).NewObject = (object)/*Error near IL_0057: Stack underflow*/;
-                            return;
-                        }
-                        continue;
-                    }
-                    return;
-                }
-            }
-        }
+    //    protected override void OnAddingNew(AddingNewEventArgs e)
+    //    {
+    //        //IL_002f: Incompatible stack heights: 0 vs 1
+    //        //IL_0032: Incompatible stack heights: 0 vs 1
+    //        //IL_003c: Incompatible stack heights: 0 vs 1
+    //        //IL_0043: Incompatible stack heights: 0 vs 1
+    //        //IL_0046: Incompatible stack heights: 0 vs 1
+    //        //IL_0049: Incompatible stack heights: 0 vs 1
+    //        //IL_0050: Incompatible stack heights: 0 vs 1
+    //        while (8u != 0 && 5u != 0)
+    //        {
+    //            if (3u != 0)
+    //            {
+    //                ((BindingList<DynamicObject>)/*Error near IL_0039: Stack underflow*/).OnAddingNew((AddingNewEventArgs)/*Error near IL_0039: Stack underflow*/);
+    //            }
+    //            while (0 == 0)
+    //            {
+    //                object newObject = ((AddingNewEventArgs)/*Error near IL_0043: Stack underflow*/).NewObject;
+    //                if ((int)/*Error near IL_0018: Stack underflow*/ == 0)
+    //                {
+    //                    if (2u != 0)
+    //                    {
+    //                        ((DynamicObjectBindingList)/*Error near IL_0024: Stack underflow*/)._col._collectionItemPropertyType.CreateInstance();
+    //                        ((AddingNewEventArgs)/*Error near IL_0057: Stack underflow*/).NewObject = (object)/*Error near IL_0057: Stack underflow*/;
+    //                        return;
+    //                    }
+    //                    continue;
+    //                }
+    //                return;
+    //            }
+    //        }
+    //    }
 
-        public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors)
-        {
-            //IL_000f: Incompatible stack heights: 0 vs 1
-            //IL_0016: Incompatible stack heights: 0 vs 1
-            //IL_001d: Incompatible stack heights: 0 vs 1
-            //IL_0024: Incompatible stack heights: 0 vs 1
-            DynamicObjectType dynamicCollectionItemPropertyType = ((DynamicObjectBindingList)/*Error near IL_0007: Stack underflow*/)._col.DynamicCollectionItemPropertyType;
-            ICustomTypeDescriptor customTypeDescriptor = ((DynamicObjectType)/*Error near IL_001d: Stack underflow*/).CustomTypeDescriptor;
-            ((ICustomTypeDescriptor)/*Error near IL_0024: Stack underflow*/).GetProperties();
-            return (PropertyDescriptorCollection)/*Error near IL_000e: Stack underflow*/;
-        }
+    //    public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors)
+    //    {
+    //        //IL_000f: Incompatible stack heights: 0 vs 1
+    //        //IL_0016: Incompatible stack heights: 0 vs 1
+    //        //IL_001d: Incompatible stack heights: 0 vs 1
+    //        //IL_0024: Incompatible stack heights: 0 vs 1
+    //        DynamicObjectType dynamicCollectionItemPropertyType = ((DynamicObjectBindingList)/*Error near IL_0007: Stack underflow*/)._col.DynamicCollectionItemPropertyType;
+    //        ICustomTypeDescriptor customTypeDescriptor = ((DynamicObjectType)/*Error near IL_001d: Stack underflow*/).CustomTypeDescriptor;
+    //        ((ICustomTypeDescriptor)/*Error near IL_0024: Stack underflow*/).GetProperties();
+    //        return (PropertyDescriptorCollection)/*Error near IL_000e: Stack underflow*/;
+    //    }
 
-        public string GetListName(PropertyDescriptor[] listAccessors)
-        {
-            //IL_000d: Incompatible stack heights: 0 vs 1
-            //IL_0014: Incompatible stack heights: 0 vs 1
-            //IL_001b: Incompatible stack heights: 0 vs 1
-            DynamicObjectType dynamicCollectionItemPropertyType = ((DynamicObjectBindingList)/*Error near IL_0007: Stack underflow*/)._col.DynamicCollectionItemPropertyType;
-            string name = ((DynamicMetadata)/*Error near IL_001b: Stack underflow*/).Name;
-            return (string)/*Error near IL_000c: Stack underflow*/;
-        }
-    }
+    //    public string GetListName(PropertyDescriptor[] listAccessors)
+    //    {
+    //        //IL_000d: Incompatible stack heights: 0 vs 1
+    //        //IL_0014: Incompatible stack heights: 0 vs 1
+    //        //IL_001b: Incompatible stack heights: 0 vs 1
+    //        DynamicObjectType dynamicCollectionItemPropertyType = ((DynamicObjectBindingList)/*Error near IL_0007: Stack underflow*/)._col.DynamicCollectionItemPropertyType;
+    //        string name = ((DynamicMetadata)/*Error near IL_001b: Stack underflow*/).Name;
+    //        return (string)/*Error near IL_000c: Stack underflow*/;
+    //    }
+    //}
 
-    private readonly DynamicObjectType _collectionItemPropertyType;
+    //private readonly DynamicObjectType _collectionItemPropertyType;
 
-    private IList<DynamicObject> _deleteRows;
+    //private IList<DynamicObject> _deleteRows;
 
-    [NonSerialized]
-    private BindingList<DynamicObject> _bingingList;
+    //[NonSerialized]
+    //private BindingList<DynamicObject> _bingingList;
 
     [NonSerialized]
     internal static GetString \u001d;
@@ -123,12 +123,12 @@ public class DynamicObjectCollection : DataEntityCollection<DynamicObject>, ILis
             }
             return ((DynamicObjectCollection)/*Error near IL_0019: Stack underflow*/)._deleteRows;
         }
-        private set
-        {
-            //IL_000b: Incompatible stack heights: 0 vs 1
-            //IL_000e: Incompatible stack heights: 0 vs 1
-            ((DynamicObjectCollection)/*Error near IL_0009: Stack underflow*/)._deleteRows = (IList<DynamicObject>)/*Error near IL_0009: Stack underflow*/;
-        }
+        //private set
+        //{
+        //    //IL_000b: Incompatible stack heights: 0 vs 1
+        //    //IL_000e: Incompatible stack heights: 0 vs 1
+        //    ((DynamicObjectCollection)/*Error near IL_0009: Stack underflow*/)._deleteRows = (IList<DynamicObject>)/*Error near IL_0009: Stack underflow*/;
+        //}
     }
 
     public IList<DynamicObject> InsertRows
