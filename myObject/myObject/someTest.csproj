@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -31,48 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kingdee.BOS">
-      <HintPath>..\xkSDK\Kingdee.BOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.App">
-      <HintPath>..\xkSDK\Kingdee.BOS.App.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.Contracts, Version=8.0.235.9, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\xkSDK\Kingdee.BOS.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.Core">
-      <HintPath>..\xkSDK\Kingdee.BOS.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.DataEntity">
-      <HintPath>..\xkSDK\Kingdee.BOS.DataEntity.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.FileServer.Core, Version=8.0.235.9, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\xkSDK\Kingdee.BOS.FileServer.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.OrmEngine, Version=8.0.235.9, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\xkSDK\Kingdee.BOS.OrmEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.ServiceHelper, Version=8.0.235.9, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\xkSDK\Kingdee.BOS.ServiceHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.Web">
-      <HintPath>..\xkSDK\Kingdee.BOS.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.K3.Core">
-      <HintPath>..\xkSDK\Kingdee.K3.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.K3.MFG.PRD.App.ReportPlugIn">
-      <HintPath>..\xkSDK\Kingdee.K3.MFG.PRD.App.ReportPlugIn.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.K3.SCM.App.Sal.Report">
-      <HintPath>..\xkSDK\Kingdee.K3.SCM.App.Sal.Report.dll</HintPath>
-    </Reference>
     <Reference Include="Kingdee.K3.SCM.App.Stock.Report">
       <HintPath>..\..\xkSDK\Kingdee.K3.SCM.App.Stock.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +44,21 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Kingdee.BOS.WebApi.Client">
+      <HintPath>bin\Debug\Kingdee.BOS.WebApi.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS">
+      <HintPath>bin\Debug\Kingdee.BOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.MFG.WebApi.ServicesStub">
+      <HintPath>..\..\xkSDK\Kingdee.K3.MFG.WebApi.ServicesStub.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.WebApi.ServicesStub">
+      <HintPath>bin\Debug\Kingdee.BOS.WebApi.ServicesStub.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.MFG.SFC.App.BillConvertServicePlugIn">
+      <HintPath>bin\Debug\Kingdee.K3.MFG.SFC.App.BillConvertServicePlugIn.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="上传附件.cs" />
@@ -105,6 +83,7 @@
     <Compile Include="销售订单执行汇总表增加字段干预插件.cs" />
     <Compile Include="销售订单转采购申请单取BOM包材材质工艺干预插件.cs" />
     <Compile Include="销售订单转采购申请单取BOM包材材质工艺插件.cs" />
+    <Compile Include="testMain.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

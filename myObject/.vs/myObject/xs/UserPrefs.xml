@@ -1,11 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClassLibrary1/采购订单输入查询报价单锁定部分字段.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="myObject/testMain.cs">
+    <Files>
+      <File FileName="myObject/testMain.cs" Line="13" Column="32" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="myObject" expanded="True">
             <Node name="someTest" expanded="True">
-              <Node name="采购订单输入查询报价单锁定部分字段.cs" selected="True" />
+              <Node name="References" expanded="True" />
+              <Node name="testMain.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -15,10 +25,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

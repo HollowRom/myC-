@@ -1,20 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97fa84e8-53b7-4064-a71b-7fdd318facd5" name="Changes" comment="" />
+    <list default="true" id="97fa84e8-53b7-4064-a71b-7fdd318facd5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/testMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/myObject/xs/UserPrefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/myObject/xs/UserPrefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/myObject/xs/project-cache/someTest-Debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/myObject/xs/project-cache/someTest-Debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Folder.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Folder.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/someTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/someTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/someTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/someTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/someTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/someTest.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/someTest.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/1edf2b2284464c26b8909a2e5211be5c2c008/ae/e96e0b44/02000014.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4607059a7f55480a9b91e58c92b2236c29e08/29/d6792cb6/02000012.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09d7ae6217f14d388dd9dea98bb41dea13008/28/ec9b618c/CloudBillForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09d7ae6217f14d388dd9dea98bb41dea13008/2c/7fa0c10e/WebApiQueryType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09d7ae6217f14d388dd9dea98bb41dea13008/77/8846ea96/Enums.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09d7ae6217f14d388dd9dea98bb41dea13008/9e/9b3b572f/WebApiQueryParam.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09d7ae6217f14d388dd9dea98bb41dea13008/df/998e4761/CopyMtrlParameter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09d7ae6217f14d388dd9dea98bb41dea13008/ee/ef5d15f2/DeleteMtrlsSerivce.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09d7ae6217f14d388dd9dea98bb41dea13008/ef/b245d038/WebApiQueryOption.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1edf2b2284464c26b8909a2e5211be5c2c008/9f/12de7155/DynamicFormService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/01/6168e302/ServiceTypeManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/0a/88d2279c/KDSecuredServiceAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/1a/5fbe0b78/ServiceTypes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/25/2e8bfa77/GlobalCacheManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/2a/26b28f5e/NonceVerifier`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/30/feaeea57/FormRequestExtractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/31/ea4c08e8/ProgressReportHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/3f/f2987b2b/KDSVCAysncHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/54/04aff581/ModuleEventHandler`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/56/53eae4d8/ExecuteServiceModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/58/23d7d053/RequestExtractorQueue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/5b/f9767b6e/ProgressChangedArgs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/5e/97815119/WebContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/66/2cd692f5/ServiceNames.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/71/fc9ee8a8/KDServiceSession.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/75/587f5fe5/RequestExtractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/76/465a4df2/ServiceType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/7c/8ac5d590/ModulePipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/7f/184b915e/KDServiceMethodAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/82/80b263e6/JQueryRequestExtractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/86/4c97c4a7/EndProcessArgs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/99/8d2d33b9/KDBaseService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/b3/ed73afa5/BaseModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/b7/1ceb664d/KDServiceAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/c1/1f8a2b28/RequestExcuteRuntime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/c8/46ddfb65/KDServiceParameterAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/c9/276ee7db/ModulePipelineBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/d6/be15b4bc/QueryInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/dd/379406ac/QueryExecEngine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/e3/0a40efc4/BeforeProcessArgs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/e5/e294f288/KDServiceStubAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/e6/332a7585/DictonaryCache.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/ea/4408c323/CommUtils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/eb/81509b07/KDServiceHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/f1/013d2970/KDSVCHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/373321305b8e46ad951bf6fcdb081b7817a08/f1/6d9788e9/KDServiceContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/01/fc9c7e25/ReportPrintService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/02/badefb56/DataCompareService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/03/b7f1fbeb/PushBillService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/1b/9801741c/DynamicFormService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/27/9dd40b1c/CopyService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/2a/21b18bf3/ValidateService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/2c/8d8697c1/WebApiQueryService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/30/b23e5f97/Copy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/31/5cc61dd8/SFCWebApiService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/4f/3ae3e3c3/BillFieldsConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/56/9a0f4d07/CopyEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/57/89c239dd/OperationUtil.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/60/c81a4ba8/AuditById.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/63/c853b3bf/MFGOrderHttpHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/67/91d9e8fd/PrepareMtrlHttpHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/6c/0dca8350/AbstractWebAPIValidator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/73/d3372885/GetFlexPropertyService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/74/47847abf/GetCloudBillField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/79/b236fdbe/OptPlanOptRtpApiService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/7c/db062819/CheckConflictService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/9c/2e0a4304/DynamicObjectToJsonConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/a9/6ca7a5e8/Validate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/b0/2b3a8265/OptPlanOptPlanDetailApiService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/b1/6335d1a6/FilterSchemeParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/b1/b024e298/MaterialChildValidator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/cc/cc125b67/CopyMtrlService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/df/f79a9929/KBBoxSetting.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/e4/b19d25a3/BatchViewService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/eb/25a927d9/OrderServiceHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/ee/bd0d469d/OptPlanOptTransApiService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/f6/073dab5e/PrepareMtrlTaskService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/f8/97869d6c/AbstractStatusConvertById.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/fc/9aa2345f/SubmitById.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/e4/f4affda5/BusinessInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a0229e958fef4edba041e685939c01c7108608/30/ec6abb6a/JSONObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a0229e958fef4edba041e685939c01c7108608/7e/558e1c44/KA.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b27839cc2dba4804baacf2f5cce6de3246b600/19/6f41191b/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b27839cc2dba4804baacf2f5cce6de3246b600/74/17f47f6d/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b27839cc2dba4804baacf2f5cce6de3246b600/c5/a33ba9ce/ArgumentNullException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4428425a4c04913a4a7dca69fa11ca581208/cf/31f9fa38/FormMetaDataCache.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bbad98c41fce4829aab9c443f49a1d446e408/13/beb973ca/WebApiServiceCall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bbad98c41fce4829aab9c443f49a1d446e408/ac/29d4f92f/QueryBillService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bf8183a45d5847d885eedffd83533a7b99200/42/938425db/ArgumentNullException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bf8183a45d5847d885eedffd83533a7b99200/44/55bf5921/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bf8183a45d5847d885eedffd83533a7b99200/47/5bad1388/ArgumentException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bf8183a45d5847d885eedffd83533a7b99200/a1/65e44225/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/02/45a2834c/ProgressInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/07/46731c00/SaveResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/08/2ee5a89c/EnDecode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/08/c3d9e3bb/ExceptionWrapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/23/e133934c/SuccessEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/3d/7ee7fe4c/ApiRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/3e/e3f6dfbc/DataCenter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/47/dd5f2b61/SavaParam`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/4c/d6464108/ProgressChangedHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/53/6f0d055d/TypeExt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/56/de8720ca/RepoStatus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/62/2d993ade/JsonArray.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/6e/c0eeb6fb/ServiceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/6f/e495e2d0/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/75/beb8df9c/K3CloudApi.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/76/f23178de/ApiServiceRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/79/8ab40c74/ApiProgressRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/84/2e9152a0/WebRequestHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/87/82a64153/LockOneTime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/94/531ac9d8/BaseEntify.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/9c/df5e231c/ConstDefine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/9f/6ff51342/StreamRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/a1/19eef6ea/JsonObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/b3/28967b0e/K3CloudApiClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/ba/b593b3f3/FailCallbackHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/c0/f3878dfe/HeaderContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/c6/5bff8572/ApiClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/c8/48e885fc/RepoResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/cf/a30303cb/Repo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/e4/06060511/ProgressReporter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/ea/b716eea4/AsyncResult`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/fb/36f5cc82/DelayInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/09d7ae6217f14d388dd9dea98bb41dea13008/79/fb2d8eac/Kingdee.K3.MFG.WebApi.BusinessEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/4607059a7f55480a9b91e58c92b2236c29e08/7e/38a8a9a6/Kingdee.K3.MFG.WebApi.ServicesStub.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/a0229e958fef4edba041e685939c01c7108608/cd/d400b7c6/Kingdee.BOS.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/daf342e97b114270bbef3c2065e334f14ae08/8e/c67864fd/Kingdee.BOS.WebApi.Client.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/testMain.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2DKKUhOouaL1G8vSjiENa9TOZRV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,6 +184,12 @@
       <workItem from="1660442499909" duration="617000" />
       <workItem from="1660452793188" duration="420000" />
       <workItem from="1660453232663" duration="600000" />
+      <workItem from="1662817706263" duration="27000" />
+      <workItem from="1662817872965" duration="2756000" />
+      <workItem from="1662821157061" duration="990000" />
+      <workItem from="1662858374548" duration="3831000" />
+      <workItem from="1662868470996" duration="1547000" />
+      <workItem from="1662882290023" duration="5775000" />
     </task>
     <servers />
   </component>
