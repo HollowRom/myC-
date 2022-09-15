@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97fa84e8-53b7-4064-a71b-7fdd318facd5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testMain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/myObject/xs/UserPrefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/myObject/xs/UserPrefs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/myObject/xs/project-cache/someTest-Debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/myObject/xs/project-cache/someTest-Debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Folder.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Folder.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/someTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/someTest.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/someTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/someTest.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/someTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/someTest.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/someTest.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,6 +137,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/e4/06060511/ProgressReporter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/ea/b716eea4/AsyncResult`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/fb/36f5cc82/DelayInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ec97c3f80bad4618b98afc732fd9cb2a110a08/e6/eae11998/PurchaseOrderEdit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/09d7ae6217f14d388dd9dea98bb41dea13008/79/fb2d8eac/Kingdee.K3.MFG.WebApi.BusinessEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/4607059a7f55480a9b91e58c92b2236c29e08/7e/38a8a9a6/Kingdee.K3.MFG.WebApi.ServicesStub.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/a0229e958fef4edba041e685939c01c7108608/cd/d400b7c6/Kingdee.BOS.cs" root0="SKIP_HIGHLIGHTING" />
@@ -190,6 +186,10 @@
       <workItem from="1662858374548" duration="3831000" />
       <workItem from="1662868470996" duration="1547000" />
       <workItem from="1662882290023" duration="5775000" />
+      <workItem from="1663156827464" duration="689000" />
+      <workItem from="1663157553450" duration="904000" />
+      <workItem from="1663215083276" duration="58000" />
+      <workItem from="1663215736040" duration="27000" />
     </task>
     <servers />
   </component>
