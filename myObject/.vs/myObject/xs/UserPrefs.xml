@@ -1,11 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="myObject/testMain.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="myObject/testMain.cs" Line="13" Column="32" />
     </Files>
@@ -15,7 +10,6 @@
           <Node name="myObject" expanded="True">
             <Node name="someTest" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="testMain.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -25,4 +19,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
