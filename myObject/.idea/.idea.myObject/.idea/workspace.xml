@@ -2,11 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/myObject.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/AWSSDK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.App.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.Cabinet.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.Cabinet.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.FileServer.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.FileServer.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.OrmEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.OrmEngine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.ServiceHelper.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.ServiceHelper.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.BOS.WebApi.Client.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.BD.ServiceHelper.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.APS.Common.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.App.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.Common.BusinessEntity.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.Contracts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.DI.Common.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.ENG.Common.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.PLN.Common.BusinessEntity.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.PRD.Common.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.SFC.Common.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.MFG.SFS.Common.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Kingdee.K3.SCM.ServiceHelper.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Microsoft.Practices.EnterpriseLibrary.Common.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Microsoft.Practices.ServiceLocation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/ServiceStack.Common.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/ServiceStack.Interfaces.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/ServiceStack.Redis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/ServiceStack.Text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/someTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/testMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/testMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/上传附件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/上传附件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/列表固定读取本地文件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/列表固定读取本地文件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/列表读取文件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/列表读取文件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/打开单据弹窗.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/打开单据弹窗.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/树形插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/树形插件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/物料收发明细表增加字段干预插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/物料收发明细表增加字段干预插件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/生产入库单转生产订单保存前更新工艺路线.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/生产入库单转生产订单保存前更新工艺路线.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/生产入库单转生产订单保存按钮携带工艺路线插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/生产入库单转生产订单保存按钮携带工艺路线插件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/生产入库转生产订单携带工艺路线干预-废弃.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/生产入库转生产订单携带工艺路线干预-废弃.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/生产订单取源单填写批号插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/生产订单取源单填写批号插件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/生产订单执行明细表携带合同号-废弃.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/生产订单执行明细表携带合同号-废弃.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/生产订单执行明细表携带合同号2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/生产订单执行明细表携带合同号2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/用料清单手动携带生产订单批号字段.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/用料清单手动携带生产订单批号字段.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/监视调试接受返回值.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/监视调试接受返回值.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/采购订单输入查询报价单锁定部分字段.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/采购订单输入查询报价单锁定部分字段.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/销售订单导入excel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单导入excel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/销售订单导入装箱单-o.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单导入装箱单-o.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/销售订单导入装箱单.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单导入装箱单.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/销售订单执行汇总表增加字段干预插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单执行汇总表增加字段干预插件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/销售订单转采购申请单取BOM包材材质工艺干预插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单转采购申请单取BOM包材材质工艺干预插件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/销售订单转采购申请单取BOM包材材质工艺插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单转采购申请单取BOM包材材质工艺插件.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +77,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3a34125a19c8461dbcdc4737827b86dea0e08/52/b810768b/Save.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/79/b236fdbe/OptPlanOptRtpApiService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/ee/bd0d469d/OptPlanOptTransApiService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b4a50f5d3d942058d9e1046b2b9f48c46008/ee/fb47b312/IOSCreateSettleTran.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/07/46731c00/SaveResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/08/2ee5a89c/EnDecode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/3d/7ee7fe4c/ApiRequest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -59,6 +124,11 @@
       <workItem from="1660440522378" duration="1690000" />
       <workItem from="1662959613947" duration="2319000" />
       <workItem from="1663209032680" duration="259000" />
+      <workItem from="1663288997068" duration="1171000" />
+      <workItem from="1663290823104" duration="373000" />
+      <workItem from="1663292289597" duration="478000" />
+      <workItem from="1663304442273" duration="208000" />
+      <workItem from="1663304913624" duration="3911000" />
     </task>
     <servers />
   </component>
