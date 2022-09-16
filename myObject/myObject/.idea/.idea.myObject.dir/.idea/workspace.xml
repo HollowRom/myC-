@@ -4,8 +4,6 @@
     <list default="true" id="97fa84e8-53b7-4064-a71b-7fdd318facd5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Folder.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Folder.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/someTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/someTest.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/someTest.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +97,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b27839cc2dba4804baacf2f5cce6de3246b600/74/17f47f6d/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b27839cc2dba4804baacf2f5cce6de3246b600/c5/a33ba9ce/ArgumentNullException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4428425a4c04913a4a7dca69fa11ca581208/cf/31f9fa38/FormMetaDataCache.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b678a8f82fab4040a66093111d4b268519f808/52/8f5ee211/OperationPlanningList.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bbad98c41fce4829aab9c443f49a1d446e408/13/beb973ca/WebApiServiceCall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bbad98c41fce4829aab9c443f49a1d446e408/ac/29d4f92f/QueryBillService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bf8183a45d5847d885eedffd83533a7b99200/42/938425db/ArgumentNullException.cs" root0="SKIP_HIGHLIGHTING" />
@@ -190,6 +189,7 @@
       <workItem from="1663157553450" duration="904000" />
       <workItem from="1663215083276" duration="58000" />
       <workItem from="1663215736040" duration="27000" />
+      <workItem from="1663284461868" duration="595000" />
     </task>
     <servers />
   </component>

@@ -1,15 +1,18 @@
 ﻿<Properties>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="myObject/销售订单导入excel.cs">
     <Files>
-      <File FileName="myObject/testMain.cs" Line="13" Column="32" />
+      <File FileName="myObject/销售订单导入excel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="myObject" expanded="True">
             <Node name="someTest" expanded="True">
-              <Node name="References" expanded="True" />
+              <Node name="销售订单导入excel.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -19,9 +22,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
