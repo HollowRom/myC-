@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/K3CloudApp/KDSAMLTransfer.aspx" hash="fffffffebd86b965" filehash="4b3b84c610f" flags="110000" assembly="App_Web_hiwvrear" type="ASP.kdsamltransfer_aspx">
+    <filedeps>
+        <filedep name="/K3CloudApp/KDSAMLTransfer.aspx" />
+    </filedeps>
+</preserve>
