@@ -21,7 +21,7 @@ namespace XkPdaJumpServer
                 listerner.AuthenticationSchemes = AuthenticationSchemes.Anonymous; //指定身份验证 Anonymous匿名访问
                 listerner.Prefixes.Add("http://127.0.0.1:8080/jumpApi/");
 
-// listerner.Prefixes.Add("http://localhost/web/");
+                // listerner.Prefixes.Add("http://localhost/web/");
                 listerner.Start();
                 Console.WriteLine("WebServer Start Successed.......");
 
@@ -30,8 +30,8 @@ namespace XkPdaJumpServer
                 {
                     // maxTime--;
                     // Console.WriteLine("maxTime:" + maxTime);
-//等待请求连接
-//没有请求则GetContext处于阻塞状态
+                    //等待请求连接
+                    //没有请求则GetContext处于阻塞状态
                    HttpListenerContext ctx = listerner.GetContext();
 
                    ctx.Response.StatusCode = 404; //设置返回给客服端http状态代码 
@@ -40,7 +40,7 @@ namespace XkPdaJumpServer
                    
                    try
                    {
-                        if (ctx.Request.HttpMethod != "POST")
+                        if (ctx.Request.HttpMethod.ToUpper() != "POST")
                         {
                             Console.WriteLine("接收的不是post:" + ctx.Request.HttpMethod);
                             continue;
@@ -72,7 +72,7 @@ namespace XkPdaJumpServer
                           reMes.Put("err", e.ToString());
                    }
                    finally
-                  {
+                   {
                       using (StreamWriter writer = new StreamWriter(ctx.Response.OutputStream))
                       {
                           writer.Write(reMes);
@@ -82,12 +82,12 @@ namespace XkPdaJumpServer
                        ctx.Response.Close(); 
                    }
 
-               }
+                }
                 Console.WriteLine("退出server");
                 listerner.Stop();
-           }
+            }
         }
-
+                                       
         static ApiClient GetApiClient(string logUrl, string loginApi, object[] loginInfo)
         {
             ApiClient objC = new ApiClient(logUrl);
