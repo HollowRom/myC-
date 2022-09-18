@@ -25,6 +25,9 @@ namespace XkPdaJumpServer
                 listerner.Start();
                 Console.WriteLine("WebServer Start Successed.......");
 
+                // ApiClient objC2 = GetApiClient(LogUrl, LoginApi, loginInfo);
+                //
+                // return;
                 int maxTime = 1;
                while (maxTime > 0)
                 {
@@ -37,7 +40,7 @@ namespace XkPdaJumpServer
                    ctx.Response.StatusCode = 404; //设置返回给客服端http状态代码 
 
                    JSONObject reMes = new JSONObject();
-                   
+
                    try
                    {
                         if (ctx.Request.HttpMethod.ToUpper() != "POST")
