@@ -1,0 +1,3391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{723C6D2B-3F02-4393-B220-A7A52586B16E}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>xkPdaJumpServer</RootNamespace>
+        <AssemblyName>xkPdaJumpServer</AssemblyName>
+        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Accessibility" />
+        <Reference Include="Antlr3.Runtime">
+          <HintPath>..\..\..\xkSDK\Antlr3.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="AopSdk">
+          <HintPath>..\..\..\xkSDK\AopSdk.dll</HintPath>
+        </Reference>
+        <Reference Include="AWSSDK">
+          <HintPath>..\..\..\xkSDK\AWSSDK.dll</HintPath>
+        </Reference>
+        <Reference Include="AWSSDK.Core">
+          <HintPath>..\..\..\xkSDK\AWSSDK.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="AWSSDK.S3">
+          <HintPath>..\..\..\xkSDK\AWSSDK.S3.dll</HintPath>
+        </Reference>
+        <Reference Include="BarcodeLib">
+          <HintPath>..\..\..\xkSDK\BarcodeLib.dll</HintPath>
+        </Reference>
+        <Reference Include="BarCodeService">
+          <HintPath>..\..\..\xkSDK\BarCodeService.dll</HintPath>
+        </Reference>
+        <Reference Include="BDK.K3.BD.API.QCC">
+          <HintPath>..\..\..\xkSDK\BDK.K3.BD.API.QCC.dll</HintPath>
+        </Reference>
+        <Reference Include="BDK.K3.BD.API.QY">
+          <HintPath>..\..\..\xkSDK\BDK.K3.BD.API.QY.dll</HintPath>
+        </Reference>
+        <Reference Include="BDK.K3.BD.CRM.Specimen">
+          <HintPath>..\..\..\xkSDK\BDK.K3.BD.CRM.Specimen.dll</HintPath>
+        </Reference>
+        <Reference Include="BDK.K3.CRM.Common.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\BDK.K3.CRM.Common.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="BDK.K3.CRM.HRORG.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\BDK.K3.CRM.HRORG.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="BDK.K3.SCM.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\BDK.K3.SCM.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="BouncyCastle.Crypto">
+          <HintPath>..\..\..\xkSDK\BouncyCastle.Crypto.dll</HintPath>
+        </Reference>
+        <Reference Include="CacheBaseLibrary">
+          <HintPath>..\..\..\xkSDK\CacheBaseLibrary.dll</HintPath>
+        </Reference>
+        <Reference Include="CASBase">
+          <HintPath>..\..\..\xkSDK\CASBase.dll</HintPath>
+        </Reference>
+        <Reference Include="Castle.Core">
+          <HintPath>..\..\..\xkSDK\Castle.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="ChnCharInfo">
+          <HintPath>..\..\..\xkSDK\ChnCharInfo.dll</HintPath>
+        </Reference>
+        <Reference Include="ClientLibrary">
+          <HintPath>..\..\..\xkSDK\ClientLibrary.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.App">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.App.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.App.Services">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.App.Services.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.BD.App.Service.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.BD.App.Service.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.BD.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.BD.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.Contract">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.Contract.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.Core">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.PP.APP.Core">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.PP.APP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.PP.App.Service.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.PP.App.Service.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.PP.Business.DynamicForm">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.PP.Business.DynamicForm.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.PP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.PP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.PP.Contract">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.PP.Contract.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.PP.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.PP.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.REBATE.App.Service.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.REBATE.App.Service.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.REBATE.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.REBATE.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.Smart.Services">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.Smart.Services.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.STORE.App.Core">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.STORE.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.STORE.App.Service.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.STORE.App.Service.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.STORE.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.STORE.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.STORE.Contract">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.STORE.Contract.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.STORE.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.STORE.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.VIP.APP.Core">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.VIP.APP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.VIP.App.Service.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.VIP.App.Service.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.VIP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.VIP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.VIP.Contracts">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.VIP.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.VIP.Core">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.VIP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.VIP.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.VIP.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="CMK.K3.RI.WebServiceExtend">
+          <HintPath>..\..\..\xkSDK\CMK.K3.RI.WebServiceExtend.dll</HintPath>
+        </Reference>
+        <Reference Include="Commons.Xml.Relaxng" />
+        <Reference Include="cscompmgd" />
+        <Reference Include="CustomMarshalers" />
+        <Reference Include="DevExpress.Build.XamlResourceProcessing">
+          <HintPath>..\..\..\xkSDK\DevExpress.Build.XamlResourceProcessing.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Charts.v13.1.Core">
+          <HintPath>..\..\..\xkSDK\DevExpress.Charts.v13.1.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Data.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.Data.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Office.v13.1.Core">
+          <HintPath>..\..\..\xkSDK\DevExpress.Office.v13.1.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.PivotGrid.v13.1.Core">
+          <HintPath>..\..\..\xkSDK\DevExpress.PivotGrid.v13.1.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Printing.v13.1.Core">
+          <HintPath>..\..\..\xkSDK\DevExpress.Printing.v13.1.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.RichEdit.v13.1.Core">
+          <HintPath>..\..\..\xkSDK\DevExpress.RichEdit.v13.1.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Utils.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.Utils.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Xpf.Printing.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.Xpf.Printing.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Xpf.Printing.v13.1.Service">
+          <HintPath>..\..\..\xkSDK\DevExpress.Xpf.Printing.v13.1.Service.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.Xpo.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.Xpo.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraCharts.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraCharts.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraEditors.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraEditors.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraPivotGrid.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraPivotGrid.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraPrinting.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraPrinting.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraReports.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraReports.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraReports.v13.1.Extensions">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraReports.v13.1.Extensions.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraReports.v13.1.Service">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraReports.v13.1.Service.dll</HintPath>
+        </Reference>
+        <Reference Include="DevExpress.XtraRichEdit.v13.1">
+          <HintPath>..\..\..\xkSDK\DevExpress.XtraRichEdit.v13.1.dll</HintPath>
+        </Reference>
+        <Reference Include="esdk_obs_.net">
+          <HintPath>..\..\..\xkSDK\esdk_obs_.net.dll</HintPath>
+        </Reference>
+        <Reference Include="FabricCommon">
+          <HintPath>..\..\..\xkSDK\FabricCommon.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.CalcEngine">
+          <HintPath>..\..\..\xkSDK\FarPoint.CalcEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.Excel">
+          <HintPath>..\..\..\xkSDK\FarPoint.Excel.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.Localization">
+          <HintPath>..\..\..\xkSDK\FarPoint.Localization.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.PDF">
+          <HintPath>..\..\..\xkSDK\FarPoint.PDF.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.PluginCalendar.WinForms">
+          <HintPath>..\..\..\xkSDK\FarPoint.PluginCalendar.WinForms.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.Win">
+          <HintPath>..\..\..\xkSDK\FarPoint.Win.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.Win.Chart">
+          <HintPath>..\..\..\xkSDK\FarPoint.Win.Chart.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.Win.Ink">
+          <HintPath>..\..\..\xkSDK\FarPoint.Win.Ink.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.Win.Spread">
+          <HintPath>..\..\..\xkSDK\FarPoint.Win.Spread.dll</HintPath>
+        </Reference>
+        <Reference Include="FarPoint.Win.TextRenderer">
+          <HintPath>..\..\..\xkSDK\FarPoint.Win.TextRenderer.dll</HintPath>
+        </Reference>
+        <Reference Include="Gma.QrCodeNet.Encoding">
+          <HintPath>..\..\..\xkSDK\Gma.QrCodeNet.Encoding.dll</HintPath>
+        </Reference>
+        <Reference Include="HtmlAgilityPack">
+          <HintPath>..\..\..\xkSDK\HtmlAgilityPack.dll</HintPath>
+        </Reference>
+        <Reference Include="I18N" />
+        <Reference Include="I18N.CJK" />
+        <Reference Include="I18N.MidEast" />
+        <Reference Include="I18N.Other" />
+        <Reference Include="I18N.Rare" />
+        <Reference Include="I18N.West" />
+        <Reference Include="IBM.Data.DB2" />
+        <Reference Include="ICSharpCode.SharpZipLib" />
+        <Reference Include="IronPython">
+          <HintPath>..\..\..\xkSDK\IronPython.dll</HintPath>
+        </Reference>
+        <Reference Include="ITextSharp">
+          <HintPath>..\..\..\xkSDK\ITextSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="iTrusClient">
+          <HintPath>..\..\..\xkSDK\iTrusClient.dll</HintPath>
+        </Reference>
+        <Reference Include="ItrusDotNetCertAPI 1.2">
+          <HintPath>..\..\..\xkSDK\ItrusDotNetCertAPI 1.2.dll</HintPath>
+        </Reference>
+        <Reference Include="ITSecurity">
+          <HintPath>..\..\..\xkSDK\ITSecurity.dll</HintPath>
+        </Reference>
+        <Reference Include="JWT">
+          <HintPath>..\..\..\xkSDK\JWT.dll</HintPath>
+        </Reference>
+        <Reference Include="K3Cloud.Extend">
+          <HintPath>..\..\..\xkSDK\K3Cloud.Extend.dll</HintPath>
+        </Reference>
+        <Reference Include="K3Cloud.WebApi.Client">
+          <HintPath>..\..\..\xkSDK\K3Cloud.WebApi.Client.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BAS.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BAS.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BI.Mobile.LightApp">
+          <HintPath>..\..\..\xkSDK\Kingdee.BI.Mobile.LightApp.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BI.Mobile.LightApp.Web">
+          <HintPath>..\..\..\xkSDK\Kingdee.BI.Mobile.LightApp.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BI.Mobile.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BI.Mobile.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.AI">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.AI.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.AOP">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.AOP.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Apm">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Apm.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Apm.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Apm.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Apm.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Apm.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Apm.Client">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Apm.Client.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Apm.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Apm.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Apm.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Apm.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Apm.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Apm.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.Auth">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.Auth.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.ClearAndInitDataPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.ClearAndInitDataPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.CloudHealthCenter">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.CloudHealthCenter.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.CloudHealthService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.CloudHealthService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.DBCompare">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.DBCompare.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.EnvironmentDetect">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.EnvironmentDetect.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.EnvironmentService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.EnvironmentService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.InformationCenter">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.InformationCenter.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.IntegrationPlugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.IntegrationPlugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.IntegrationService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.IntegrationService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.KDSCaculateService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.KDSCaculateService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.KDSService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.KDSService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.LogService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.LogService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.MessageCenter">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.MessageCenter.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.OSS">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.OSS.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.Security">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.App.VelocityMgtLib">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.VelocityMgtLib.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ApprovalFlow">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ApprovalFlow.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ApprovalFlow.PlugIns">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ApprovalFlow.PlugIns.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Background.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Background.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.BuildService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.BuildService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.BuildService.Contract">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.BuildService.Contract.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.BuildService.Packager">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.BuildService.Packager.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.AdminPermission">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.AdminPermission.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.Bill">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.Bill.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.BusinessFlowPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.BusinessFlowPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.ClearAndInitDataPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.ClearAndInitDataPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.DynamicForm">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.DynamicForm.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.IntegrationPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.IntegrationPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Business.RobotPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Business.RobotPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Bussiness.TaxManagementPlugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Bussiness.TaxManagementPlugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Cabinet">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Cabinet.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Cache.ECache">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Cache.ECache.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Cache.VCache">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Cache.VCache.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.CDP.BusinessPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.CDP.BusinessPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.CDP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.CDP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ClearAndInitData">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ClearAndInitData.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ClearAndInitData.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ClearAndInitData.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.CloudEdition">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.CloudEdition.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.CloudQueue">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.CloudQueue.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.CmdScheduler">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.CmdScheduler.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Computing.Framework">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Computing.Framework.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Computing.Plugins">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Computing.Plugins.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Computing.Repositories">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Computing.Repositories.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Computing.Services">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Computing.Services.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.DataEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.DataEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.DevReportService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.DevReportService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Excel">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Excel.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ExcelPrint.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ExcelPrint.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ExcelToolHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ExcelToolHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FileConvert.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FileConvert.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FileServer.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FileServer.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FileServer.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FileServer.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FileServer.ProxyService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FileServer.ProxyService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.Common">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.Dts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.Dts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.Model">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.FullTextSearch.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.FullTextSearch.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IBPM">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IBPM.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IBPM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IBPM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IBPM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IBPM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IBPM.Model">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IBPM.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IBPM.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IBPM.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IBPM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IBPM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IK3Cloud.ServiceFacade.Contract">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IK3Cloud.ServiceFacade.Contract.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.IK3Cloud.ServiceFacade.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.IK3Cloud.ServiceFacade.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Install.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Install.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Install.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Install.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDS.ServiceFacade.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDS.ServiceFacade.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDS.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDS.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDSReportCommon">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDSReportCommon.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDSReportEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDSReportEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDSSpreadEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDSSpreadEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDSSpreadLicense">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDSSpreadLicense.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDWeiBo.HttpUtil">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDWeiBo.HttpUtil.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDWeiBo.IKDWeiBo">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDWeiBo.IKDWeiBo.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.KDWeibo.OauthAPI">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.KDWeibo.OauthAPI.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.Build.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.Build.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.Build.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.Build.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.Build.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.Build.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.Build.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.Build.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.ServiceFacade.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.ServiceFacade.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Lang.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Lang.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.LianJie100">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.LianJie100.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.LightApp.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.LightApp.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Log">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Log.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MachineKey">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MachineKey.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Management.Performance.PerformanceWMIPublisher">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Management.Performance.PerformanceWMIPublisher.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Management.Performance.PublisherInterface">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Management.Performance.PublisherInterface.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MC.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MC.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MC.ServiceFacade.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MC.ServiceFacade.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MC.ServiceFacade.KDServiceEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MC.ServiceFacade.KDServiceEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MC.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MC.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MDSCommonLib">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MDSCommonLib.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MDSCore">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MDSCore.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MemoryDB">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MemoryDB.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MessageCenter.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MessageCenter.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MessageCenter.Model">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MessageCenter.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MessageCenter.ServiceFacade.Common">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MessageCenter.ServiceFacade.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MessageCenter.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MessageCenter.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MiPush_SDK_Server">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MiPush_SDK_Server.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.Build.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.Build.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.Build.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.Build.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.Build.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.Build.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.Build.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.Build.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.ServiceFacade.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.ServiceFacade.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MLLang.Utils">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MLLang.Utils.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile.Contract">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.Contract.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile.FormPlugIns">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.FormPlugIns.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile.Model">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Mobile.Web">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Mobile.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Model">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MpWeiXin">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MpWeiXin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MQService.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MQService.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.Build.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.Build.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.Build.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.Build.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.Build.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.Build.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.Build.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.Build.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.ServiceFacade.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.ServiceFacade.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.MultiLang.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.MultiLang.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.NotePrinting">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.NotePrinting.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.OracleUdtType">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.OracleUdtType.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.OrmEngine">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.OrmEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Package.ProductModel">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Package.ProductModel.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Performance">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Performance.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.PlatformDetection">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.PlatformDetection.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.PlatformDetection.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.PlatformDetection.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.PlatformDetection.Service">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.PlatformDetection.Service.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ProductModel">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ProductModel.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ProductService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ProductService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.QyWeiXin">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.QyWeiXin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.RemoteProxy">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.RemoteProxy.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.RichEditDataConvert">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.RichEditDataConvert.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.SAML">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.SAML.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Schedule.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Schedule.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Security">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.Common">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceClientFx">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceClientFx.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceFx">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceFx.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceWIF">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceWIF.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceFacade.StartApp">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.StartApp.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceInterface">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceInterface.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.ServiceInterface.Model">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceInterface.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.SQL">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.SQL.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Verification">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Verification.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.VerificationHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.VerificationHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.VerificationService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.VerificationService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.VersionControl">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.VersionControl.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.VersionControl.SVNProvider">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.VersionControl.SVNProvider.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.VersionControl.TFSProvider">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.VersionControl.TFSProvider.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Web">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Web.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Web.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Web.HTML">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Web.HTML.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Web.HTML.CloudPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Web.HTML.CloudPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Web.HTML.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Web.HTML.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.WebApi.Client">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.Client.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.WebApi.FormService">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.WeiXin.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.WeiXin.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.WinForm.KDS20Lib">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.WinForm.KDS20Lib.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.Extends">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.Extends.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.ImageCenter.Docuvix">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.ImageCenter.Docuvix.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.ImageCenter.FPY">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.ImageCenter.FPY.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.ImageCenter.GuoXin">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.ImageCenter.GuoXin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.Kernel">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.Kernel.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.Models">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.Models.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.PlugIns">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.PlugIns.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.BOS.Workflow.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.BOS.Workflow.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.CloudERP.YunZhiJia.AppCore">
+          <HintPath>..\..\..\xkSDK\Kingdee.CloudERP.YunZhiJia.AppCore.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.CloudERP.YunZhiJia.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.CloudERP.YunZhiJia.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.CloudERP.YunZhiJia.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.CloudERP.YunZhiJia.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.CloudERP.YunZhiJia.TaskService">
+          <HintPath>..\..\..\xkSDK\Kingdee.CloudERP.YunZhiJia.TaskService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.App.Common.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.App.Common.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.App.Core.Debug">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.App.Core.Debug.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.Business.DynamicForm">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.Business.DynamicForm.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.ConnectUnint.Services">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.ConnectUnint.Services.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BarCode.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BarCode.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.BaseDataController">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.BaseDataController.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.Common.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.Common.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.App.Accessor">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.App.Accessor.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.App.Addin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.App.Addin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.App.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.App.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.Common.Services">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.Common.Services.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.Devenv.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.Devenv.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.Extension">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.Extension.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.NewCode.Packager.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.NewCode.Packager.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.SCM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.SCM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.ServiceFacde.KDServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.ServiceFacde.KDServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.ServiceFacde.ServiceStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.ServiceFacde.ServiceStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.BD.WebAPI.ServiceStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.BD.WebAPI.ServiceStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.CUST.APP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.CUST.APP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.CUST.APP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.CUST.APP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.CUST.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.CUST.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Entity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Entity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.LightApp.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.LightApp.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.LightApp.Business.Plugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.LightApp.Business.Plugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.LightApp.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.LightApp.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.LightApp.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.LightApp.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.LightApp.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.LightApp.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.LightApp.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.LightApp.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.LightApp.WebSite">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.LightApp.WebSite.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.MAR.APP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.MAR.APP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.MAR.APP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.MAR.APP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.MAR.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.MAR.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.CUST.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.CUST.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.CUST.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.CUST.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.Opp.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.Opp.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.OPP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.OPP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.Public.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.Public.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.Sche.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.Sche.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.Sche.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.Sche.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.OPP.APP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.OPP.APP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.OPP.APP.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.OPP.APP.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.OPP.APP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.OPP.APP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.OPP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.OPP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.OPP.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.OPP.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Public.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Public.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Sche.APP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Sche.APP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Sche.APP.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Sche.APP.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Sche.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Sche.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.Sche.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.Sche.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.SV.APP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.SV.APP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.SV.APP.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.SV.APP.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.SV.APP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.SV.APP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.SV.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.SV.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.SV.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.SV.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.CRM.WebAPI.ServiceExtend.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.CRM.WebAPI.ServiceExtend.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.App.ECC.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.App.ECC.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.App.ECC.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.App.ECC.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.App.ECC.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.App.ECC.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.Business.DynamicForm">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.Business.DynamicForm.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.ECC.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.ECC.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.ECC.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.ECC.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.ECM.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.ECM.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ACA.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ACA.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.App.ServicePlugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.App.ServicePlugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AP.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.App.BillOcrService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.App.BillOcrService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.App.CangQiong.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.App.CangQiong.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.AR.Web.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AR.Web.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.App.KDSFunc">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.App.KDSFunc.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.Business.DynamicForm">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.Business.DynamicForm.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.BM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.BM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Business.DynamicForm">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Business.DynamicForm.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Business.PlugIn.BillOcr">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Business.PlugIn.BillOcr.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CA.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CA.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.App.PAT">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.App.PAT.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CB.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CB.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CN.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CN.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.App.KDSFunc">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.App.KDSFunc.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.CR.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.CR.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ER.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ER.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.Common.Analyzer">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.Common.Analyzer.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.FA.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.FA.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GFS.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GFS.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.App.KDSFunc">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.App.KDSFunc.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.NewInstaller.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.NewInstaller.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.GL.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.GL.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.App.PAT">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.App.PAT.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.PAT.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.PAT.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.RPTEP.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.RPTEP.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.RPTEP.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.RPTEP.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.RPTEP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.RPTEP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.RPTEP.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.RPTEP.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.RPTEP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.RPTEP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.RPTEP.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.RPTEP.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.HS.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.HS.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.IV.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.IV.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Mobile.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Mobile.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Mobile.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Mobile.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Mobile.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Mobile.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Mobile.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Mobile.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.NewInstaller.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.NewInstaller.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ReportCommon">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ReportCommon.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ReportEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ReportEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.SC.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.SC.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ServiceFacade.ServiceClient">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ServiceFacade.ServiceClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.App.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.App.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WB.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WB.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.Web.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Web.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.FIN.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.HM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.HM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.HM.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.HM.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.HM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.HM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.HM.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.HM.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.JS.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.JS.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.JS.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.JS.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.JS.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.JS.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.JS.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.JS.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.ORG.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.ORG.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.ORG.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.ORG.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.ORG.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.ORG.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.ORG.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.ORG.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.PA.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.PA.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.PA.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.PA.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.PA.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.PA.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.PA.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.PA.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.HR.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.HR.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.App.ClearAndInitBillData">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.App.ClearAndInitBillData.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.APS.App.BusinessModel">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.APS.App.BusinessModel.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.APS.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.APS.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.APS.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.APS.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.APS.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.APS.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.APS.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.APS.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.APS.ServiceFacade.WebService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.APS.ServiceFacade.WebService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.APS.ServiceFacade.WebServiceEx">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.APS.ServiceFacade.WebServiceEx.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.BusinessCommon">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.BusinessCommon.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.BusinessCore">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.BusinessCore.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.DependencyCore">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.DependencyCore.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.DI.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.DI.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.DI.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.DI.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.DI.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.DI.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.DI.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.DI.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.ENG.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.ENG.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.ENG.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.ENG.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.ENG.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.ENG.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.ENG.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.ENG.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.ENG.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.ENG.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.Mobile.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.Mobile.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.Mobile.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.Mobile.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PAT.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PAT.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PDFViewer.ServiceFacade.WebService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PDFViewer.ServiceFacade.WebService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.App.BillConvertServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.App.BillConvertServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.App.MrpModel">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.App.MrpModel.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.App.ReportPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.App.ReportPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PLN.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PLN.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.App.BillConvertServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.App.BillConvertServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.App.ReportPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.App.ReportPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.PRD.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.PRD.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.App.BillConvertServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.App.BillConvertServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.App.ReportPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.App.ReportPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.QM.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.QM.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.App.BillConvertServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.App.BillConvertServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.App.BusinessModel">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.App.BusinessModel.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.App.ReportPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.App.ReportPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.Installer.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.Installer.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.REM.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.REM.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.App.BillConvertServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.App.BillConvertServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.App.ReportPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.App.ReportPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFC.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFC.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFS.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFS.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFS.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFS.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SFS.ServiceFacade.WebService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SFS.ServiceFacade.WebService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.App.BillConvertServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.App.BillConvertServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.App.ReportPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.App.ReportPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.SUB.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.SUB.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.WebApi.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.WebApi.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.MFG.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.MFG.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.AI.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.AI.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.AI.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.AI.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.GWB.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.GWB.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.GWB.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.GWB.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.GWB.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.GWB.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.GWB.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.GWB.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.GWB.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.GWB.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Live.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Live.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Live.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Live.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Live.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Live.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Live.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Live.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Live.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Live.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Live.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Live.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.Live.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.Live.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.SCM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.SCM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.SCM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.SCM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.SCM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.SCM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.SCM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.SCM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.Mobile.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.Mobile.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.CFG.App.BillConvertServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.CFG.App.BillConvertServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.CFG.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.CFG.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.CFG.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.CFG.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.CFG.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.CFG.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.CFG.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.CFG.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.CFG.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.CFG.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.CFG.Common.Interface">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.CFG.Common.Interface.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.Common.Cad">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.Common.Cad.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.Common.Framework">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.Common.Framework.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.Common.Installer">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.Common.Installer.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.Common.References">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.Common.References.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.OpenApi.FileService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.OpenApi.FileService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.ServiceFacade.AppVerifyService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.ServiceFacade.AppVerifyService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.ServiceFacade.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.ServiceFacade.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.STD.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.STD.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.STD.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.STD.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.STD.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.STD.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.WebServices">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.WebServices.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.WF.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.WF.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.WF.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.WF.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.WF.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.WF.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.WF.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.WF.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.PLM.WF.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.PLM.WF.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.Common.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.Common.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.Common.RpaApi">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.Common.RpaApi.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.RPA.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.RPA.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.BackService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.BackService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.BDIP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.BDIP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.BDIP.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.BDIP.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.BDIP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.BDIP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.ClearAndInitDataPlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.ClearAndInitDataPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.CP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.CP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.CP.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.CP.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.CP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.CP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Credit.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Credit.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Credit.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Credit.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Credit.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Credit.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.DRP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.DRP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.DRP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.DRP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.GY.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.GY.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.IOS.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.IOS.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.IOS.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.IOS.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.IOS.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.IOS.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.MEM.ServicePlugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.MEM.ServicePlugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Mobile.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Mobile.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Mobile.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Mobile.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Pur.Plan.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Pur.Plan.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Pur.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Pur.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Purchase.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Purchase.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.RPM.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.RPM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.RPM.ServicePlugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.RPM.ServicePlugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Sal.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Sal.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Sal.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Sal.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Schedule">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Schedule.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.SCP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.SCP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.SCP.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.SCP.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.SCP.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.SCP.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.SPM.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.SPM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.SPM.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.SPM.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Stock.Report">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Stock.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.Stock.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Stock.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.SVM.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.SVM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.App.SVM.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.SVM.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.BDIP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.BDIP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.BDIP.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.BDIP.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Business.DynamicForm">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Business.DynamicForm.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Cloud.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Cloud.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Common.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Common.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.Business.Plugin.Html">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.Business.Plugin.Html.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.Business.Plugin.MainControl">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.Business.Plugin.MainControl.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.ServiceFacade.StartApp">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.ServiceFacade.StartApp.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.CP.Web">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.CP.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Credit.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Credit.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Credit.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Credit.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.DRP.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.DRP.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.GY.Common">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.GY.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Gy.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Gy.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.H5.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.H5.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.IOS.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.IOS.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.IOS.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.IOS.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.MEM.Business.Plugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.MEM.Business.Plugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.LightApp.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.LightApp.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.LightApp.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.LightApp.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.LightApp.Web">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.LightApp.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.LightApp.WebApi.ApiService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.LightApp.WebApi.ApiService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.SCP.Web">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.SCP.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Pur.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Pur.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Pur.Plan.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Pur.Plan.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Pur.Plan.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Pur.Plan.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Pur.Plan.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Pur.Plan.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Pur.Plan.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Pur.Plan.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Purchase.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Purchase.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Purchase.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Purchase.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.PurSupply.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.PurSupply.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.RPA.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.RPA.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.RPA.Business">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.RPA.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.RPA.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.RPA.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.RPM.Business.Plugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.RPM.Business.Plugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.RPM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.RPM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.RPM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.RPM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Sal.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Sal.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Sal.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Sal.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SCP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SCP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SCP.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SCP.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SCP.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SCP.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SCP.Web">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SCP.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SPM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SPM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SPM.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SPM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SPM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SPM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SRMServiceProxy">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SRMServiceProxy.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Stock.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Stock.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Stock.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Stock.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.SVM.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.SVM.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.TGT.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.TGT.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.TGT.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.TGT.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.TGT.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.TGT.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.TGT.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.TGT.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.TGT.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.TGT.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.Web.Client">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.Web.Client.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.WebApi.ServicesStub">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.WebApi.ServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCM.WebService">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.WebService.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.App.Mobile.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.App.Mobile.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.App.OOC.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.App.OOC.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.App.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.App.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.App.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.MMC.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.MMC.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.Mobile.Business.Plugin">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.Mobile.Business.Plugin.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.Mobile.BusinessEntity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.Mobile.BusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.Mobile.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.Mobile.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.Mobile.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.Mobile.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.OOC.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.OOC.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.OOC.Core">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.OOC.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SCO.OOC.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SCO.OOC.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SiSense.App">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SiSense.App.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SiSense.CommonHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SiSense.CommonHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SiSense.Contract">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SiSense.Contract.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SiSense.Entity">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SiSense.Entity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SiSense.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SiSense.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3.SiSense.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3.SiSense.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.K3Cloud.Evaluation">
+          <HintPath>..\..\..\xkSDK\Kingdee.K3Cloud.Evaluation.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.Order100.SDK">
+          <HintPath>..\..\..\xkSDK\Kingdee.Order100.SDK.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.Tools.BuildCloud.Common">
+          <HintPath>..\..\..\xkSDK\Kingdee.Tools.BuildCloud.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.Tools.BuildCloud.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.Tools.BuildCloud.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.Tools.MultiLang.BuildCloud.Common">
+          <HintPath>..\..\..\xkSDK\Kingdee.Tools.MultiLang.BuildCloud.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.Tools.MultiLang.BuildCloud.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.Tools.MultiLang.BuildCloud.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.XT.Open">
+          <HintPath>..\..\..\xkSDK\Kingdee.XT.Open.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.Xuntong">
+          <HintPath>..\..\..\xkSDK\Kingdee.Xuntong.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.YZJ.ConnectERP.AppCore">
+          <HintPath>..\..\..\xkSDK\Kingdee.YZJ.ConnectERP.AppCore.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.YZJ.ConnectERP.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingdee.YZJ.ConnectERP.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.YZJ.ConnectERP.Contracts">
+          <HintPath>..\..\..\xkSDK\Kingdee.YZJ.ConnectERP.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingdee.YZJ.ConnectERP.Entity">
+          <HintPath>..\..\..\xkSDK\Kingdee.YZJ.ConnectERP.Entity.dll</HintPath>
+        </Reference>
+        <Reference Include="Kingee.K3.SCO.OOC.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\Kingee.K3.SCO.OOC.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="LitJson">
+          <HintPath>..\..\..\xkSDK\LitJson.dll</HintPath>
+        </Reference>
+        <Reference Include="log4net">
+          <HintPath>..\..\..\xkSDK\log4net.dll</HintPath>
+        </Reference>
+        <Reference Include="log4net2">
+          <HintPath>..\..\..\xkSDK\log4net2.dll</HintPath>
+        </Reference>
+        <Reference Include="LumiSoft.Net">
+          <HintPath>..\..\..\xkSDK\LumiSoft.Net.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.ApplicationServer.Http">
+          <HintPath>..\..\..\xkSDK\Microsoft.ApplicationServer.Http.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.ApplicationServer.HttpEnhancements">
+          <HintPath>..\..\..\xkSDK\Microsoft.ApplicationServer.HttpEnhancements.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Build" />
+        <Reference Include="Microsoft.Build.Engine" />
+        <Reference Include="Microsoft.Build.Framework" />
+        <Reference Include="Microsoft.Build.Tasks.v4.0" />
+        <Reference Include="Microsoft.Build.Utilities.v4.0" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="Microsoft.Dynamic">
+          <HintPath>..\..\..\xkSDK\Microsoft.Dynamic.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Exchange.WebServices">
+          <HintPath>..\..\..\xkSDK\Microsoft.Exchange.WebServices.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Exchange.WebServices.Auth">
+          <HintPath>..\..\..\xkSDK\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Ink">
+          <HintPath>..\..\..\xkSDK\Microsoft.Ink.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Json">
+          <HintPath>..\..\..\xkSDK\Microsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Net.Http.Formatting">
+          <HintPath>..\..\..\xkSDK\Microsoft.Net.Http.Formatting.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Net.Http.Formatting.OData">
+          <HintPath>..\..\..\xkSDK\Microsoft.Net.Http.Formatting.OData.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Office.Interop.Excel">
+          <HintPath>..\..\..\xkSDK\Microsoft.Office.Interop.Excel.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Office.Interop.PowerPoint">
+          <HintPath>..\..\..\xkSDK\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Office.Interop.Visio">
+          <HintPath>..\..\..\xkSDK\Microsoft.Office.Interop.Visio.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Office.Interop.Word">
+          <HintPath>..\..\..\xkSDK\Microsoft.Office.Interop.Word.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.SqlConfigurationSource">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.SqlConfigurationSource.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.ObjectBuilder2">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.ServiceLocation">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.ServiceLocation.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.Unity">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.Unity.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.Unity.Configuration">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Practices.Unity.Interception">
+          <HintPath>..\..\..\xkSDK\Microsoft.Practices.Unity.Interception.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Runtime.Serialization.Internal">
+          <HintPath>..\..\..\xkSDK\Microsoft.Runtime.Serialization.Internal.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Scripting">
+          <HintPath>..\..\..\xkSDK\Microsoft.Scripting.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Scripting.Debugging">
+          <HintPath>..\..\..\xkSDK\Microsoft.Scripting.Debugging.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Server.Common">
+          <HintPath>..\..\..\xkSDK\Microsoft.Server.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.ServiceModel.Internal">
+          <HintPath>..\..\..\xkSDK\Microsoft.ServiceModel.Internal.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.VisualBasic" />
+        <Reference Include="Microsoft.VisualC" />
+        <Reference Include="Microsoft.Web.Infrastructure" />
+        <Reference Include="MiPush_SDK_Server">
+          <HintPath>..\..\..\xkSDK\MiPush_SDK_Server.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.C5" />
+        <Reference Include="Mono.Cairo" />
+        <Reference Include="Mono.CodeContracts" />
+        <Reference Include="Mono.CompilerServices.SymbolWriter" />
+        <Reference Include="Mono.CSharp" />
+        <Reference Include="Mono.Data.Sqlite" />
+        <Reference Include="Mono.Data.Tds" />
+        <Reference Include="Mono.Debugger.Soft" />
+        <Reference Include="Mono.Http" />
+        <Reference Include="Mono.Management" />
+        <Reference Include="Mono.Messaging" />
+        <Reference Include="Mono.Messaging.RabbitMQ" />
+        <Reference Include="Mono.Options" />
+        <Reference Include="Mono.Parallel" />
+        <Reference Include="Mono.Posix" />
+        <Reference Include="Mono.Security" />
+        <Reference Include="Mono.Security.Win32" />
+        <Reference Include="Mono.Simd" />
+        <Reference Include="Mono.Tasklets" />
+        <Reference Include="Mono.WebBrowser" />
+        <Reference Include="MySql.Data">
+          <HintPath>..\..\..\xkSDK\MySql.Data.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json">
+          <HintPath>..\..\..\xkSDK\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json.Net20">
+          <HintPath>..\..\..\xkSDK\Newtonsoft.Json.Net20.dll</HintPath>
+        </Reference>
+        <Reference Include="NLog">
+          <HintPath>..\..\..\xkSDK\NLog.dll</HintPath>
+        </Reference>
+        <Reference Include="Novell.Directory.Ldap" />
+        <Reference Include="Npgsql">
+          <HintPath>..\..\..\xkSDK\Npgsql.dll</HintPath>
+        </Reference>
+        <Reference Include="NPOI">
+          <HintPath>..\..\..\xkSDK\NPOI.dll</HintPath>
+        </Reference>
+        <Reference Include="NPOI.OOXML">
+          <HintPath>..\..\..\xkSDK\NPOI.OOXML.dll</HintPath>
+        </Reference>
+        <Reference Include="NPOI.OpenXml4Net">
+          <HintPath>..\..\..\xkSDK\NPOI.OpenXml4Net.dll</HintPath>
+        </Reference>
+        <Reference Include="NPOI.OpenXmlFormats">
+          <HintPath>..\..\..\xkSDK\NPOI.OpenXmlFormats.dll</HintPath>
+        </Reference>
+        <Reference Include="office">
+          <HintPath>..\..\..\xkSDK\OFFICE.DLL</HintPath>
+        </Reference>
+        <Reference Include="PdfSharp">
+          <HintPath>..\..\..\xkSDK\PdfSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.K3.BD.BarCode.WebApi.XZBServicesStub">
+          <HintPath>..\..\..\xkSDK\PDTV.K3.BD.BarCode.WebApi.XZBServicesStub.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.Common.Models">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.Common.Models.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.CRMOA">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.CRMOA.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.CRMOA.Plugin">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.CRMOA.Plugin.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.BD.App.Common.ServicePlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.BD.App.Common.ServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.Common.LicenseSecurity">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.Common.LicenseSecurity.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.Common.Tools">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.Common.Tools.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.Core.SCM.Mobile">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.Core.SCM.Mobile.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.Core.SCM.PUR">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.Core.SCM.PUR.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.App.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.App.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.CUST.APP.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.CUST.APP.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.CUST.APP.XZBServicePlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.CUST.APP.XZBServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.CUST.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.CUST.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.LightApp.App.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.LightApp.App.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.LightApp.Business.XZBPlugin">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.LightApp.Business.XZBPlugin.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.LightApp.XZBBusinessEntity">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.LightApp.XZBBusinessEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.LightApp.XZBContracts">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.LightApp.XZBContracts.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.LightApp.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.LightApp.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.LightApp.XZBServiceHelper">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.LightApp.XZBServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.MAR.APP.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.MAR.APP.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.MAR.APP.XZBServicePlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.MAR.APP.XZBServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.MAR.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.MAR.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.CUST.App.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.CUST.App.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.CUST.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.CUST.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.Opp.App.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.Opp.App.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.OPP.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.OPP.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.Public.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.Public.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.Sche.App.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.Sche.App.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.Sche.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.Sche.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.SV.App.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.SV.App.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.SV.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.SV.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.ThirdBusiness">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.ThirdBusiness.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.XZBContracts">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.XZBContracts.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Mobile.XZBServiceHelper">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Mobile.XZBServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.OPP.APP.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.OPP.APP.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.OPP.APP.XZBReport">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.OPP.APP.XZBReport.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.OPP.APP.XZBServicePlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.OPP.APP.XZBServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.OPP.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.OPP.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.OPP.Report.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.OPP.Report.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Public.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Public.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Sche.APP.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Sche.APP.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Sche.APP.XZBReport">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Sche.APP.XZBReport.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Sche.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Sche.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.Sche.Report.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.Sche.Report.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.SV.APP.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.SV.APP.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.SV.APP.XZBReport">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.SV.APP.XZBReport.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.SV.APP.XZBServicePlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.SV.APP.XZBServicePlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.SV.Business.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.SV.Business.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.SV.Report.XZBPlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.SV.Report.XZBPlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.WxPlugin">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.WxPlugin.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.XZBContracts">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.XZBContracts.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.XZBCore">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.XZBCore.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.XZBEntity">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.XZBEntity.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.CRM.XZBServiceHelper">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.CRM.XZBServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.DRP.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.DRP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.IOS.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.IOS.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.Mobile.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.Mobile.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.RPM.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.RPM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.Sal.Report">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.Sal.Report.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.SCP.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.SCP.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.SPM.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.SPM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.App.SRM.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.App.SRM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.Business">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.Business.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.Contracts">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.Core">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.DRP.Contracts">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.DRP.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.Mobile.Business.PlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.Mobile.Business.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.Mobile.Contracts">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.Mobile.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.Mobile.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.Mobile.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.Sal.Report.PlugIn">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.Sal.Report.PlugIn.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.K3.SCM.ServiceHelper">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.K3.SCM.ServiceHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="PDTV.XZB.Models">
+          <HintPath>..\..\..\xkSDK\PDTV.XZB.Models.dll</HintPath>
+        </Reference>
+        <Reference Include="PEAPI" />
+        <Reference Include="QuickGraph">
+          <HintPath>..\..\..\xkSDK\QuickGraph.dll</HintPath>
+        </Reference>
+        <Reference Include="RabbitMQ.Client" />
+        <Reference Include="Renci.SshNet">
+          <HintPath>..\..\..\xkSDK\Renci.SshNet.dll</HintPath>
+        </Reference>
+        <Reference Include="ServiceStack">
+          <HintPath>..\..\..\xkSDK\ServiceStack.dll</HintPath>
+        </Reference>
+        <Reference Include="ServiceStack.Common">
+          <HintPath>..\..\..\xkSDK\ServiceStack.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="ServiceStack.Interfaces">
+          <HintPath>..\..\..\xkSDK\ServiceStack.Interfaces.dll</HintPath>
+        </Reference>
+        <Reference Include="ServiceStack.OrmLite">
+          <HintPath>..\..\..\xkSDK\ServiceStack.OrmLite.dll</HintPath>
+        </Reference>
+        <Reference Include="ServiceStack.Redis">
+          <HintPath>..\..\..\xkSDK\ServiceStack.Redis.dll</HintPath>
+        </Reference>
+        <Reference Include="ServiceStack.ServiceInterface">
+          <HintPath>..\..\..\xkSDK\ServiceStack.ServiceInterface.dll</HintPath>
+        </Reference>
+        <Reference Include="ServiceStack.Text">
+          <HintPath>..\..\..\xkSDK\ServiceStack.Text.dll</HintPath>
+        </Reference>
+        <Reference Include="SevenZipSharp">
+          <HintPath>..\..\..\xkSDK\SevenZipSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="SMDiagnostics" />
+        <Reference Include="System" />
+        <Reference Include="System.ComponentModel.Composition" />
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Configuration.Install" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="System.Data.Linq" />
+        <Reference Include="System.Data.OracleClient" />
+        <Reference Include="System.Data.Services" />
+        <Reference Include="System.Data.Services.Client" />
+        <Reference Include="System.Data.SQLite">
+          <HintPath>..\..\..\xkSDK\System.Data.SQLite.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Data.SqlServerCe">
+          <HintPath>..\..\..\xkSDK\System.Data.SqlServerCe.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Design" />
+        <Reference Include="System.DirectoryServices" />
+        <Reference Include="System.DirectoryServices.Protocols" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Drawing.Design" />
+        <Reference Include="System.Dynamic" />
+        <Reference Include="System.EnterpriseServices" />
+        <Reference Include="System.IdentityModel" />
+        <Reference Include="System.IdentityModel.Selectors" />
+        <Reference Include="System.Json" />
+        <Reference Include="System.Json.Microsoft" />
+        <Reference Include="System.Management" />
+        <Reference Include="System.Management.Automation">
+          <HintPath>..\..\..\xkSDK\System.Management.Automation.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Messaging" />
+        <Reference Include="System.Net" />
+        <Reference Include="System.Net.Http">
+          <HintPath>..\..\..\xkSDK\System.Net.Http.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Net.Http.Formatting" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
+        <Reference Include="System.Reactive.Core" />
+        <Reference Include="System.Reactive.Debugger" />
+        <Reference Include="System.Reactive.Experimental" />
+        <Reference Include="System.Reactive.Interfaces" />
+        <Reference Include="System.Reactive.Linq" />
+        <Reference Include="System.Reactive.Observable.Aliases" />
+        <Reference Include="System.Reactive.PlatformServices" />
+        <Reference Include="System.Reactive.Providers" />
+        <Reference Include="System.Reactive.Runtime.Remoting" />
+        <Reference Include="System.Reactive.Windows.Forms" />
+        <Reference Include="System.Reactive.Windows.Threading" />
+        <Reference Include="System.Runtime.Caching" />
+        <Reference Include="System.Runtime.DurableInstancing" />
+        <Reference Include="System.Runtime.Remoting" />
+        <Reference Include="System.Runtime.Serialization" />
+        <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+        <Reference Include="System.Security" />
+        <Reference Include="System.ServiceModel" />
+        <Reference Include="System.ServiceModel.Activation" />
+        <Reference Include="System.ServiceModel.Discovery" />
+        <Reference Include="System.ServiceModel.Routing" />
+        <Reference Include="System.ServiceModel.Web" />
+        <Reference Include="System.ServiceProcess" />
+        <Reference Include="System.Threading.Tasks.Dataflow" />
+        <Reference Include="System.Transactions" />
+        <Reference Include="System.Web" />
+        <Reference Include="System.Web.Abstractions" />
+        <Reference Include="System.Web.ApplicationServices" />
+        <Reference Include="System.Web.DynamicData" />
+        <Reference Include="System.Web.Extensions" />
+        <Reference Include="System.Web.Extensions.Design" />
+        <Reference Include="System.Web.Http" />
+        <Reference Include="System.Web.Http.SelfHost" />
+        <Reference Include="System.Web.Http.WebHost" />
+        <Reference Include="System.Web.Mvc" />
+        <Reference Include="System.Web.Razor" />
+        <Reference Include="System.Web.Routing" />
+        <Reference Include="System.Web.Services" />
+        <Reference Include="System.Web.WebPages" />
+        <Reference Include="System.Web.WebPages.Deployment" />
+        <Reference Include="System.Web.WebPages.Razor" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Windows.Forms.DataVisualization" />
+        <Reference Include="System.Xaml" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="TECIT.TBarCode">
+          <HintPath>..\..\..\xkSDK\TECIT.TBarCode.dll</HintPath>
+        </Reference>
+        <Reference Include="ThoughtWorks.QRCode">
+          <HintPath>..\..\..\xkSDK\ThoughtWorks.QRCode.dll</HintPath>
+        </Reference>
+        <Reference Include="TopSdk">
+          <HintPath>..\..\..\xkSDK\TopSdk.dll</HintPath>
+        </Reference>
+        <Reference Include="WebMatrix.Data" />
+        <Reference Include="WindowsBase" />
+        <Reference Include="XpShop.MSMQ">
+          <HintPath>..\..\..\xkSDK\XpShop.MSMQ.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
