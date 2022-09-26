@@ -12,7 +12,7 @@ namespace autoClean
             const string url = "http://127.0.0.1/k3cloud/";
             const string dbid = "5f3a43d65be160";
             const string userName = "administrator";
-            const string password = "888888";
+            const string password = "kd@123456";
             const int lcid = 2052;
             const int sleepTime = 300;
             while (true)
