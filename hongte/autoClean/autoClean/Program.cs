@@ -10,13 +10,13 @@ namespace autoClean
         static void Main(string[] args)
         {
             const string url = "http://127.0.0.1/k3cloud/";
-            const string dbid = "610bbd142a6e15";
+            /*const string dbid = "610bbd142a6e15";
             const string userName = "administrator";
-            const string password = "kingdee@123";
+            const string password = "kingdee@123";*/
 
-            /*const string dbid = "631b68f12f6250";
+            const string dbid = "631b68f12f6250";
             const string userName = "administrator";
-            const string password = "kd@123456";*/
+            const string password = "kd@123456";
 
             const int lcid = 2052;
             const int sleepTime = 300;
