@@ -583,9 +583,7 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\ServiceStack.Redis.pdb
 D:\mySome\myC-\myObject\myObject\bin\Debug\ServiceStack.Common.pdb
 D:\mySome\myC-\myObject\myObject\bin\Debug\ServiceStack.Text.pdb
 D:\mySome\myC-\myObject\myObject\obj\Debug\someTest.csproj.CopyComplete
-D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.Contracts.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.Web.dll
-D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.App.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.Core.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.ServiceHelper.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.FileServer.Core.dll
