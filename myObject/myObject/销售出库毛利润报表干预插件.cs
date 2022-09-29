@@ -16,7 +16,7 @@ namespace myObject
     {
         public override void BuilderReportSqlAndTempTable(IRptParams filter, string tableName)
         {
-            base.BuilderReportSqlAndTempTable(filter, tableName);
+            
             this.AddMnemonicCode(filter, tableName);
         }
 
@@ -47,6 +47,7 @@ namespace myObject
             else
             {
                 base.BuilderReportSqlAndTempTable(filter, tableName);
+                return;
             }
 
             for (int i = 0; i < fieldListCustomExtension.Count; i++)
@@ -58,7 +59,7 @@ namespace myObject
             {
                 _ = strFilter.Replace(fieldListOriginal[i], "T99." + fieldListOriginal[i]);
             }
-
+            base.BuilderReportSqlAndTempTable(filter, tableName);
             StringBuilder sqlStr = new StringBuilder();
             sqlStr.AppendFormat("alter table {0} add F_VBDA_Text nvarchar(255) ", tableName);
             DBUtils.Execute(this.Context, sqlStr.ToString());
@@ -70,6 +71,7 @@ namespace myObject
             sqlStr.AppendFormat(" when matched then update set F_VBDA_Text = T99.fid ");
             DBUtils.Execute(this.Context, sqlStr.ToString());
         }
+        
         public override ReportHeader GetReportHeaders(IRptParams filter)
         {
             ReportHeader header = base.GetReportHeaders(filter);
