@@ -22,27 +22,35 @@ namespace autoClean
             const int sleepTime = 300;
             while (true)
             {
-                var apiClient = new K3CloudApiClient(url);
-                var isLoginOk = apiClient.Login(dbid, userName, password, lcid);
-                var rval = false; // Action
-                if (isLoginOk)
+                try
                 {
-                    var times = 100;
-                    while (times > 0)
+                    var apiClient = new K3CloudApiClient(url);
+                    var isLoginOk = apiClient.Login(dbid, userName, password, lcid);
+                    //var rval = false; // Action
+                    if (isLoginOk)
                     {
-                        times--;
-                        apiClient.Execute<bool>(
-                            "shoudongClean.CacheManagerWebApiService.ClearCacheByFormIds,shoudongClean",
-                            new object[] { new List<string>(new[] { "BD_MATERIAL" }) });
-                        Console.WriteLine("执行了一次清理:" + DateTime.Now.ToLocalTime());  
+                        var times = 100;
+                        while (times > 0)
+                        {
+                            times--;
+                            apiClient.Execute<bool>(
+                                "shoudongClean.CacheManagerWebApiService.ClearCacheByFormIds,shoudongClean",
+                                new object[] { new List<string>(new[] { "BD_MATERIAL" }) });
+                            Console.WriteLine("执行了一次清理:" + DateTime.Now.ToLocalTime());
+                            Thread.Sleep(1000 * sleepTime);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("登录失败:" + DateTime.Now.ToLocalTime());
                         Thread.Sleep(1000 * sleepTime);
                     }
                 }
-                else
+                catch (Exception e)
                 {
-                    Console.WriteLine("登录失败:" + DateTime.Now.ToLocalTime());  
-                    Thread.Sleep(1000 * sleepTime);;
+                    Console.WriteLine(e);
                 }
+
             }
         }
     }
