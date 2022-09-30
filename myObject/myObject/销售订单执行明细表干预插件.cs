@@ -19,16 +19,21 @@ namespace myObject
             List<string> fieldListCustomExtension = new List<string>() { "F_CHECK_USERID", "F_CHECK_NAME" };
             List<string> fieldListOriginal = new List<string>();
             string strFilter = "";
-            if (CheckIsNeedChange(filter, fieldListCustomExtension, fieldListOriginal))
+            bool checkSome = CheckIsNeedChange(filter, fieldListCustomExtension, fieldListOriginal);
+            if (checkSome)
             {
                 strFilter = filter.FilterParameter.FilterString;
                 filter.FilterParameter.FilterString = " 2 > 1 ";
             }
-            else
-            {
-                base.BuilderReportSqlAndTempTable(filter, tableName);
-                return;
-            }
+            //else
+            //{
+            //    base.BuilderReportSqlAndTempTable(filter, tableName);
+            //    string strSql2 = string.Format(@"select T1.* into {0} from {1} T1 join username_pwd_plugin C on T1.FSALES = C.F_CHECK_NAME where ({2})",
+            //    tableName, strTable, strFilter);
+
+            //    DBUtils.Execute(this.Context, strSql);
+            //    return;
+            //}
             for (int i = 0; i < fieldListCustomExtension.Count; i++)
             {
                 _ = strFilter.Replace(fieldListCustomExtension[i], "C." + fieldListCustomExtension[i]);
@@ -43,7 +48,17 @@ namespace myObject
             string strTable = tempTableNames[0];
             
             base.BuilderReportSqlAndTempTable(filter, strTable);
-            string strSql = string.Format(@"select T1.* into {0} from {1} T1 join username_pwd_plugin C on T1.FSALES = C.F_CHECK_NAME where {2}",
+
+            if (!checkSome)
+            {
+                string strSql2 = string.Format(@"select T1.* into {0} from {1} T1 join username_pwd_plugin C on T1.FSALES = C.F_CHECK_NAME where 1 = 0",
+                tableName, strTable);
+
+                DBUtils.Execute(this.Context, strSql2);
+                return;
+            }
+
+            string strSql = string.Format(@"select T1.* into {0} from {1} T1 join username_pwd_plugin C on T1.FSALES = C.F_CHECK_NAME where ({2})",
                 tableName, strTable, strFilter);
 
             DBUtils.Execute(this.Context, strSql);
