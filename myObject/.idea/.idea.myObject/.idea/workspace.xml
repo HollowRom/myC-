@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/销售出库毛利润报表干预插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售出库毛利润报表干预插件.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/someTest.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +64,7 @@
       <workItem from="1663573227455" duration="801000" />
       <workItem from="1663574764986" duration="897000" />
       <workItem from="1664458529338" duration="863000" />
+      <workItem from="1664515499295" duration="1678000" />
     </task>
     <servers />
   </component>
