@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="业务员销售订单执行明细表-自定义插件.cs" />
     <Compile Include="物料收发明细表增加合同号干预插件.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="组织结算单携带客户合同号覆盖插件.cs" />
