@@ -7,7 +7,7 @@ using Kingdee.BOS.Contracts;
 using Kingdee.BOS.Core.Report;
 using Kingdee.K3.SCM.App.Sal.Report;
 
-namespace myObject
+namespace anfuObject
 {
     [Description("业务员销售订单执行明细表-自定义插件")]
     [Kingdee.BOS.Util.HotUpdate]

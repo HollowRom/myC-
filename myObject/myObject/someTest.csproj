@@ -103,7 +103,7 @@
     <Compile Include="销售订单导入excel.cs" />
     <Compile Include="销售订单导入装箱单-o.cs" />
     <Compile Include="销售订单导入装箱单.cs" />
-    <Compile Include="销售订单执行明细表干预插件.cs" />
+    <Compile Include="业务员销售订单执行明细表-自定义插件.cs" />
     <Compile Include="销售订单执行汇总表增加字段干预插件.cs" />
     <Compile Include="销售订单转采购申请单取BOM包材材质工艺干预插件.cs" />
     <Compile Include="销售订单转采购申请单取BOM包材材质工艺插件.cs" />
