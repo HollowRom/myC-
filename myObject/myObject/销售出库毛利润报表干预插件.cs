@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using Kingdee.BOS;
 using Kingdee.BOS.App.Data;
+using Kingdee.BOS.Contracts;
 using Kingdee.BOS.Core.Report;
 using Kingdee.K3.SCM.App.Sal.Report;
 
@@ -12,93 +9,78 @@ namespace myObject
 {
     [Description("销售出库毛利润报表干预插件")]
     [Kingdee.BOS.Util.HotUpdate]
-    public class add_xsck_mlr_plugin : SalOutStockProfitAnalyseRpt
+    public class xsck_lr_plugin : SalOutStockProfitAnalyseRpt
     {
+        private string[] tempTableNames;
         public override void BuilderReportSqlAndTempTable(IRptParams filter, string tableName)
         {
-            
-            this.AddMnemonicCode(filter, tableName);
-        }
-
-        // private void AddMnemonicCode(string tableName)
-        // {
-        //     StringBuilder sqlStr = new StringBuilder();
-        //     sqlStr.AppendFormat("alter table {0} add F_VBDA_Text nvarchar(255) ", tableName);
-        //     DBUtils.Execute(this.Context, sqlStr.ToString());
-        //
-        //     sqlStr.Clear();
-        //     sqlStr.AppendFormat(" MERGE INTO {0} T0 ", tableName);
-        //     sqlStr.AppendFormat(" using test_view as T99");
-        //     sqlStr.AppendFormat(" on T0.FBILLNO = T99.FBILLNO ");
-        //     sqlStr.AppendFormat(" when matched then update set F_VBDA_Text = T99.fid ");
-        //     DBUtils.Execute(this.Context, sqlStr.ToString());
-        // }
-              
-        private void AddMnemonicCode(IRptParams filter, string tableName)
-        {
-            
-            var fieldListCustomExtension = new List<string>() { "F_VBDA_Text" };
-            var fieldListOriginal = new List<string>();
-            var strFilter = "";
-            //if (CheckIsNeedChange(filter, fieldListCustomExtension, fieldListOriginal))
+            List<string> fieldListCustomExtension = new List<string>() { "F_VBDA_Text".ToUpper() };
+            List<string> fieldListOriginal = new List<string>();
+            string strFilter = "";
+            bool checkSome = CheckIsNeedChange(filter, fieldListCustomExtension, fieldListOriginal);
+            //if (checkSome)
             //{
-                StringBuilder sqlStr = new StringBuilder();
-                sqlStr.AppendFormat("alter table {0} add F_VBDA_Text nvarchar(255) ", tableName);
-                DBUtils.Execute(this.Context, sqlStr.ToString());
-
-                sqlStr.Clear();
-                sqlStr.AppendFormat(" MERGE INTO {0} T0 ", tableName);
-                sqlStr.AppendFormat(" using test_view as T99");
-                sqlStr.AppendFormat(" on T0.FBILLNO = T99.FBILLNO");
-                sqlStr.AppendFormat(" when matched then update set F_VBDA_Text = T99.fid ");
-                DBUtils.Execute(this.Context, sqlStr.ToString());
-
-                sqlStr.Clear();
-                strFilter = "";
-                //strFilter = filter.FilterParameter.FilterString;
-                //filter.FilterParameter.FilterString = " 2 > 1 ";
-
-                //for (int i = 0; i < fieldListCustomExtension.Count; i++)
-                //{
-                //    _ = strFilter.Replace(fieldListCustomExtension[i], "T0." + fieldListCustomExtension[i]);
-                //}
-
-                //for (int i = 0; i < fieldListOriginal.Count; i++)
-                //{
-                //    _ = strFilter.Replace(fieldListOriginal[i], "T99." + fieldListOriginal[i]);
-                //}
-
-                sqlStr.AppendFormat(" delete {0} where not ( 1 = 1 {1})", tableName, strFilter);
-                DBUtils.Execute(this.Context, sqlStr.ToString());
-
-            base.BuilderReportSqlAndTempTable(filter, tableName);
+                strFilter = filter.FilterParameter.FilterString;
+                filter.FilterParameter.FilterString = " 2 > 1 ";
             //}
-            //else
+           
+            for (int i = 0; i < fieldListCustomExtension.Count; i++)
+            {
+                _ = strFilter.Replace(fieldListCustomExtension[i], "C." + fieldListCustomExtension[i]);
+            }
+            for (int i = 0; i < fieldListOriginal.Count; i++)
+            {
+                _ = strFilter.Replace(fieldListCustomExtension[i], "T1." + fieldListCustomExtension[i]);
+            }
+
+            IDBService dbService = Kingdee.BOS.App.ServiceHelper.GetService<IDBService>();
+            tempTableNames = dbService.CreateTemporaryTableName(this.Context, 1);
+            string strTable = tempTableNames[0];
+
+            base.BuilderReportSqlAndTempTable(filter, strTable);
+
+            if (!checkSome)
+            {
+                string strSql2 = string.Format(@"select T1.* into {0} from {1} T1 where 1 = 0",
+                tableName, strTable);
+
+                DBUtils.Execute(this.Context, strSql2);
+                return;
+            }
+
+            string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.FBILLNO where {2}",
+            tableName, strTable, strFilter);
+
+            DBUtils.Execute(this.Context, strSql);
+
+
+            //base.BuilderReportSqlAndTempTable(filter, strTable);
+
+            //DBUtils.Execute(this.Context, "alter table " + tableName + " add F_VBDA_Text nvarchar(255) ");
+
+            //if (strFilter.Trim().Equals(""))
             //{
-            //    base.BuilderReportSqlAndTempTable(filter, tableName);
-            //    return;
+            //    strFilter = "1 = 1";
             //}
+            
+            //string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.FBILLNO where {2}",
+            //    tableName, strTable, strFilter);
 
-        }
-        
-        public override ReportHeader GetReportHeaders(IRptParams filter)
-        {
-            ReportHeader header = base.GetReportHeaders(filter);
-            header.AddChild("F_VBDA_Text", new LocaleValue("新增的列"));
-
-            return base.GetReportHeaders(filter);
+            //DBUtils.Execute(this.Context, strSql);
+            
         }
 
         private static bool CheckIsNeedChange(IRptParams filter, List<string> filedListCustomExtension,
             List<string> fieldListOriginal)
         {
-            for (int i = 0; i < filter.FilterParameter.FilterRows.Count; i++)
+            foreach (var t in filter.FilterParameter.FilterRows)
             {
-                string strFieldName = filter.FilterParameter.FilterRows[i].FilterField.FieldName;
-                if (!filedListCustomExtension.Contains(strFieldName))
+                string strFieldName = t.FilterField.FieldName;
+                if (!filedListCustomExtension.Contains(strFieldName.ToUpper()))
                 {
-                    fieldListOriginal.Add(strFieldName);
+                    fieldListOriginal.Add(strFieldName.ToUpper());
                 }
+
             }
 
             return filter.FilterParameter.FilterRows.Count != fieldListOriginal.Count;
