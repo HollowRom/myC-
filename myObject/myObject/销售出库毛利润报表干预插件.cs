@@ -31,7 +31,7 @@ namespace myObject
 
             strFilter = filter.FilterParameter.FilterString.ToUpper();
             //filter.FilterParameter = new FilterParameter();
-            filter.FilterParameter.FilterString = "";
+            filter.FilterParameter.FilterString = " 12 = 12 ";
             //filter.FilterParameter.BatchFilterString = " 22 = 22 ";
             //filter.FilterParameter.QuickFilterString = " 22 = 22 ";
             //filter.FilterParameter.StatusFilterString = " 22 = 22 ";
@@ -54,17 +54,26 @@ namespace myObject
             string strTable = tempTableNames[0];
 
             //DBUtils.Execute(this.Context, "alter table " + strTable + " add F_VBDA_Text nvarchar(255) ");
+            filter.FilterParameter.ColumnInfo.Clear();
+            filter.FilterParameter.FilterRows.Clear();
+            filter.FilterParameter.SortRows.Clear();
 
-            var arr = filter.FilterParameter.ColumnInfo;
-            for (int idx = 0; idx < arr.Count; idx++)
-            {
-                if (arr[idx].ToString().Contains("F_VBDA_TEXT"))
-                {
-                    int flag = 1;
-                    flag = flag / (flag - flag);
-                    filter.FilterParameter.ColumnInfo.RemoveAt(idx);
-                }
-            }
+
+            filter.FilterFieldInfo.FilterFieldList.Clear();
+            filter.FilterFieldInfo.DspColumnFieldList.Clear();
+            //filter.FilterFieldInfo.DspColumnFieldKeyNameDic.Clear();
+
+
+            //var arr = filter.FilterParameter.ColumnInfo;
+            //for (int idx = 0; idx < arr.Count; idx++)
+            //{
+            //    if (arr[idx].FieldName.ToUpper().Contains("F_VBDA_TEXT"))
+            //    {
+            //        //int flag = 1;
+            //        //flag = flag / (flag - flag);
+            //        filter.FilterParameter.ColumnInfo.RemoveAt(idx);
+            //    }
+            //}
 
             base.BuilderReportSqlAndTempTable(filter, strTable);
 
