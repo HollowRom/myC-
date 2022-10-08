@@ -4,6 +4,7 @@
   &lt;Assembly Path="D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.PRD.App.ServicePlugIn.dll" /&gt;&#xD;
   &lt;Assembly Path="D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.WebApi.ServicesStub.dll" /&gt;&#xD;
   &lt;Assembly Path="D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.IOS.Business.PlugIn.dll" /&gt;&#xD;
+  &lt;Assembly Path="D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.App.Sal.Report.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">/Users/hollorom/Library/Caches/VisualStudio/8.0/MsBuild/18508_1/MSBuild.dll</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/DotNetCliExePath/@EntryValue">/Users/hollorom/.dotnet/dotnet</s:String>

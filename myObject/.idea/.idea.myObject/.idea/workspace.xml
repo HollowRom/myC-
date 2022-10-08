@@ -4,16 +4,15 @@
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/myObject.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/someTest.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/业务员销售订单执行明细表-自定义插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/业务员销售订单执行明细表-自定义插件.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/销售出库毛利润报表干预插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售出库毛利润报表干预插件.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../安富/anfuObject/anfuObject/业务员销售订单执行明细表-自定义插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../安富/anfuObject/anfuObject/业务员销售订单执行明细表-自定义插件.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/79/b236fdbe/OptPlanOptRtpApiService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/ee/bd0d469d/OptPlanOptTransApiService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/28/1d2a109e/ColumnField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/a1/ce1b8382/IRptParams.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3eb0aee296c42b9a328c58e52803a2e1c9c08/29/3a80e0d1/SalDetailRpt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3eb0aee296c42b9a328c58e52803a2e1c9c08/62/92acb8a4/SalePriceAnalyzeRpt.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/07/46731c00/SaveResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/08/2ee5a89c/EnDecode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/3d/7ee7fe4c/ApiRequest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -80,6 +82,8 @@
       <workItem from="1665035363530" duration="1446000" />
       <workItem from="1665036838869" duration="6000" />
       <workItem from="1665037247181" duration="1375000" />
+      <workItem from="1665126771390" duration="4324000" />
+      <workItem from="1665196392564" duration="1351000" />
     </task>
     <servers />
   </component>
