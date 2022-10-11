@@ -601,3 +601,8 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\Mono.Security.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\DevExpress.RichEdit.v13.1.Core.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\DevExpress.Office.v13.1.Core.dll
 D:\mySome\myC-\myObject\myObject\obj\Debug\someTest.csprojAssemblyReference.cache
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.Sal.Report.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.Business.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.BD.ServiceHelper.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.ServiceHelper.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.Business.Bill.dll

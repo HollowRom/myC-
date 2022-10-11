@@ -55,6 +55,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Kingdee.K3.SCM.IOS.Business.PlugIn.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.SCM.Sal.Report.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.SCM.Sal.Report.PlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>

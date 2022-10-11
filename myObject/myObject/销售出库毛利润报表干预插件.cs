@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.IO;
+using Kingdee.BOS;
+using Kingdee.BOS.App;
 using Kingdee.BOS.App.Data;
 using Kingdee.BOS.Contracts;
-using Kingdee.BOS.Core.CommonFilter;
 using Kingdee.BOS.Core.Report;
 using Kingdee.K3.SCM.App.Sal.Report;
 
@@ -12,133 +15,180 @@ namespace myObject
     [Kingdee.BOS.Util.HotUpdate]
     public class xsck_lr_plugin : SalOutStockProfitAnalyseRpt
     {
-        private string[] tempTableNames;
+        private string oldFilter = "";
+        private string defFilter = " 22 = 22 ";
+        private List<string> fieldListCustomExtension = new List<string>() { "F_VBDA_Text".ToUpper() };
+        private List<string> fieldListOriginal = new List<string>();
+
         public override void BuilderReportSqlAndTempTable(IRptParams filter, string tableName)
         {
-            List<string> fieldListCustomExtension = new List<string>() { "F_VBDA_TEXT" };
-            List<string> fieldListOriginal = new List<string>();
-            filter.FilterParameter.FilterString = filter.FilterParameter.FilterString.ToUpper();
             string strFilter = "";
-            /*bool checkSome =*/ CheckIsNeedChange(filter, fieldListCustomExtension, fieldListOriginal);
-            //if (!filter.FilterParameter.FilterString.ToUpper().Contains("F_VBDA_Text".ToUpper()))
-            //{
-            //    base.BuilderReportSqlAndTempTable(filter, tableName);
-            //    return;
-            //}
-
-            //int flag = 1;
-            //flag = flag / (flag - flag);
-
-            strFilter = filter.FilterParameter.FilterString.ToUpper();
-            //filter.FilterParameter = new FilterParameter();
-            filter.FilterParameter.FilterString = " 12 = 12 ";
-            //filter.FilterParameter.BatchFilterString = " 22 = 22 ";
-            //filter.FilterParameter.QuickFilterString = " 22 = 22 ";
-            //filter.FilterParameter.StatusFilterString = " 22 = 22 ";
-            //filter.FilterParameter.GroupbyString = " 22 = 22 ";
-            //filter.FilterParameter.SortString = " 22 = 22 ";
-
-
-
-            for (int i = 0; i < fieldListCustomExtension.Count; i++)
-            {
-                _ = strFilter.Replace(fieldListCustomExtension[i].ToUpper(), "C." + fieldListCustomExtension[i].ToUpper());
-            }
-            for (int i = 0; i < fieldListOriginal.Count; i++)
-            {
-                _ = strFilter.Replace(fieldListCustomExtension[i].ToUpper(), "T1." + fieldListCustomExtension[i].ToUpper());
-            }
-
-            IDBService dbService = Kingdee.BOS.App.ServiceHelper.GetService<IDBService>();
-            tempTableNames = dbService.CreateTemporaryTableName(this.Context, 1);
-            string strTable = tempTableNames[0];
-
-            //DBUtils.Execute(this.Context, "alter table " + strTable + " add F_VBDA_Text nvarchar(255) ");
-            filter.FilterParameter.ColumnInfo.Clear();
-            filter.FilterParameter.FilterRows.Clear();
-            filter.FilterParameter.SortRows.Clear();
-
-
-            filter.FilterFieldInfo.FilterFieldList.Clear();
-            filter.FilterFieldInfo.DspColumnFieldList.Clear();
-            //filter.FilterFieldInfo.DspColumnFieldKeyNameDic.Clear();
-
-
-            //var arr = filter.FilterParameter.ColumnInfo;
-            //for (int idx = 0; idx < arr.Count; idx++)
-            //{
-            //    if (arr[idx].FieldName.ToUpper().Contains("F_VBDA_TEXT"))
-            //    {
-            //        //int flag = 1;
-            //        //flag = flag / (flag - flag);
-            //        filter.FilterParameter.ColumnInfo.RemoveAt(idx);
-            //    }
-            //}
-
-            base.BuilderReportSqlAndTempTable(filter, strTable);
-
-            //if (strFilter.Contains("F_VBDA_TEXT"))
-            //{
-            //    int flag = 1;
-            //    flag = flag / (flag - flag);
-            //}
             
-
-            //DBUtils.Execute(this.Context, "if not exists(select 1 from sysobjects a, syscolumns b where a.id = b.id and b.name = 'F_VBDA_Text' and a.type = 'u' and a.name = N'" + strTable + "') alter table " + strTable + " add F_VBDA_Text nvarchar(255)");
-
-            //if (!checkSome)
-            //{
-            //    string strSql2 = string.Format(@"select T1.*,'' as F_VBDA_Text into {0} from {1} T1 where 1 = 0",
-            //    tableName, strTable);
-
-            //    DBUtils.Execute(this.Context, strSql2);
-            //    return;
-            //}
-
-            if (strFilter.Trim() == "")
+            printRpt(filter, "BuilderReportSqlAndTempTable");
+            cleanRpt(filter);
+            
+            string strTable = ServiceHelper.GetService<IDBService>().CreateTemporaryTableName(this.Context, 1)[0];
+            
+            base.BuilderReportSqlAndTempTable(filter, strTable);
+            
+            if (filter.FilterParameter.FilterString.Trim().Equals(""))
             {
-                strFilter = " 22 = 22 ";
+                filter.FilterParameter.FilterString = defFilter;
             }
+
+            if (!oldFilter.Equals(""))
+            {
+                filter.FilterParameter.FilterString = oldFilter;
+            }
+
+            strFilter = replaceSome(filter, fieldListCustomExtension, fieldListOriginal);
 
             string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.FBILLNO where {2}",
             tableName, strTable, strFilter);
 
-            //string strSql = string.Format(@"/*dialect*/select T1.* into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.FBILLNO where {2}",
-            //tableName, strTable, strFilter);
-
             DBUtils.Execute(this.Context, strSql);
 
-
-            //base.BuilderReportSqlAndTempTable(filter, strTable);
-
-            //DBUtils.Execute(this.Context, "alter table " + tableName + " add F_VBDA_Text nvarchar(255) ");
-
-            //if (strFilter.Trim().Equals(""))
-            //{
-            //    strFilter = "1 = 1";
-            //}
-            
-            //string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.FBILLNO where {2}",
-            //    tableName, strTable, strFilter);
-
-            //DBUtils.Execute(this.Context, strSql);
-            
+            filter.FilterParameter.FilterString = defFilter; //oldFilter;
+            oldFilter = "";
+            fieldListCustomExtension = new List<string>() { "F_VBDA_Text".ToUpper() };
+            fieldListOriginal = new List<string>();
         }
 
         private static bool CheckIsNeedChange(IRptParams filter, List<string> filedListCustomExtension,
             List<string> fieldListOriginal)
         {
-            foreach (var t in filter.FilterParameter.FilterRows)
+            foreach (var t in filter.FilterParameter.ColumnInfo)
             {
-                string strFieldName = t.FilterField.FieldName;
-                if (!filedListCustomExtension.Contains(strFieldName.ToUpper()))
+                if (!filedListCustomExtension.Contains(t.Key.ToUpper()))
                 {
-                    fieldListOriginal.Add(strFieldName.ToUpper());
+                    fieldListOriginal.Add(t.Key.ToUpper());
                 }
 
             }
 
             return filter.FilterParameter.FilterRows.Count != fieldListOriginal.Count;
+        }
+
+        private static string replaceSome(IRptParams filter, List<string> fcExtension,
+            List<string> flOriginal)
+        {
+            string strFilter = filter.FilterParameter.FilterString.ToUpper();
+            CheckIsNeedChange(filter, fcExtension, flOriginal);
+            for (int i = 0; i < fcExtension.Count; i++)
+            {
+                _ = strFilter.Replace(fcExtension[i].ToUpper(), "C." + fcExtension[i].ToUpper());
+            }
+            for (int i = 0; i < flOriginal.Count; i++)
+            {
+                _ = strFilter.Replace(flOriginal[i].ToUpper(), "T1." + flOriginal[i].ToUpper());
+            }
+            flOriginal.Clear();
+            return strFilter;
+        }
+
+        public override DataTable GetList(IRptParams filter)
+        {
+            printRpt(filter, "GetList");
+            cleanRpt(filter);
+            var ret = base.GetList(filter);
+            if (!ret.Columns.Contains("F_VBDA_Text")) {
+                ret.Columns.Add("F_VBDA_Text");
+            }
+            
+            return ret;
+        }
+
+        protected override DataTable GetReportData(string tablename, IRptParams filter)
+        {
+            printRpt(filter, "GetReportData");
+            cleanRpt(filter);
+            return base.GetReportData(tablename, filter);
+        }
+
+
+        public override ReportTitles GetReportTitles(IRptParams filter)
+        {
+            printRpt(filter, "GetReportTitles");
+            cleanRpt(filter);
+            return base.GetReportTitles(filter);
+        }
+
+        private void cleanRpt(IRptParams filter)
+        {
+            if (filter.FilterParameter.FilterString.Contains("F_VBDA_Text"))
+            {
+                if (oldFilter.Equals(""))
+                {
+                    oldFilter = filter.FilterParameter.FilterString;
+                }
+                filter.FilterParameter.FilterString = defFilter;
+            }
+        }
+
+        private void printRpt(IRptParams filter, string flagstr)
+        {
+            return;
+            using (StreamWriter sw = new StreamWriter("C:\\Users\\Administrator\\Desktop\\1.txt", true))
+            {
+                sw.WriteLine(flagstr);
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterParameter.FilterString");
+                sw.WriteLine(filter.FilterParameter.FilterString.ToString());
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterParameter.FilterRows");
+                for (int idx = 0; idx < filter.FilterParameter.FilterRows.Count; idx++)
+                {
+                    sw.WriteLine(filter.FilterParameter.FilterRows[idx].Value.ToString());
+                }
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterParameter.ColumnInfo");
+                for (int idx = 0; idx < filter.FilterParameter.ColumnInfo.Count; idx++)
+                {
+                    sw.WriteLine(filter.FilterParameter.ColumnInfo[idx].Key.ToString());
+                }
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterParameter.SelectedEntities");
+                for (int idx = 0; idx < filter.FilterParameter.SelectedEntities.Count; idx++)
+                {
+                    sw.WriteLine(filter.FilterParameter.SelectedEntities[idx].Key.ToString());
+                }
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterFieldInfo.FilterFieldList");
+                for (int idx = 0; idx < filter.FilterFieldInfo.FilterFieldList.Count; idx++)
+                {
+                    sw.WriteLine(filter.FilterFieldInfo.FilterFieldList[idx].Key.ToString());
+                }
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterFieldInfo.DspColumnFieldList");
+                for (int idx = 0; idx < filter.FilterFieldInfo.DspColumnFieldList.Count; idx++)
+                {
+                    sw.WriteLine(filter.FilterFieldInfo.DspColumnFieldList[idx].Key.ToString());
+                }
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterFieldInfo.GroupFieldList");
+                for (int idx = 0; idx < filter.FilterFieldInfo.GroupFieldList.Count; idx++)
+                {
+                    sw.WriteLine(filter.FilterFieldInfo.GroupFieldList[idx].Key.ToString());
+                }
+                if (filter.CustomParams.ContainsKey("F_VBDA_Text"))
+                {
+                    sw.WriteLine();
+                    sw.WriteLine("filter.CustomParams[F_VBDA_Text]");
+                    sw.WriteLine(filter.CustomParams["F_VBDA_Text"].ToString());
+                }
+
+                sw.WriteLine();
+                sw.WriteLine("filter.FilterParameter.CustomFilter");
+                sw.WriteLine(filter.FilterParameter.CustomFilter.ToString());
+
+                if (filter.FilterParameter.CustomOption.ContainsKey("F_VBDA_Text"))
+                {
+                    sw.WriteLine();
+                    sw.WriteLine(" filter.FilterParameter.CustomOption[F_VBDA_Text]");
+                    sw.WriteLine(filter.FilterParameter.CustomOption["F_VBDA_Text"].ToString());
+                }
+                
+            }
         }
     }
 }
