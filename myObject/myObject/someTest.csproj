@@ -44,6 +44,10 @@
       <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.Core.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.DataEntity, Version=8.0.235.9, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Kingdee.K3.FIN.HS.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.FIN.HS.Business.PlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.SCM.App.Sal.Report, Version=8.0.235.9, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.SCM.App.Sal.Report.dll</HintPath>
@@ -84,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="上传附件.cs" />
+    <Compile Include="入库成本调整单按钮插件.cs" />
     <Compile Include="列表固定读取本地文件.cs" />
     <Compile Include="列表读取文件.cs" />
     <Compile Include="创建结算清单覆盖插件.cs" />

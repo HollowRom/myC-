@@ -43,7 +43,7 @@ namespace myObject
 
             strFilter = replaceSome(filter, fieldListCustomExtension, fieldListOriginal);
 
-            string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.FBILLNO where {2}",
+            string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.FBillNo where {2}",
             tableName, strTable, strFilter);
 
             DBUtils.Execute(this.Context, strSql);
@@ -115,7 +115,7 @@ namespace myObject
 
         private void cleanRpt(IRptParams filter)
         {
-            if (filter.FilterParameter.FilterString.Contains("F_VBDA_Text"))
+            if (filter.FilterParameter.FilterString.Contains("F_VBDA_Text".ToUpper()))
             {
                 if (oldFilter.Equals(""))
                 {
