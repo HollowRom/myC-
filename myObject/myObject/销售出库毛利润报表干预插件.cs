@@ -54,19 +54,19 @@ namespace myObject
             fieldListOriginal = new List<string>();
         }
 
-        private static bool CheckIsNeedChange(IRptParams filter, List<string> filedListCustomExtension,
+        private static void CheckIsNeedChange(IRptParams filter, List<string> filedListCustomExtension,
             List<string> fieldListOriginal)
         {
+            fieldListOriginal.Clear();
             foreach (var t in filter.FilterParameter.ColumnInfo)
             {
                 if (!filedListCustomExtension.Contains(t.Key.ToUpper()))
                 {
                     fieldListOriginal.Add(t.Key.ToUpper());
                 }
-
             }
 
-            return filter.FilterParameter.FilterRows.Count != fieldListOriginal.Count;
+            //return filter.FilterParameter.FilterRows.Count != fieldListOriginal.Count;
         }
 
         private static string replaceSome(IRptParams filter, List<string> fcExtension,
@@ -127,7 +127,7 @@ namespace myObject
 
         private void printRpt(IRptParams filter, string flagstr)
         {
-            return;
+            //return;
             using (StreamWriter sw = new StreamWriter("C:\\Users\\Administrator\\Desktop\\1.txt", true))
             {
                 sw.WriteLine(flagstr);
