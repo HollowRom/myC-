@@ -46,7 +46,7 @@ namespace anfuObject
 
             strFilter = replaceSome(filter, fieldListCustomExtension, fieldListOriginal);
 
-            string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.pluin_FBillNo where {2}",
+            string strSql = string.Format(@"/*dialect*/select T1.*, C.F_VBDA_Text, C.F_VBDA_Text1 into {0} from {1} T1 left join v_xscklr_plugin C on T1.FBILLNO = C.pluin_FBillNo and T1.FMATERIALID = C.pluin_FNUMBER where {2}",
             tableName, strTable, strFilter);
 
             DBUtils.Execute(this.Context, strSql);
