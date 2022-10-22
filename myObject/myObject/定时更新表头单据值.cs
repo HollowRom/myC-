@@ -8,13 +8,17 @@ namespace myObject
     [Kingdee.BOS.Util.HotUpdate]
     public class autoUpdLater : AbstractDynamicFormPlugIn
     {
+        const string fieldName = "F_VBDA_Integer";//可以考虑放在配置文件中,但是每次执行都会重新读取
         public override void OnTimerElapsed(EventArgs e)
 
         {
             base.OnTimerElapsed(e);
-
-            this.View.Model.SetValue("F_VBDA_Integer", Int32.Parse(this.View.Model.GetValue("F_VBDA_Integer").ToString()) + 1 % 10);
-
+            var oldInt = Int32.Parse(this.View.Model.GetValue(fieldName).ToString() + 1 % 10);
+            this.View.Model.SetValue(fieldName, oldInt);
+            if (oldInt > 0)
+            {
+                this.View.InvokeFieldUpdateService(fieldName, 0);
+            }
         }
     }
 }
