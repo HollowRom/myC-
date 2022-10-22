@@ -55,6 +55,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="NetDimension.NanUI" Version="0.9.90.193" />
       <PackageReference Include="NetDimension.NanUI.Runtime" Version="90.6.7.1" />
     </ItemGroup>
 

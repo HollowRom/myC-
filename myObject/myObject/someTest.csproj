@@ -92,6 +92,7 @@
     <Compile Include="列表固定读取本地文件.cs" />
     <Compile Include="列表读取文件.cs" />
     <Compile Include="创建结算清单覆盖插件.cs" />
+    <Compile Include="定时更新表头单据值.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="树形插件.cs" />
     <Compile Include="物料收发明细表增加字段干预插件.cs" />
