@@ -37,6 +37,21 @@ namespace myObject
 
                 this.View.InvokeFieldUpdateService("FBILLNO", 0);
             }
+            if (this.View.OpenParameter.Status.Equals(OperationStatus.ADDNEW))
+            {
+                //给备注和备注1,赋值
+
+                //this.View.Model.SetValue("F_VBDA_INTEGER", 3);
+                //this.View.Model.SetValue("FNote1", "备注1", 1);
+
+
+                //刷新这2个字段
+                //this.View.UpdateView("F_VBDA_INTEGER");
+                //this.View.UpdateView("FNote1", 1);
+
+                this.View.Model.SetValue("FSALEORGID", "106.2");
+                this.View.UpdateView("FSALEORGID");
+            }
 
         }
     }
