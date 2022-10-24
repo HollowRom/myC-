@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ComponentModel;
-using System.Text;
-using Kingdee.K3.SCM.IOS.Business.PlugIn;
+﻿using System.ComponentModel;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
 
 namespace Kingdee.K3.SCM.IOS.Business.PlugIn
