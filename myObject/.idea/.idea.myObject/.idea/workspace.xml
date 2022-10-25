@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/someTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/销售订单加载更新分录.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单加载更新分录.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,31 +23,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/a3eb0aee296c42b9a328c58e52803a2e1c9c08/ce/502990af/0200001A.il" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/79/b236fdbe/OptPlanOptRtpApiService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4607059a7f55480a9b91e58c92b2236c29e08/ee/bd0d469d/OptPlanOptTransApiService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/28/1d2a109e/ColumnField.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/3a/cb423552/ISysReportServicePlugIn.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/7a/9e82ac55/FilterFieldInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/9c/f7abd23c/FilterParameter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/a1/ce1b8382/IRptParams.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/c8/b056aba0/AbstractSysReportServicePlugIn.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/d1/ce95c946/FilterEntity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55872c49a38848d580331ebdb6a4c6c445ca08/f6/64379f97/FilterRow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3eb0aee296c42b9a328c58e52803a2e1c9c08/23/75aa2e51/SalOutStockProfitAnalyseRpt.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3eb0aee296c42b9a328c58e52803a2e1c9c08/29/3a80e0d1/SalDetailRpt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3eb0aee296c42b9a328c58e52803a2e1c9c08/62/92acb8a4/SalePriceAnalyzeRpt.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3eb0aee296c42b9a328c58e52803a2e1c9c08/85/17f1fb8c/SalRptEnums.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3ad31e43b8d4029beedeb0d3b661fb227c08/44/7fced531/SaleOutStock_TicketSumRptEdit.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3ad31e43b8d4029beedeb0d3b661fb227c08/87/956e1fc8/SalOutStockProfitAnalyseEdit.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/07/46731c00/SaveResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/08/2ee5a89c/EnDecode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/3d/7ee7fe4c/ApiRequest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/47/dd5f2b61/SavaParam`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/84/2e9152a0/WebRequestHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/b3/28967b0e/K3CloudApiClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/daf342e97b114270bbef3c2065e334f14ae08/c6/5bff8572/ApiClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07c8d96e84c4031ae00b19db459af1352e08/ae/d9190b96/SysReportBaseService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/179ed297e8a3431a945973d575cf61ccc7e08/9b/61b81747/App.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/450fc25e323f4fcbac4639cdd838fdf813d388/7a/32e33271/UnsafeNativeMethods.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/450fc25e323f4fcbac4639cdd838fdf813d388/a4/e9e6ddd8/Dispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b04dc0027d9245d59f0781c8c53ad1565fe778/8e/b25b5509/Application.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f4884efe4e014236b37f2c69c938a18746ea08/a3/6c94b2e3/IRptParams.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f4884efe4e014236b37f2c69c938a18746ea08/b4/ef6bec8f/ISysReportServicePlugIn.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f4884efe4e014236b37f2c69c938a18746ea08/e9/d624d496/FilterParameter.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,15 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,6 +86,10 @@
       <workItem from="1665447032795" duration="5266000" />
       <workItem from="1665462816298" duration="1093000" />
       <workItem from="1665987730363" duration="9000" />
+      <workItem from="1666571154850" duration="1478000" />
+      <workItem from="1666573170682" duration="119000" />
+      <workItem from="1666575861390" duration="1142000" />
+      <workItem from="1666677513276" duration="1239000" />
     </task>
     <servers />
   </component>
