@@ -56,6 +56,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.FIN.HS.Business.PlugIn.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.SCM.App.Purchase.Report, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.SCM.App.Purchase.Report.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.SCM.App.Sal.Report, Version=8.0.235.9, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.SCM.App.Sal.Report.dll</HintPath>
@@ -112,6 +116,7 @@
     <Compile Include="生产订单执行明细表携带合同号2.cs" />
     <Compile Include="用料清单手动携带生产订单批号字段.cs" />
     <Compile Include="监视调试接受返回值.cs" />
+    <Compile Include="采购订单执行明细表合计开票金额干预插件.cs" />
     <Compile Include="采购订单输入查询报价单锁定部分字段.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="销售出库毛利润报表干预插件.cs" />
@@ -3592,6 +3597,7 @@
     <Content Include="bin\Debug\Kingdee.K3.MFG.WebApi.ServicesStub.dll" />
     <Content Include="bin\Debug\Kingdee.K3.SCM.App.Core.dll" />
     <Content Include="bin\Debug\Kingdee.K3.SCM.App.dll" />
+    <Content Include="bin\Debug\Kingdee.K3.SCM.App.Purchase.Report.dll" />
     <Content Include="bin\Debug\Kingdee.K3.SCM.App.Sal.Report.dll" />
     <Content Include="bin\Debug\Kingdee.K3.SCM.App.Stock.Report.dll" />
     <Content Include="bin\Debug\Kingdee.K3.SCM.Common.BusinessEntity.dll" />

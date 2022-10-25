@@ -14,9 +14,7 @@ namespace myObject
         public override void AfterBindData(EventArgs e)
         {
             base.AfterBindData(e);
-
-
-
+            
             //这个方法是判断单据状态。
             //有四种：ADDNEW、EDIT、VIEW、DISASSEMBLY
             //新增、编辑、查看、卸载
