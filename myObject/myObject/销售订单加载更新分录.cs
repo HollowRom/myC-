@@ -1,16 +1,8 @@
 ﻿using Kingdee.BOS.Core.Bill.PlugIn;
 using Kingdee.BOS.Core.Metadata;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using Kingdee.BOS.App.Core;
-using Kingdee.BOS.Core.DynamicForm.PlugIn;
-using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
 using Kingdee.BOS.ServiceHelper;
-using Kingdee.BOS.Util;
-using Kingdee.BOS.Core.Metadata;
 using Kingdee.BOS.Orm.DataEntity;
 
 namespace myObject
@@ -52,8 +44,9 @@ namespace myObject
                 DynamicObject dynamicObject = BusinessDataServiceHelper.LoadSingle(this.Context, 100046, formMetadata.BusinessInfo.GetDynamicObjectType());
                 //"106.2"
                 //100046
+                this.View.OpenParameter.SetCustomParameter("ShowConfirmDialogWhenChangeOrg", false);
                 this.View.Model.SetValue("FSALEORGID", dynamicObject);
-                this.View.UpdateView("FSALEORGID");
+                //this.View.UpdateView("FSALEORGID");
             }
 
         }
