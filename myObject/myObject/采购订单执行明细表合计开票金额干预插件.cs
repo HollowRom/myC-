@@ -15,7 +15,7 @@ namespace myObject
             base.BuilderReportSqlAndTempTable(filter, tableName);
 
             var edate = GetDataByKey(filter.FilterParameter.CustomFilter, "OrderEndDate");
-        
+
             //printRpt(filter, edate);
 
             StringBuilder sqlStr = new StringBuilder();
@@ -26,43 +26,45 @@ namespace myObject
             DBUtils.Execute(this.Context, sqlStr.ToString());
 
             sqlStr.Clear();
-            sqlStr.AppendFormat("select a1.FNAME                                                           as pluin_name, " +
-       "isnull(sum(a1.FALLAMOUNTFOR - isnull(b1.FREALPAYAMOUNTFOR, 0)), 0) as pluin_undone, " +
-       "isnull(sum(isnull(b1.FREALPAYAMOUNTFOR, 0)), 0) as pluin_done " +
-        "from(select sum(a.FALLAMOUNTFOR) as FALLAMOUNTFOR, c.FNAME " +
-        "from T_AP_PAYABLE a, " +
-       "t_BD_Supplier b, " +
-           "t_BD_Supplier_L c " +
-      "where a.FALLAMOUNTFOR > 0 " +
-    "    and a.FSUPPLIERID = b.FSUPPLIERID " +
-    "    and b.FSUPPLIERID = c.FSUPPLIERID " +
-    "    and c.FLOCALEID = 2052 " +
-    "    and a.FDATE <= '{1}' " +
-    "  group by c.FNAME) a1 " +
-    "     left join " +
-    " (select sum(a.FREALPAYAMOUNTFOR) as FREALPAYAMOUNTFOR, c.FNAME " +
-    "  from T_AP_PAYBILL a, " +
-    "       t_BD_Supplier b, " +
-    "       t_BD_Supplier_L c " +
-    "  where a.FREALPAYAMOUNTFOR > 0 " +
-    "    and a.FRECTUNIT = b.FSUPPLIERID " +
-    "    and b.FSUPPLIERID = c.FSUPPLIERID " +
-    "    and c.FLOCALEID = 2052 " +
-    "    and a.FDATE <= '{2}' " +
-   "   group by c.FNAME) b1 " +
-   "  on a1.FNAME = b1.FNAME " +
-    "group by a1.FNAME ", tableName, edate, edate);
+            sqlStr.AppendFormat(
+                "select a1.FNAME                                                           as pluin_name, " +
+                "isnull(sum(a1.FALLAMOUNTFOR - isnull(b1.FREALPAYAMOUNTFOR, 0)), 0) as pluin_undone, " +
+                "isnull(sum(isnull(b1.FREALPAYAMOUNTFOR, 0)), 0) as pluin_done " +
+                "from(select sum(a.FALLAMOUNTFOR) as FALLAMOUNTFOR, c.FNAME " +
+                "from T_AP_PAYABLE a, " +
+                "t_BD_Supplier b, " +
+                "t_BD_Supplier_L c " +
+                "where a.FALLAMOUNTFOR > 0 " +
+                "    and a.FSUPPLIERID = b.FSUPPLIERID " +
+                "    and b.FSUPPLIERID = c.FSUPPLIERID " +
+                "    and c.FLOCALEID = 2052 " +
+                "    and a.FDATE <= '{0}' " +
+                "  group by c.FNAME) a1 " +
+                "     left join " +
+                " (select sum(a.FREALPAYAMOUNTFOR) as FREALPAYAMOUNTFOR, c.FNAME " +
+                "  from T_AP_PAYBILL a, " +
+                "       t_BD_Supplier b, " +
+                "       t_BD_Supplier_L c " +
+                "  where a.FREALPAYAMOUNTFOR > 0 " +
+                "    and a.FRECTUNIT = b.FSUPPLIERID " +
+                "    and b.FSUPPLIERID = c.FSUPPLIERID " +
+                "    and c.FLOCALEID = 2052 " +
+                "    and a.FDATE <= '{1}' " +
+                "   group by c.FNAME) b1 " +
+                "  on a1.FNAME = b1.FNAME " +
+                "group by a1.FNAME ", edate, edate);
             var updTab = sqlStr.ToString();
 
             sqlStr.Clear();
-            sqlStr.AppendFormat("/*dialect*/update a9 set F_VBDA_Decimal = a8.pluin_done, F_VBDA_Decimal1 = a8.pluin_undone from {0} a9, ({1}) a8 where a9.FSUPPLIERNAME = a8.pluin_name", tableName, updTab);
-            
+            sqlStr.AppendFormat(
+                "/*dialect*/update a9 set F_VBDA_Decimal = a8.pluin_done, F_VBDA_Decimal1 = a8.pluin_undone from {0} a9, ({1}) a8 where a9.FSUPPLIERNAME = a8.pluin_name",
+                tableName, updTab);
+
             //sqlStr.AppendFormat(" MERGE INTO {0} T0 ", tableName);
             //sqlStr.AppendFormat(" using hl_cgddzxmx_v_plugin as T99");
             //sqlStr.AppendFormat(" on T0.FBILLNO = T99.plugin_name ");
             //sqlStr.AppendFormat(" when matched then update set F_VBDA_Decimal = T99.plugin_dic_done, F_VBDA_Decimal1 = T99.plugin_dic_undone");
             DBUtils.Execute(this.Context, sqlStr.ToString());
-            
         }
 
         // private void printRpt(IRptParams filter, string flagstr)

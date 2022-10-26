@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/someTest.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/销售订单加载更新分录.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/销售订单加载更新分录.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/采购订单执行明细表合计开票金额干预插件.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/采购订单执行明细表合计开票金额干预插件.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +30,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,6 +77,7 @@
       <workItem from="1666573170682" duration="119000" />
       <workItem from="1666575861390" duration="1142000" />
       <workItem from="1666677513276" duration="1239000" />
+      <workItem from="1666768885417" duration="976000" />
     </task>
     <servers />
   </component>

@@ -35,7 +35,7 @@ namespace hlObject
     "    and a.FSUPPLIERID = b.FSUPPLIERID " +
     "    and b.FSUPPLIERID = c.FSUPPLIERID " +
     "    and c.FLOCALEID = 2052 " +
-    "    and a.FDATE <= '{1}' " +
+    "    and a.FDATE <= '{0}' " +
     "  group by c.FNAME) a1 " +
     "     left join " +
     " (select sum(a.FREALPAYAMOUNTFOR) as FREALPAYAMOUNTFOR, c.FNAME " +
@@ -46,10 +46,10 @@ namespace hlObject
     "    and a.FRECTUNIT = b.FSUPPLIERID " +
     "    and b.FSUPPLIERID = c.FSUPPLIERID " +
     "    and c.FLOCALEID = 2052 " +
-    "    and a.FDATE <= '{2}' " +
+    "    and a.FDATE <= '{1}' " +
    "   group by c.FNAME) b1 " +
    "  on a1.FNAME = b1.FNAME " +
-    "group by a1.FNAME ", tableName, edate, edate);
+    "group by a1.FNAME ", edate, edate);
             var updTab = sqlStr.ToString();
 
             sqlStr.Clear();
