@@ -116,6 +116,7 @@
     <Compile Include="生产订单执行明细表携带合同号2.cs" />
     <Compile Include="用料清单手动携带生产订单批号字段.cs" />
     <Compile Include="监视调试接受返回值.cs" />
+    <Compile Include="自定义函数执行sql.cs" />
     <Compile Include="采购订单执行明细表合计开票金额干预插件.cs" />
     <Compile Include="采购订单输入查询报价单锁定部分字段.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
