@@ -50,23 +50,28 @@ public class caozujiaoyan : AbstractOperationServicePlugIn
                 //object PurchaserId = obj.DataEntity["MaterialId"];
                 //采购员是否为空
                 //if (PurchaserId == null || !(doSomeThing(obj.BillNo)))
-                if (obj.DataEntity["BillNo"] == null || obj.DataEntity["BillNo"].Equals("") || /*obj.DataEntity["BillTypeID"] == null || (((DynamicObject)obj.DataEntity["BillTypeID"])["FNumber"].Equals("CGDD02_SYS") &&*/ !doSomeThing(obj.BillNo))//)
+                if (obj.DataEntity["BillNo"] == null || obj.DataEntity["BillNo"].Equals("")) /*obj.DataEntity["BillTypeID"] == null || (((DynamicObject)obj.DataEntity["BillTypeID"])["FNumber"].Equals("CGDD02_SYS") &&*///)
                 {
-                   //报错
-                   validateContext.AddError(obj.DataEntity,
+                    var reStr = doSomeThing(obj.BillNo);
+                    if (reStr != "")
+                    {
+                        //报错
+                        validateContext.AddError(obj.DataEntity,
                         new ValidationErrorInfo
                         (
                             "FNumber",
-                            // "F_VBDA_Text", //出错的字段Key，可以空
+                           // "F_VBDA_Text", //出错的字段Key，可以空
                            null, // 出错的字段Key，可以空
                             obj.DataEntityIndex, // 出错的数据包在全部数据包中的顺序
                             obj.RowIndex, // 出错的数据行在全部数据行中的顺序，如果校验基于单据头，此为0
                             "001", //错误编码，可以任意设定一个字符，主要用于追查错误来源
-                           // "单据编号" + obj.BillNo + "采购订单没有录入校验字段", //错误的详细提示信息 
-                           "单据编号" + obj.BillNo + ":采购订单审核自动生成委外领料失败", //错误的详细提示信息 
+                                   // "单据编号" + obj.BillNo + "采购订单没有录入校验字段", //错误的详细提示信息 
+                           "单据编号" + obj.BillNo + ":采购订单审核自动生成委外领料失败:" + reStr, //错误的详细提示信息 
                             "审核" + obj.BillNo, // 错误的简明提示信息
                             ErrorLevel.Error // 错误级别：警告、错误...
                         ));
+                    }
+                   
                 }
             }
         }
@@ -109,7 +114,7 @@ public class caozujiaoyan : AbstractOperationServicePlugIn
                 }
                 //var llbill = result.GetJSONObject("ResponseStatus").GetJSONObject("SuccessEntitys");
             }
-            return "下推成功";
+            return "";
 
             //var result = WebApiServiceCall.Save(cloneCtx, "KKK_BillA", "{\"Model\": {\"FBillTypeID\": {\"FNUMBER\": \"FBillANumber2\"}}");
             //第三种方式：自行创建上下文，再使用此上下文去调用接口

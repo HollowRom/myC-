@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" afterDir="false" />
@@ -90,6 +93,7 @@
       <workItem from="1667032496179" duration="1399000" />
       <workItem from="1667176471414" duration="3841000" />
       <workItem from="1667197779111" duration="222000" />
+      <workItem from="1667205946758" duration="622000" />
     </task>
     <servers />
   </component>
@@ -111,6 +115,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/myObject/操作校验.cs</url>
+          <line>52</line>
+          <properties documentPath="D:\mySome\myC-\myObject\myObject\操作校验.cs" initialLine="52" containingFunctionPresentation="method 'Validate'">
+            <startOffsets>
+              <option value="1651" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1727" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
