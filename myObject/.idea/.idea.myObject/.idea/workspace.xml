@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myObject/操作校验.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.myObject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myObject/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/someTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/操作校验.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/操作校验.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,9 +16,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/179ed297e8a3431a945973d575cf61ccc7e08/9b/61b81747/App.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1dee426beb13440dbb1a49de80d476a841408/60/de490cae/DynamicObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/450fc25e323f4fcbac4639cdd838fdf813d388/7a/32e33271/UnsafeNativeMethods.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/450fc25e323f4fcbac4639cdd838fdf813d388/a4/e9e6ddd8/Dispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b04dc0027d9245d59f0781c8c53ad1565fe778/8e/b25b5509/Application.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f4884efe4e014236b37f2c69c938a18746ea08/77/622388b8/ExtendedDataEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f4884efe4e014236b37f2c69c938a18746ea08/a3/6c94b2e3/IRptParams.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f4884efe4e014236b37f2c69c938a18746ea08/b4/ef6bec8f/ISysReportServicePlugIn.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f4884efe4e014236b37f2c69c938a18746ea08/e9/d624d496/FilterParameter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -82,7 +87,9 @@
       <workItem from="1666575861390" duration="1142000" />
       <workItem from="1666677513276" duration="1239000" />
       <workItem from="1666768885417" duration="976000" />
-      <workItem from="1667032496179" duration="1248000" />
+      <workItem from="1667032496179" duration="1399000" />
+      <workItem from="1667176471414" duration="3841000" />
+      <workItem from="1667197779111" duration="222000" />
     </task>
     <servers />
   </component>
