@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using Kingdee.BOS;
 using Kingdee.BOS.Core;
 using Kingdee.BOS.Core.DynamicForm.PlugIn;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
 using Kingdee.BOS.Core.Validation;
-using Kingdee.BOS.ServiceHelper;
 using Kingdee.BOS.Util;
 using Kingdee.BOS.WebApi.FormService;
-using System.Linq;
 using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.App.Data;
 using Kingdee.BOS.JSON;
+using Kingdee.BOS.WebApi.Client;
 
 [Description("操作校验")]
 [Kingdee.BOS.Util.HotUpdate]
@@ -53,7 +51,7 @@ public class caozujiaoyan : AbstractOperationServicePlugIn
                 if (obj.DataEntity["BillNo"] != null && !obj.DataEntity["BillNo"].Equals(""))
                 {
                     var reStr = doSomeThing(obj.BillNo);
-                    if (reStr == "")
+                    if (reStr == "下推成功过")
                     {
                         continue;
                     }
@@ -80,8 +78,9 @@ public class caozujiaoyan : AbstractOperationServicePlugIn
         private string doSomeThing(string billno)
         {
             //第一种方式：通过客户端调用接口，先调用登陆接口，再调用其他接口，
-            //K3CloudApiClient apiClient = new K3CloudApiClient("http://localhost:2800/");
-            //var isSucc = apiClient.Login(this.Context.DBId, this.Context.UserName, "888888", 2052);
+            //K3CloudApiClient cloneCtx = new K3CloudApiClient("http://localhost/");
+            //var isSucc = cloneCtx.Login("610bbd142a6e15", "demo", "kingdee@123", 2052);
+            //var isSucc = cloneCtx.Login(this.Context.DBId, this.Context.UserName, "888888", 2052);
             //apiClient.Save(ctx, "KKK_BillA", "{\"Model\": {\"FBillTypeID\": {\"FNUMBER\": \"FBillANumber2\"}}");
 
             //第二种方式：通过克隆创建一个新的上下文，再使用克隆的上下文直接调用api接口，
@@ -108,11 +107,22 @@ public class caozujiaoyan : AbstractOperationServicePlugIn
             }
             for (int idx = 0; idx < Dyobj.Count; idx++)
             {
-                var result = JSONObject.Parse(WebApiServiceCall.Push(cloneCtx, "SUB_PPBOM", "{\"Numbers\":[\"" + Dyobj[idx]["FBILLNO"] + "\"]}").ToString());
-                if (!result.GetJSONObject("ResponseStatus")["IsSuccess"].ToString().ToLower().Equals("true"))
+                var parJsonStr = "{\"Ids\":\"\",\"Numbers\":[\"" + Dyobj[idx]["FBILLNO"].ToString() + "\"],\"EntryIds\":\"\",\"RuleId\":\"\",\"TargetBillTypeId\":\"\",\"TargetOrgId\":0,\"TargetFormId\":\"\",\"IsEnableDefaultRule\":\"false\",\"IsDraftWhenSaveFail\":\"false\",\"CustomParams\":{}}";
+                try
                 {
-                    return "下推失败:" + result.GetJSONObject("ResponseStatus");
+                    var result = WebApiServiceCall.Push(cloneCtx, "SUB_PPBOM", parJsonStr).ToString();
+                    //var result = JSONObject.Parse(WebApiServiceCall.Push(cloneCtx, "SUB_PPBOM", "{\"Numbers\":[\"" + Dyobj[idx]["FBILLNO"] + "\"]}").ToString());
+                    //var result2 = JSONObject.Parse(result);
+                    //if (!result2.GetJSONObject("ResponseStatus")["IsSuccess"].ToString().ToLower().Equals("true"))
+                    //{
+                    //    return "下推失败:" + result2.GetJSONObject("ResponseStatus");
+                    //}
                 }
+                catch (Exception e)
+                {
+                    return "下推异常:" + e.ToString() + ":::发送json:" + parJsonStr;
+                }
+                
                 //var llbill = result.GetJSONObject("ResponseStatus").GetJSONObject("SuccessEntitys");
             }
             return "下推成功过";
