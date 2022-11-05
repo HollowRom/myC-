@@ -9,11 +9,11 @@ using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.App.Data;
 using System.Collections.Generic;
 
-namespace myObject
+namespace ytObject
 {
     [Description("采购订单审核后事件")]
     [HotUpdate]
-    public class shenheshijian : AbstractOperationServicePlugIn
+    public class cgddshenheshijian : AbstractOperationServicePlugIn
     {
         private const string ylqdFormStr = "SUB_PPBOM";
         private const string wwllFormStr = "SUB_PickMtrl";
