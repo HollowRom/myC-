@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="上传附件.cs" />
+    <Compile Include="修改销售订单默认组织.cs" />
     <Compile Include="入库成本调整单按钮插件.cs" />
     <Compile Include="列表固定读取本地文件.cs" />
     <Compile Include="列表读取文件.cs" />
