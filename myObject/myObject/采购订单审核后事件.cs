@@ -11,8 +11,7 @@ using System.Collections.Generic;
 
 namespace myObject
 {
-    [Description("采购订单审核后事件")]
-    [HotUpdate]
+    [Description("采购订单审核后事件"), HotUpdate]
     public class shenheshijian : AbstractOperationServicePlugIn
     {
         private const string ylqdFormStr = "SUB_PPBOM";

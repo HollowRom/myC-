@@ -5,12 +5,11 @@ using System.ComponentModel;
 using Kingdee.BOS.App.Data;
 using Kingdee.BOS.Orm.DataEntity;
 using System.Text;
+using Kingdee.BOS.Util;
 
 namespace myObject
 {
-    [Description("自定义函数执行sql")]
-    [Kingdee.BOS.Util.HotUpdate]
-    [Serializable]
+    [Description("自定义函数执行sql"), HotUpdate, Serializable]
     public class exSQLFromFunc : AbstractFuncDefine
     {
         private string sqlParseKey = "someKey";

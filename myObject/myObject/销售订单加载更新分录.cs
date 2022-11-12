@@ -4,11 +4,11 @@ using System;
 using System.ComponentModel;
 using Kingdee.BOS.ServiceHelper;
 using Kingdee.BOS.Orm.DataEntity;
+using Kingdee.BOS.Util;
 
 namespace myObject
 {
-    [Description("销售订单加载更新表头跳转更新分录")]
-    [Kingdee.BOS.Util.HotUpdate]
+    [Description("销售订单加载更新表头跳转更新分录"), HotUpdate]
     public class sorderInitUpdData : AbstractBillPlugIn
     {
         public override void AfterBindData(EventArgs e)
