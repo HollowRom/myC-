@@ -61,6 +61,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.FIN.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.FIN.Business.PlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.FIN.HS.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.FIN.HS.Business.PlugIn.dll</HintPath>
@@ -115,6 +119,7 @@
     <Compile Include="列表读取文件.cs" />
     <Compile Include="创建结算清单覆盖插件.cs" />
     <Compile Include="定时更新表头单据值.cs" />
+    <Compile Include="客户对账单明细增加列.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="操作校验.cs" />
     <Compile Include="树形插件.cs" />

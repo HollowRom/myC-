@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96b38165-1c18-4e0b-ae3e-fa0a59b07807" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/myObject/客户对账单明细增加列.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/myObject/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/bin/Debug/myObject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/myObject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/obj/Debug/someTest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myObject/someTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myObject/someTest.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,6 +100,7 @@
       <workItem from="1667197779111" duration="222000" />
       <workItem from="1667205946758" duration="622000" />
       <workItem from="1667612445759" duration="266000" />
+      <workItem from="1668493434155" duration="607000" />
     </task>
     <servers />
   </component>
@@ -107,6 +121,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -114,16 +129,29 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/myObject/采购订单审核后事件.cs</url>
-          <line>37</line>
+          <line>36</line>
           <properties documentPath="D:\mySome\myC-\myObject\myObject\采购订单审核后事件.cs" initialLine="37" containingFunctionPresentation="method 'EndOperationTransaction'">
             <startOffsets>
-              <option value="1262" />
+              <option value="1257" />
             </startOffsets>
             <endOffsets>
-              <option value="1312" />
+              <option value="1307" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/myObject/客户对账单明细增加列.cs</url>
+          <line>15</line>
+          <properties documentPath="D:\mySome\myC-\myObject\myObject\客户对账单明细增加列.cs" initialLine="15" containingFunctionPresentation="method 'SetListData'">
+            <startOffsets>
+              <option value="365" />
+            </startOffsets>
+            <endOffsets>
+              <option value="388" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
