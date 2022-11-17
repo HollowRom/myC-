@@ -913,6 +913,13 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
             List<string> list = (from item in View.BusinessInfo.GetEntryEntity(FList).Fields
                 orderby item.Tabindex
                 select item.Key).ToList();
+            for (int idx = 0; idx < list.Count; idx++)
+            {
+                if (list[idx].Equals("F_VBDA_Decimal"))
+                {
+                    list.RemoveAt(idx);
+                }
+            }
             List<string> list2 = filterPara.ColumnInfo.Select((ColumnField item) => item.Key).ToList();
             foreach (string item in list)
             {
@@ -1060,6 +1067,7 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
             List<object> list3 = new List<object>();
             List<object> list4 = new List<object>();
             List<object> list5 = new List<object>();
+
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 if (!data.Rows[i]["FContactUnitID"].IsNullOrEmptyOrWhiteSpace() &&
@@ -1158,11 +1166,16 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
             {
                 foreach (string item in list)
                 {
-                    if (data.Rows[n][item].IsNullOrEmptyOrWhiteSpace())
+                    if (item.Equals("F_VBDA_Decimal"))
                     {
                         continue;
                     }
 
+                    if (data.Rows[n][item].IsNullOrEmptyOrWhiteSpace())
+                    {
+                        continue;
+                    }
+                    
                     switch (item)
                     {
                         case "FContactUnitID":
@@ -1207,6 +1220,15 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
                     }
                 }
             }
+            Random random = new Random();
+            
+             DynamicObjectCollection entityDataObject = Model.GetEntityDataObject(View.Model.BusinessInfo.GetEntity(FList));
+             for (int i = 0; i < entityDataObject.Count; i++)
+             {
+                 //entityDataObject[i]["F_VBDA_Text"] = "2.364";
+                 this.View.Model.SetValue("F_VBDA_Decimal", Convert.ToDecimal(entityDataObject[i]["FAmountFor"]) /*Math.Round(random.NextDouble() * (10.9 - 1.3) + 1.3, 3)*/, i);
+                 // this.View.Model.SetValue("F_VBDA_Text", /*Convert.ToDecimal(entityDataObject[i]["FBillNo"])*/ "aabbddxcx", i);
+             }
         }
 
         public virtual void SetListSumData(DataTable data)
