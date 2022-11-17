@@ -1,13 +1,13 @@
 ﻿using Kingdee.BOS.App.Data;
 using Kingdee.BOS.Core.Report;
+using Kingdee.BOS.Util;
 using Kingdee.K3.SCM.App.Purchase.Report;
 using System.ComponentModel;
 using System.Text;
 
 namespace myObject
 {
-    [Description("采购订单执行明细表合计开票金额干预插件")]
-    [Kingdee.BOS.Util.HotUpdate]
+    [Description("采购订单执行明细表合计开票金额干预插件"), HotUpdate]
     public class cgddzxmx_kpje_plugin : PurchaseOrderExecuteRpt
     {
         public override void BuilderReportSqlAndTempTable(IRptParams filter, string tableName)

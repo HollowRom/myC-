@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Kingdee.BOS.App.Data;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
 using Kingdee.BOS.Core.Metadata.EntityElement;
 using Kingdee.BOS.Orm.DataEntity;
+using Kingdee.BOS.Util;
 using Kingdee.K3.FIN.HS.Business.PlugIn;
 
 namespace myObject
 {
-    [Description("入库成本调整单按钮插件")]
-    [Kingdee.BOS.Util.HotUpdate]
+    [Description("入库成本调整单按钮插件"), HotUpdate]
     public class instock_cb_plu : InStockEstimateEdit
     {
         public override void BarItemClick(BarItemClickEventArgs e)

@@ -7,12 +7,12 @@ using Kingdee.BOS.App;
 using Kingdee.BOS.App.Data;
 using Kingdee.BOS.Contracts;
 using Kingdee.BOS.Core.Report;
+using Kingdee.BOS.Util;
 using Kingdee.K3.SCM.App.Sal.Report;
 
 namespace myObject
 {
-    [Description("销售出库毛利润报表干预插件")]
-    [Kingdee.BOS.Util.HotUpdate]
+    [Description("销售出库毛利润报表干预插件"), HotUpdate]
     public class xsck_lr_plugin : SalOutStockProfitAnalyseRpt
     {
         private string oldFilter = "";

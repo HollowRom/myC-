@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
+using Kingdee.BOS.Util;
+using Kingdee.K3.SCM.IOS.Business.PlugIn;
 
-namespace Kingdee.K3.SCM.IOS.Business.PlugIn
+namespace myObject
 {
-    [Description("创建结算清单覆盖插件")]
-    [Kingdee.BOS.Util.HotUpdate]
+    [Description("创建结算清单覆盖插件"), HotUpdate]
     public class overJSQDPlugin : IOSCreateSettleTran
     {
         public override void EntryBarItemClick(BarItemClickEventArgs e)

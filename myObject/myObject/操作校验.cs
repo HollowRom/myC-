@@ -9,152 +9,151 @@ using Kingdee.BOS.Util;
 using Kingdee.BOS.WebApi.FormService;
 using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.App.Data;
-using Kingdee.BOS.JSON;
-using Kingdee.BOS.WebApi.Client;
 
-[Description("操作校验")]
-[Kingdee.BOS.Util.HotUpdate]
-public class caozujiaoyan : AbstractOperationServicePlugIn
+namespace myObject
 {
-    //OnAddValidators操作执行前，加载操作校验器
-    public override void OnAddValidators(AddValidatorsEventArgs e)
+    [Description("操作校验"), HotUpdate]
+    public class caozujiaoyan : AbstractOperationServicePlugIn
     {
-        base.OnAddValidators(e);
-        TestValidator validator = new TestValidator();
-            
-        //是否需要校验,true需要
-        validator.AlwaysValidate = true;
-            
-        //校验单据头FBillHead
-        // validator.EntityKey = "FBillHead";
-        validator.EntityKey = "FBillHead";
-        //加载校验器
-        e.Validators.Add(validator);
-    }
-
-
-
-    private class TestValidator : AbstractValidator
-    {
-        //重写方法
-        //数组ExtendedDataEntity,传递全部的信息
-        public override void Validate(ExtendedDataEntity[] dataEntities, ValidateContext validateContext, Context ctx)
+        //OnAddValidators操作执行前，加载操作校验器
+        public override void OnAddValidators(AddValidatorsEventArgs e)
         {
-            //for循环,读取数据
-            foreach (ExtendedDataEntity obj in dataEntities)
+            base.OnAddValidators(e);
+            TestValidator validator = new TestValidator();
+
+            //是否需要校验,true需要
+            validator.AlwaysValidate = true;
+
+            //校验单据头FBillHead
+            // validator.EntityKey = "FBillHead";
+            validator.EntityKey = "FBillHead";
+            //加载校验器
+            e.Validators.Add(validator);
+        }
+
+
+
+        private class TestValidator : AbstractValidator
+        {
+            //重写方法
+            //数组ExtendedDataEntity,传递全部的信息
+            public override void Validate(ExtendedDataEntity[] dataEntities, ValidateContext validateContext, Context ctx)
             {
-                //采购员PurchaserId
-                // object PurchaserId = obj.DataEntity["F_VBDA_Text"];
-                //object PurchaserId = obj.DataEntity["MaterialId"];
-                //采购员是否为空
-                //if (PurchaserId == null || !(doSomeThing(obj.BillNo)))
-                if (obj.DataEntity["BillNo"] != null && !obj.DataEntity["BillNo"].Equals(""))
+                //for循环,读取数据
+                foreach (ExtendedDataEntity obj in dataEntities)
                 {
-                    var reStr = doSomeThing(obj.BillNo);
-                    if (reStr == "下推成功过")
+                    //采购员PurchaserId
+                    // object PurchaserId = obj.DataEntity["F_VBDA_Text"];
+                    //object PurchaserId = obj.DataEntity["MaterialId"];
+                    //采购员是否为空
+                    //if (PurchaserId == null || !(doSomeThing(obj.BillNo)))
+                    if (obj.DataEntity["BillNo"] != null && !obj.DataEntity["BillNo"].Equals(""))
                     {
-                        continue;
+                        var reStr = doSomeThing(obj.BillNo);
+                        if (reStr == "下推成功过")
+                        {
+                            continue;
+                        }
+                        //报错
+                        validateContext.AddError(obj.DataEntity,
+                        new ValidationErrorInfo
+                        (
+                            "FNumber",
+                           // "F_VBDA_Text", //出错的字段Key，可以空
+                           null, // 出错的字段Key，可以空
+                            obj.DataEntityIndex, // 出错的数据包在全部数据包中的顺序
+                            obj.RowIndex, // 出错的数据行在全部数据行中的顺序，如果校验基于单据头，此为0
+                            "001", //错误编码，可以任意设定一个字符，主要用于追查错误来源
+                                   // "单据编号" + obj.BillNo + "采购订单没有录入校验字段", //错误的详细提示信息 
+                                   //"单据编号" + obj.BillNo + "2:" + obj.DataEntityIndex,
+                           "单据编号" + obj.BillNo + ":采购订单审核自动生成委外领料失败:" + reStr, //错误的详细提示信息 
+                            "审核" + obj.BillNo, // 错误的简明提示信息
+                            ErrorLevel.Error // 错误级别：警告、错误...
+                        ));
                     }
-                    //报错
-                    validateContext.AddError(obj.DataEntity,
-                    new ValidationErrorInfo
-                    (
-                        "FNumber",
-                       // "F_VBDA_Text", //出错的字段Key，可以空
-                       null, // 出错的字段Key，可以空
-                        obj.DataEntityIndex, // 出错的数据包在全部数据包中的顺序
-                        obj.RowIndex, // 出错的数据行在全部数据行中的顺序，如果校验基于单据头，此为0
-                        "001", //错误编码，可以任意设定一个字符，主要用于追查错误来源
-                               // "单据编号" + obj.BillNo + "采购订单没有录入校验字段", //错误的详细提示信息 
-                               //"单据编号" + obj.BillNo + "2:" + obj.DataEntityIndex,
-                       "单据编号" + obj.BillNo + ":采购订单审核自动生成委外领料失败:" + reStr, //错误的详细提示信息 
-                        "审核" + obj.BillNo, // 错误的简明提示信息
-                        ErrorLevel.Error // 错误级别：警告、错误...
-                    ));
                 }
             }
-        }
 
-        private string doSomeThing(string billno)
-        {
-            //第一种方式：通过客户端调用接口，先调用登陆接口，再调用其他接口，
-            //K3CloudApiClient cloneCtx = new K3CloudApiClient("http://localhost/");
-            //var isSucc = cloneCtx.Login("610bbd142a6e15", "demo", "kingdee@123", 2052);
-            //var isSucc = cloneCtx.Login(this.Context.DBId, this.Context.UserName, "888888", 2052);
-            //apiClient.Save(ctx, "KKK_BillA", "{\"Model\": {\"FBillTypeID\": {\"FNUMBER\": \"FBillANumber2\"}}");
-
-            //第二种方式：通过克隆创建一个新的上下文，再使用克隆的上下文直接调用api接口，
-            var cloneCtx = ObjectUtils.CreateCopy(Context) as Context;
-            cloneCtx.ServiceType = WebType.WebService;//写死    
-            cloneCtx.ClientInfo = Context.ClientInfo;
-            cloneCtx.CharacterSet = Context.CharacterSet;
-            // cloneCtx.IsStartTimeZoneTransfer = ctx.IsStartTimeZoneTransfer;  
-            cloneCtx.LoginName = Context.LoginName;
-            cloneCtx.EntryRole = Context.EntryRole;
-            // cloneCtx.Salt = ctx.Salt;      
-            cloneCtx.UserPhone = Context.UserPhone;
-            cloneCtx.UserEmail = Context.UserEmail;
-            cloneCtx.UserLoginType = Context.UserLoginType;
-
-            DynamicObjectCollection Dyobj = DBUtils.ExecuteDynamicObject(cloneCtx, "/*dialect*/select distinct c.FBILLNO " +
-            " from t_PUR_POOrder a, T_PUR_POORDERENTRY_R b, T_SUB_PPBOM c " +
-            " where a.FID = b.FID and b.FSRCBILLNO = c.FSUBBILLNO " +
-            " and not exists(select 1 from T_SUB_PICKMTRLDATA a1 where a1.FSUBREQBILLNO = c.FSUBBILLNO) " +
-              " and a.FBILLNO = '" + billno + "'");
-            if (Dyobj.Count < 1)
+            private string doSomeThing(string billno)
             {
-                return "没有符合条件的未领料用料清单";
-            }
-            for (int idx = 0; idx < Dyobj.Count; idx++)
-            {
-                var parJsonStr = "{\"Ids\":\"\",\"Numbers\":[\"" + Dyobj[idx]["FBILLNO"].ToString() + "\"],\"EntryIds\":\"\",\"RuleId\":\"\",\"TargetBillTypeId\":\"\",\"TargetOrgId\":0,\"TargetFormId\":\"\",\"IsEnableDefaultRule\":\"false\",\"IsDraftWhenSaveFail\":\"false\",\"CustomParams\":{}}";
-                try
-                {
-                    var result = WebApiServiceCall.Push(cloneCtx, "SUB_PPBOM", parJsonStr).ToString();
-                    //var result = JSONObject.Parse(WebApiServiceCall.Push(cloneCtx, "SUB_PPBOM", "{\"Numbers\":[\"" + Dyobj[idx]["FBILLNO"] + "\"]}").ToString());
-                    //var result2 = JSONObject.Parse(result);
-                    //if (!result2.GetJSONObject("ResponseStatus")["IsSuccess"].ToString().ToLower().Equals("true"))
-                    //{
-                    //    return "下推失败:" + result2.GetJSONObject("ResponseStatus");
-                    //}
-                }
-                catch (Exception e)
-                {
-                    return "下推异常:" + e.ToString() + ":::发送json:" + parJsonStr;
-                }
-                
-                //var llbill = result.GetJSONObject("ResponseStatus").GetJSONObject("SuccessEntitys");
-            }
-            return "下推成功过";
+                //第一种方式：通过客户端调用接口，先调用登陆接口，再调用其他接口，
+                //K3CloudApiClient cloneCtx = new K3CloudApiClient("http://localhost/");
+                //var isSucc = cloneCtx.Login("610bbd142a6e15", "demo", "kingdee@123", 2052);
+                //var isSucc = cloneCtx.Login(this.Context.DBId, this.Context.UserName, "888888", 2052);
+                //apiClient.Save(ctx, "KKK_BillA", "{\"Model\": {\"FBillTypeID\": {\"FNUMBER\": \"FBillANumber2\"}}");
 
-            //var result = WebApiServiceCall.Save(cloneCtx, "KKK_BillA", "{\"Model\": {\"FBillTypeID\": {\"FNUMBER\": \"FBillANumber2\"}}");
-            //第三种方式：自行创建上下文，再使用此上下文去调用接口
-            // var ctx = Kingdee.BOS.ServiceHelper.DataCenterService.GetDataCenterContextByID("DBID");
-            // //赋值上用户
-            // ctx.UserId = FormConst.AdministratorID; //服务操作用户暂时记为Administrator
-            // ctx.UserName = "Administrator";
-            // ctx.ServiceType = WebType.WebSite;
-            //给上下文赋值上组织
-            //Kingdee.BOS.BusinessEntity.Organizations.Organization curOrg = OrganizationServiceHelper.ReadOrgInfoByOrgId(Context, 1);
-            //List<long> functions = new List<long>();
-            //if (!curOrg.OrgFunctions.IsNullOrEmptyOrWhiteSpace())
-            //{
-            //    functions = Array.ConvertAll(curOrg.OrgFunctions.Split(','), (a) => { return Convert.ToInt64(a); }).ToList();
-            //}
-            //Context.CurrentOrganizationInfo = new OrganizationInfo()
-            //{
-            //    ID = curOrg.Id,
-            //    Name = curOrg.Name,
-            //    FunctionIds = functions,
-            //    AcctOrgType = curOrg.AcctOrgType
+                //第二种方式：通过克隆创建一个新的上下文，再使用克隆的上下文直接调用api接口，
+                var cloneCtx = ObjectUtils.CreateCopy(Context) as Context;
+                cloneCtx.ServiceType = WebType.WebService;//写死    
+                cloneCtx.ClientInfo = Context.ClientInfo;
+                cloneCtx.CharacterSet = Context.CharacterSet;
+                // cloneCtx.IsStartTimeZoneTransfer = ctx.IsStartTimeZoneTransfer;  
+                cloneCtx.LoginName = Context.LoginName;
+                cloneCtx.EntryRole = Context.EntryRole;
+                // cloneCtx.Salt = ctx.Salt;      
+                cloneCtx.UserPhone = Context.UserPhone;
+                cloneCtx.UserEmail = Context.UserEmail;
+                cloneCtx.UserLoginType = Context.UserLoginType;
 
-            //};
+                DynamicObjectCollection Dyobj = DBUtils.ExecuteDynamicObject(cloneCtx, "/*dialect*/select distinct c.FBILLNO " +
+                " from t_PUR_POOrder a, T_PUR_POORDERENTRY_R b, T_SUB_PPBOM c " +
+                " where a.FID = b.FID and b.FSRCBILLNO = c.FSUBBILLNO " +
+                " and not exists(select 1 from T_SUB_PICKMTRLDATA a1 where a1.FSUBREQBILLNO = c.FSUBBILLNO) " +
+                  " and a.FBILLNO = '" + billno + "'");
+                if (Dyobj.Count < 1)
+                {
+                    return "没有符合条件的未领料用料清单";
+                }
+                for (int idx = 0; idx < Dyobj.Count; idx++)
+                {
+                    var parJsonStr = "{\"Ids\":\"\",\"Numbers\":[\"" + Dyobj[idx]["FBILLNO"].ToString() + "\"],\"EntryIds\":\"\",\"RuleId\":\"\",\"TargetBillTypeId\":\"\",\"TargetOrgId\":0,\"TargetFormId\":\"\",\"IsEnableDefaultRule\":\"false\",\"IsDraftWhenSaveFail\":\"false\",\"CustomParams\":{}}";
+                    try
+                    {
+                        var result = WebApiServiceCall.Push(cloneCtx, "SUB_PPBOM", parJsonStr).ToString();
+                        //var result = JSONObject.Parse(WebApiServiceCall.Push(cloneCtx, "SUB_PPBOM", "{\"Numbers\":[\"" + Dyobj[idx]["FBILLNO"] + "\"]}").ToString());
+                        //var result2 = JSONObject.Parse(result);
+                        //if (!result2.GetJSONObject("ResponseStatus")["IsSuccess"].ToString().ToLower().Equals("true"))
+                        //{
+                        //    return "下推失败:" + result2.GetJSONObject("ResponseStatus");
+                        //}
+                    }
+                    catch (Exception e)
+                    {
+                        return "下推异常:" + e.ToString() + ":::发送json:" + parJsonStr;
+                    }
+
+                    //var llbill = result.GetJSONObject("ResponseStatus").GetJSONObject("SuccessEntitys");
+                }
+                return "下推成功过";
+
+                //var result = WebApiServiceCall.Save(cloneCtx, "KKK_BillA", "{\"Model\": {\"FBillTypeID\": {\"FNUMBER\": \"FBillANumber2\"}}");
+                //第三种方式：自行创建上下文，再使用此上下文去调用接口
+                // var ctx = Kingdee.BOS.ServiceHelper.DataCenterService.GetDataCenterContextByID("DBID");
+                // //赋值上用户
+                // ctx.UserId = FormConst.AdministratorID; //服务操作用户暂时记为Administrator
+                // ctx.UserName = "Administrator";
+                // ctx.ServiceType = WebType.WebSite;
+                //给上下文赋值上组织
+                //Kingdee.BOS.BusinessEntity.Organizations.Organization curOrg = OrganizationServiceHelper.ReadOrgInfoByOrgId(Context, 1);
+                //List<long> functions = new List<long>();
+                //if (!curOrg.OrgFunctions.IsNullOrEmptyOrWhiteSpace())
+                //{
+                //    functions = Array.ConvertAll(curOrg.OrgFunctions.Split(','), (a) => { return Convert.ToInt64(a); }).ToList();
+                //}
+                //Context.CurrentOrganizationInfo = new OrganizationInfo()
+                //{
+                //    ID = curOrg.Id,
+                //    Name = curOrg.Name,
+                //    FunctionIds = functions,
+                //    AcctOrgType = curOrg.AcctOrgType
+
+                //};
+
+            }
 
         }
-
     }
 }
-
 
 
 

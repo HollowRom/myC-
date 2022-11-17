@@ -3,12 +3,12 @@ using System.ComponentModel;
 using Kingdee.BOS.App.Data;
 using Kingdee.BOS.Contracts;
 using Kingdee.BOS.Core.Report;
+using Kingdee.BOS.Util;
 using Kingdee.K3.SCM.App.Sal.Report;
 
 namespace myObject
 {
-    [Description("业务员销售订单执行明细表-自定义插件")]
-    [Kingdee.BOS.Util.HotUpdate]
+    [Description("业务员销售订单执行明细表-自定义插件"), HotUpdate]
     public class xsdd_run_entry_plugin : SalDetailRpt
     {
         private string[] tempTableNames;

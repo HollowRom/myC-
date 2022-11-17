@@ -49,9 +49,15 @@
       <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.Core.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.DataEntity, Version=8.0.235.9, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Kingdee.BOS.Model">
+      <HintPath>..\..\xkSDK\Kingdee.BOS.Model.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.BOS.ServiceHelper, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.VerificationHelper">
+      <HintPath>..\..\xkSDK\Kingdee.BOS.VerificationHelper.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.WebApi.Client, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -61,9 +67,23 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.FIN.AR.Report.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.FIN.AR.Report.PlugIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.FIN.Business.PlugIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.Core">
+      <HintPath>..\..\xkSDK\Kingdee.K3.FIN.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.FIN.HS.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.FIN.HS.Business.PlugIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.ServiceHelper">
+      <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\k3cloud\fa51a684\6841f5f\assembly\dl3\1b6855e8\00bbd193_54ced801\Kingdee.K3.FIN.ServiceHelper.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.K3.SCM.App.Purchase.Report, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -89,6 +109,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -109,15 +130,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="上传附件.cs" />
+    <Compile Include="修改销售订单默认组织.cs" />
     <Compile Include="入库成本调整单按钮插件.cs" />
     <Compile Include="列表固定读取本地文件.cs" />
     <Compile Include="列表读取文件.cs" />
     <Compile Include="创建结算清单覆盖插件.cs" />
     <Compile Include="定时更新表头单据值.cs" />
+    <Compile Include="客户对账单明细增加列.cs" />
+    <Compile Include="客户对账单明细增加列2.cs" />
+    <Compile Include="客户对账单明细过滤框增加列.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="操作校验.cs" />
     <Compile Include="树形插件.cs" />
     <Compile Include="物料收发明细表增加字段干预插件.cs" />
+    <Compile Include="物料收发汇总表读取查询起止时间.cs" />
     <Compile Include="生产入库单转生产订单保存前更新工艺路线.cs" />
     <Compile Include="生产入库单转生产订单保存按钮携带工艺路线插件.cs" />
     <Compile Include="生产入库转生产订单携带工艺路线干预-废弃.cs" />
