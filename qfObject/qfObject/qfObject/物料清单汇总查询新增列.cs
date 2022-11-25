@@ -12,7 +12,7 @@ using Kingdee.BOS.Core.DynamicForm.PlugIn.ControlModel;
 using Kingdee.BOS.Core.Metadata.FieldElement;
 using Kingdee.BOS.App.Data;
 
-namespace myObject
+namespace qfObject
 {
     [Description("物料清单汇总查询新增列")]
     [HotUpdate]
@@ -95,7 +95,8 @@ namespace myObject
                         //this.View.Model.SetValue("F_VBDA_Text", ((DynamicObject)this.View.Model.GetValue("FMaterialId2", row))["Number"].ToString() + "---" + orgNumber, row);
                         this.View.Model.SetValue("F_VBDA_Decimal", Dyobj[0]["stockQty"].ToString(), row);
                     }
-                } catch (Exception e)
+                }
+                catch (Exception e)
                 {
                     this.View.ShowMessage("异常:" + e.ToString());
                 }
