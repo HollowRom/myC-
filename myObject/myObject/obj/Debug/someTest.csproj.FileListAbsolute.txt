@@ -686,3 +686,5 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Report.PlugIn.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.ServiceHelper.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Common.Core.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Contracts.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.ENG.Business.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.SFC.Common.BusinessEntity.dll
