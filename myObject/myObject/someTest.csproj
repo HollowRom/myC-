@@ -152,6 +152,7 @@
     <Compile Include="客户对账单明细增加列.cs" />
     <Compile Include="客户对账单明细增加列2.cs" />
     <Compile Include="客户对账单明细过滤框增加列.cs" />
+    <Compile Include="手工发送短信.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="操作校验.cs" />
     <Compile Include="树形插件.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="生产订单执行明细表携带合同号2.cs" />
     <Compile Include="用料清单手动携带生产订单批号字段.cs" />
     <Compile Include="监视调试接受返回值.cs" />
+    <Compile Include="短信自定义内容.cs" />
     <Compile Include="自定义函数执行sql.cs" />
     <Compile Include="采购订单审核后事件.cs" />
     <Compile Include="采购订单执行明细表合计开票金额干预插件.cs" />
