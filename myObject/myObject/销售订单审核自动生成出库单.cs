@@ -73,12 +73,15 @@ namespace myObject
                 {
                     throw new Exception(reStr);
                 }
-                
+
                 //reStr = shtjBill(bs);
                 //if (!reStr.Contains(successFlag))
                 //{
                 //    throw new Exception(reStr);
                 //}
+                this.OperationResult.IsShowMessage = true;
+
+                this.FormOperation.AfterOpAlterInfo = new LocaleValue(reStr, 2052);
             }
         }
 
@@ -124,7 +127,7 @@ namespace myObject
                 {
                     return shDis;
                 }
-                successSEQ = successSEQ + Dyobj[0][seqKey].ToString().Substring(0, Dyobj[0][seqKey].ToString().Length - 1) + ",";
+                successSEQ = successSEQ + Dyobj[0][seqKey].ToString().Substring(0, Dyobj[0][seqKey].ToString().Length - 1);
             }
             catch (Exception e)
             {
