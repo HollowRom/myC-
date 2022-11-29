@@ -169,6 +169,7 @@
     <Compile Include="用料清单手动携带生产订单批号字段.cs" />
     <Compile Include="监视调试接受返回值.cs" />
     <Compile Include="短信自定义内容.cs" />
+    <Compile Include="自动发送短信.cs" />
     <Compile Include="自定义函数执行sql.cs" />
     <Compile Include="采购订单审核后事件.cs" />
     <Compile Include="采购订单执行明细表合计开票金额干预插件.cs" />
