@@ -688,3 +688,13 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Common.Core.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Contracts.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.ENG.Business.PlugIn.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.SFC.Common.BusinessEntity.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Business.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Web.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AP.Common.Core.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.App.Core.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AP.ServiceHelper.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.App.Core.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.Web.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.App.LogService.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AP.Contracts.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Common.BusinessEntity.dll

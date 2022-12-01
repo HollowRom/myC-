@@ -72,6 +72,9 @@
       <HintPath>..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.K3.Core, Version=8.0.277.11, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Kingdee.K3.FIN.AR.Business.PlugIn">
+      <HintPath>..\..\xkSDK\Kingdee.K3.FIN.AR.Business.PlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.FIN.AR.Report.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.FIN.AR.Report.PlugIn.dll</HintPath>
@@ -152,6 +155,7 @@
     <Compile Include="客户对账单明细增加列.cs" />
     <Compile Include="客户对账单明细增加列2.cs" />
     <Compile Include="客户对账单明细过滤框增加列.cs" />
+    <Compile Include="手工核销测试插件.cs" />
     <Compile Include="自动发送短信.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="操作校验.cs" />
@@ -3636,6 +3640,7 @@
     <Content Include="bin\Debug\Kingdee.K3.BD.Contracts.dll" />
     <Content Include="bin\Debug\Kingdee.K3.BD.ServiceHelper.dll" />
     <Content Include="bin\Debug\Kingdee.K3.Core.dll" />
+    <Content Include="bin\Debug\Kingdee.K3.FIN.AR.Business.PlugIn.dll" />
     <Content Include="bin\Debug\Kingdee.K3.MFG.App.dll" />
     <Content Include="bin\Debug\Kingdee.K3.MFG.APS.Common.Core.dll" />
     <Content Include="bin\Debug\Kingdee.K3.MFG.Common.BusinessEntity.dll" />

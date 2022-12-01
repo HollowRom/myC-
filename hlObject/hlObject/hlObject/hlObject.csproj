@@ -46,11 +46,32 @@
     <Reference Include="Kingdee.BOS.DataEntity">
       <HintPath>..\..\..\xkSDK\Kingdee.BOS.DataEntity.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.BOS.Model">
+      <HintPath>..\..\..\xkSDK\Kingdee.BOS.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.ServiceHelper, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.VerificationHelper, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\xkSDK\Kingdee.BOS.VerificationHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.Business.PlugIn">
+      <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Business.PlugIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.Core">
+      <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.ServiceHelper">
+      <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.ServiceHelper.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.SCM.App.Purchase.Report">
       <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Purchase.Report.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +79,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="客户对账单明细过滤框增加列.cs" />
     <Compile Include="采购订单执行明细表合计开票金额干预插件.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
