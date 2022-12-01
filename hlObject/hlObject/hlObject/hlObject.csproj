@@ -57,6 +57,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\xkSDK\Kingdee.BOS.VerificationHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.App.Report">
+      <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.App.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.App.Core">
+      <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.App.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.FIN.Business.PlugIn">
       <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.Business.PlugIn.dll</HintPath>
     </Reference>
@@ -80,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="客户对账单明细过滤框增加列.cs" />
+    <Compile Include="往来对账明细增加合同号插件.cs" />
     <Compile Include="采购订单执行明细表合计开票金额干预插件.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
