@@ -19,12 +19,31 @@ namespace myObject
             switch (e.BarItemKey)
             {
                 case "VBDA_tbButton":
-                    DynamicObjectCollection entity = Model.GetEntityDataObject(View.Model.BusinessInfo.GetEntity("FDebitEntry"));
-                    for (int idx = 0; idx < entity.Count; idx++)
+                    object headStr = this.View.Model.GetValue("F_VBDA_Text");
+                    if (headStr == null || headStr.ToString().Equals(""))
                     {
+                        this.View.ShowMessage("未填写条件");
+                        return;
+                    }
+                    string billnos = "表头条件:" + this.View.Model.GetValue("F_VBDA_Text").ToString() + "\r\n";
+                    
+                    //应收
+                    DynamicObjectCollection entityD = Model.GetEntityDataObject(View.Model.BusinessInfo.GetEntity("FDebitEntry"));
+                    
+                    for (int idx = 0; idx < entityD.Count; idx++)
+                    {
+                        this.View.Model.SetValue("FTheIsMatchD", (object)true, idx);
+                    }
+
+                    //应付
+                    DynamicObjectCollection entityC = Model.GetEntityDataObject(View.Model.BusinessInfo.GetEntity("FCreditEntry"));
+                    
+                    for (int idx = 0; idx < entityC.Count; idx++)
+                    {
+                        billnos = billnos + this.View.Model.GetValue("FSRCBILLNOC", idx);
                         this.View.Model.SetValue("FTheIsMatchC", (object)true, idx);
                     }
-                    this.View.ShowMessage(entity.Count.ToString() + "a");
+                    this.View.ShowMessage(billnos);
                     break;
             }
             base.BarItemClick(e);
