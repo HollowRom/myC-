@@ -94,7 +94,7 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
             amountFieldsFor.Add("FHadAmountFor");
             amountFieldsFor.Add("FBalanceAmtFor");
             amountFieldsFor.Add("FBalanceAmtForSum");
-            amountFieldsFor.Add(newFieldName);
+            //amountFieldsFor.Add(newFieldName);
             amountFields.Add("FAmount");
             amountFields.Add("FHadAmount");
             amountFields.Add("FBalanceAmt");
