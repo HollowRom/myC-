@@ -37,6 +37,8 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
     [HotUpdate]
     public class khdzd_add_col_dic : AbstractDynamicFormPlugIn
     {
+        private const string newFieldName = "F_VBDA_Text";
+
         public string FList = "FBillList";
 
         public string FListSum = "FListSum";
@@ -92,7 +94,7 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
             amountFieldsFor.Add("FHadAmountFor");
             amountFieldsFor.Add("FBalanceAmtFor");
             amountFieldsFor.Add("FBalanceAmtForSum");
-            amountFieldsFor.Add("F_VBDA_Decimal");
+            amountFieldsFor.Add(newFieldName);
             amountFields.Add("FAmount");
             amountFields.Add("FHadAmount");
             amountFields.Add("FBalanceAmt");
@@ -916,7 +918,7 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
                                  select item.Key).ToList();
             for (int idx = 0; idx < list.Count; idx++)
             {
-                if (list[idx].Equals("F_VBDA_Decimal"))
+                if (list[idx].Equals(newFieldName))
                 {
                     list.RemoveAt(idx);
                 }
@@ -1167,7 +1169,7 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
             {
                 foreach (string item in list)
                 {
-                    if (item.Equals("F_VBDA_Decimal"))
+                    if (item.Equals(newFieldName))
                     {
                         continue;
                     }
@@ -1231,7 +1233,7 @@ namespace Kingdee.K3.FIN.AR.Report.PlugI.ARAP
                 {
                     continue;
                 }
-                this.View.Model.SetValue("F_VBDA_Text", dt[0]["hth"], i);
+                this.View.Model.SetValue(newFieldName, dt[0]["hth"], i);
             }
         }
 
