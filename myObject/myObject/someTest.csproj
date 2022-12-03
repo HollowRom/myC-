@@ -101,6 +101,7 @@
     <Reference Include="Kingdee.K3.FIN.ServiceHelper">
       <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\k3cloud\fa51a684\6841f5f\assembly\dl3\1b6855e8\00bbd193_54ced801\Kingdee.K3.FIN.ServiceHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.MFG.BusinessCommon, Version=8.0.277.11, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Kingdee.K3.MFG.ENG.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.MFG.ENG.Business.PlugIn.dll</HintPath>
@@ -108,6 +109,10 @@
     <Reference Include="Kingdee.K3.MFG.ServiceHelper, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.MFG.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.MFG.SUB.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.MFG.SUB.Business.PlugIn.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.K3.SCM.App.Purchase.Report, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -159,6 +164,7 @@
     <Compile Include="列表固定读取本地文件.cs" />
     <Compile Include="列表读取文件.cs" />
     <Compile Include="创建结算清单覆盖插件.cs" />
+    <Compile Include="委外订单解锁bom版本号.cs" />
     <Compile Include="定时更新表头单据值.cs" />
     <Compile Include="客户对账单明细增加列.cs" />
     <Compile Include="客户对账单明细增加列2.cs" />

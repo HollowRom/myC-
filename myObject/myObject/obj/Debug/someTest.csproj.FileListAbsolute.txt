@@ -699,3 +699,5 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.App.LogService.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AP.Contracts.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Common.BusinessEntity.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AP.App.Report.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.SUB.Business.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.SUB.Common.BusinessEntity.dll
