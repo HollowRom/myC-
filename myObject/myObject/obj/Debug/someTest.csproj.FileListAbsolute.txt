@@ -701,3 +701,12 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AR.Common.BusinessEnti
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.FIN.AP.App.Report.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.SUB.Business.PlugIn.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.SUB.Common.BusinessEntity.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.BD.Common.Business.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.Workflow.PlugIns.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.BD.WebAPI.ServiceStub.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.Workflow.Extends.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.BOS.ApprovalFlow.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.Purchase.Business.PlugIn.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.Web.Client.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\System.Net.Http.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\System.Net.Http.pdb

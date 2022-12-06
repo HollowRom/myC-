@@ -71,6 +71,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.BD.Common.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.BD.Common.Business.PlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.Core, Version=8.0.277.11, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Kingdee.K3.FIN.AP.App.Report, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -129,6 +133,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Kingdee.K3.SCM.IOS.Business.PlugIn.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.SCM.Purchase.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.SCM.Purchase.Business.PlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.SCM.Sal.Report.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.SCM.Sal.Report.PlugIn.dll</HintPath>
@@ -158,6 +166,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api保存物料接口测试.cs" />
     <Compile Include="上传附件.cs" />
     <Compile Include="修改销售订单默认组织.cs" />
     <Compile Include="入库成本调整单按钮插件.cs" />
