@@ -22,7 +22,7 @@ namespace myObject
             base.BarItemClick(e);
             if (e.BarItemKey.ToUpperInvariant() == "VBDA_TBBUTTON9")
             {
-                var renum = pushWLQD();
+                var renum = pushGYLX();
                 this.View.ShowMessage("生成单据编号:" + renum);
             }
         }
@@ -48,6 +48,8 @@ namespace myObject
 
         private string pushGYLX()
         {
+            initCtx();
+
             var gylxDicObj = new Dictionary<string, object>();
 
             gylxDicObj["IsDeleteEntry"] = "true";
@@ -91,9 +93,42 @@ namespace myObject
         private List<Dictionary<string, object>> getGYLXChild()
         {
             var FEntityDicObj = new List<Dictionary<string, object>>();
+            var eDicObj = new Dictionary<string, object>();
+            FEntityDicObj.Add(eDicObj);
+
+            eDicObj["FSeqName"] = "主序列";
+            eDicObj["FSeqType"] = "M";
+
+            var FSubEntityDicObj = new List<Dictionary<string, object>>();
+            eDicObj["FSubEntity"] = FSubEntityDicObj;
 
             var childOne = new Dictionary<string, object>();
 
+            FSubEntityDicObj.Add(childOne);
+
+            childOne["FOperNumber"] = 10;
+            childOne["FProOrgId"] = getKVDis("FNUMBER", "101.2");
+            childOne["FWorkCenterId"] = getKVDis("FNUMBER", "WC000004");
+            childOne["FDepartmentId"] = getKVDis("FNUMBER", "BM000004");
+            childOne["FProcessId"] = getKVDis("FNUMBER", "PRC000002");
+            childOne["FOperDescription"] = "视觉测试";
+            childOne["FOptCtrlCodeId"] = getKVDis("FNUMBER", "OCC000002");
+            childOne["FBaseBatch"] = 1.0;
+            childOne["FOperUnitID"] = getKVDis("FNumber", "Pcs");
+            
+            var childTwo = new Dictionary<string, object>();
+
+            FSubEntityDicObj.Add(childTwo);
+
+            childTwo["FOperNumber"] = 20;
+            childTwo["FProOrgId"] = getKVDis("FNUMBER", "101.2");
+            childTwo["FWorkCenterId"] = getKVDis("FNUMBER", "WC000006");
+            childTwo["FDepartmentId"] = getKVDis("FNUMBER", "BM000005");
+            childTwo["FProcessId"] = getKVDis("FNUMBER", "PRC000004");
+            childTwo["FOperDescription"] = "软件下载";
+            childTwo["FOptCtrlCodeId"] = getKVDis("FNUMBER", "OCC000001_SYS");
+            childTwo["FBaseBatch"] = 1.0;
+            childTwo["FOperUnitID"] = getKVDis("FNumber", "Pcs");
             return FEntityDicObj;
         }
 
