@@ -50,6 +50,33 @@ namespace myObject
         {
             var gylxDicObj = new Dictionary<string, object>();
 
+            gylxDicObj["IsDeleteEntry"] = "true";
+            gylxDicObj["IsEntryBatchFill"] = "true";
+            gylxDicObj["ValidateFlag"] = "true";
+            gylxDicObj["NumberSearch"] = "true";
+
+            var modelDicObj = new Dictionary<string, object>();
+
+            gylxDicObj["Model"] = modelDicObj;
+
+            modelDicObj["FCreateOrgId"] = getKVDis("FNumber", "101.2");
+            modelDicObj["FUseOrgId"] = getKVDis("FNumber", "101.2");
+            modelDicObj["FName"] = "电容:IND-ML,6.8nH±5%";
+            modelDicObj["FProcessType"] = "M";
+            
+            modelDicObj["FMATERIALID"] = getKVDis("FNumber", "1.02.001.0007.00004");
+            modelDicObj["FUnitID"] = getKVDis("FNumber", "Pcs");
+            modelDicObj["FEFFECTDATE"] = "2022-12-07 00:00:00";
+            modelDicObj["FProDepartmentId"] = getKVDis("FNumber", "BM000004");
+            modelDicObj["FBatchTo"] = 9999999.0;
+            modelDicObj["FExpireDate"] = "9999-12-31 00:00:00";
+            modelDicObj["FCreateDate"] = "2022-12-07 16:10:56";
+            modelDicObj["FRouteSrc"] = "E";
+            modelDicObj["FProduceType"] = "C";
+            modelDicObj["FAutoInStore"] = "C";
+            modelDicObj["FFailAutoInStore"] = "A";
+            
+            modelDicObj["FEntity"] = getGYLXChild();
 
             var reDic = WebApiServiceCall.Save(cloneCtx, "ENG_BOM", JObject.FromObject(gylxDicObj).ToString()) as Dictionary<string, object>;
             var reStrParse = getErrorMess(reDic);
@@ -59,6 +86,15 @@ namespace myObject
             }
 
             return getNumberMess(reDic);
+        }
+
+        private List<Dictionary<string, object>> getGYLXChild()
+        {
+            var FEntityDicObj = new List<Dictionary<string, object>>();
+
+            var childOne = new Dictionary<string, object>();
+
+            return FEntityDicObj;
         }
 
         private string pushWLQD()
