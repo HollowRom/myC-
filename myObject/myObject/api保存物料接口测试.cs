@@ -68,11 +68,11 @@ namespace myObject
             
             modelDicObj["FMATERIALID"] = getKVDis("FNumber", "1.02.001.0007.00004");
             modelDicObj["FUnitID"] = getKVDis("FNumber", "Pcs");
-            modelDicObj["FEFFECTDATE"] = "2022-12-07 00:00:00";
+            modelDicObj["FEFFECTDATE"] = DateTime.Now.ToString();
             modelDicObj["FProDepartmentId"] = getKVDis("FNumber", "BM000004");
             modelDicObj["FBatchTo"] = 9999999.0;
             modelDicObj["FExpireDate"] = "9999-12-31 00:00:00";
-            modelDicObj["FCreateDate"] = "2022-12-07 16:10:56";
+            modelDicObj["FCreateDate"] = DateTime.Now.ToString();
             modelDicObj["FRouteSrc"] = "E";
             modelDicObj["FProduceType"] = "C";
             modelDicObj["FAutoInStore"] = "C";
@@ -80,7 +80,7 @@ namespace myObject
             
             modelDicObj["FEntity"] = getGYLXChild();
 
-            var reDic = WebApiServiceCall.Save(cloneCtx, "ENG_BOM", JObject.FromObject(gylxDicObj).ToString()) as Dictionary<string, object>;
+            var reDic = WebApiServiceCall.Save(cloneCtx, "ENG_Route", JObject.FromObject(gylxDicObj).ToString()) as Dictionary<string, object>;
             var reStrParse = getErrorMess(reDic);
             if (!reStrParse.Equals(successFlag))
             {
