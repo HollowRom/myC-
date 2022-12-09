@@ -15,15 +15,15 @@
 //using Kingdee.BOS.ServiceHelper.FileServer;
 //using Kingdee.BOS.Util;
 
-//namespace Running.Sample.PlugIn.BusinessPlugIn.Bill
+//namespace myObject
 //{
 //    [Description("附件上传下载的表单插件示例。"), HotUpdate]
-//    public class P20200427FileServiceEdit : AbstractBillPlugIn
+//    public class upd_file_to_file_server : AbstractBillPlugIn
 //    {
-//        public override void ButtonClick(ButtonClickEventArgs e)
+//        public override void BarItemClick(BarItemClickEventArgs e)
 //        {
 //            //上传附件，并保存于单据关联关系。
-//            if (e.Key.EqualsIgnoreCase("UploadLB"))
+//            if (e.BarItemKey.Equals("UploadLB"))
 //            {
 //                Upload();
 //            }
@@ -44,12 +44,14 @@
 //                /// </summary>
 //        public void Upload()
 //        {
+//            //View.ShowMessage("aabb");
+//            //return;
 //            //上传附件至当前启用的文件服务实例。
-//            string filePath = @"D:\123.txt"; //测试用附件地址。
+//            string filePath = @"\\192.168.31.175\aabb\123.txt"; //测试用附件地址。
 //            FileUploadResult uploadResult = UploadAttachment(filePath);
-//            this.View.ShowMessage(uploadResult.FileName);
+//            //this.View.ShowMessage(uploadResult.FileName);
 //            //保存与单据的关联关系，此处以币别为例。
-//            //SaveAttachmentData(uploadResult);
+//            SaveAttachmentData(uploadResult);
 //        }
 
 //        /// <summary>
@@ -126,39 +128,39 @@
 //                /// </summary>
 //        //public void Download()
 //        //{
-//        //    //下载至应用服务器的文件，建议放 WebSite/tempFilePath 目录，开启执行计划后定时会清空。
-//        //    string tempFilePath = HttpContext.Current.Server.MapPath(KeyConst.TEMPFILEPATH);
+//        //    //下载至应用服务器的文件，建议放 WebSite/tempFilePath 目录，开启执行计划后定时会清空。
+//        //    string tempFilePath = HttpContext.Current.Server.MapPath(KeyConst.TEMPFILEPATH);
 //        //    string filePath = Path.Combine(tempFilePath, Guid.NewGuid() + ".txt"); //用GUID做文件名，防止同名冲突。
 
 //        //    IUpDownloadService service = FileServiceContainer.GetUpDownloadService();
 //        //    TFileInfo tFile = new TFileInfo()
 //        //    {
-//        //        //fileId文件编码可由 T_BAS_ATTACHMENT 附件明细表查得，此处直接拿上面上传文件的编码来做示例。
-//        //        FileId = _fileId,
+//        //        //fileId文件编码可由 T_BAS_ATTACHMENT 附件明细表查得，此处直接拿上面上传文件的编码来做示例。
+//        //        FileId = _fileId,
 //        //        CTX = this.Context,
 //        //        Nail = "0", //为1代表缩略图
-//        //        FilePath = filePath //应用服务器保存文件的路径。
-//        //    };
+//        //        FilePath = filePath //应用服务器保存文件的路径。
+//        //    };
 //        //    FileDownloadResult downloadResult = service.DownloadSaveLocal(tFile);
 //        //}
 
 //        /// <summary>
 //                /// 弹出下载提示窗，下载文件至客户端本地。
 //                /// </summary>
-////        public void ShowDownload()
-////        {
-////            string url = FileServerHelper.GetAppSiteOuterNetUrl(this.Context, HttpContext.Current.Request);
-////            //fileId文件编码可由 T_BAS_ATTACHMENT 附件明细表查得，此处直接拿上面上传文件的编码来做示例。
-////            string fileurl = string.Format("{0}FileUpLoadServices/download.aspx?fileId={1}&token={2}",
-////url, _fileId, this.Context.UserToken);
+//        //        public void ShowDownload()
+//        //        {
+//        //            string url = FileServerHelper.GetAppSiteOuterNetUrl(this.Context, HttpContext.Current.Request);
+//        //            //fileId文件编码可由 T_BAS_ATTACHMENT 附件明细表查得，此处直接拿上面上传文件的编码来做示例。
+//        //            string fileurl = string.Format("{0}FileUpLoadServices/download.aspx?fileId={1}&token={2}",
+//        //url, _fileId, this.Context.UserToken);
 
-////            JSONObject jObject = new JSONObject();
-////            jObject.Put("url", HttpUtility.UrlEncode(fileurl));
-////            jObject.Put("title", "文件下载");
-////            jObject.Put("desc", "请点击打开附件：");
-////            jObject.Put("urltitle", "这是文件名");
-////            this.View.AddAction(JSAction.openUrlWindow, new JSONArray { jObject });
-////        }
+//        //            JSONObject jObject = new JSONObject();
+//        //            jObject.Put("url", HttpUtility.UrlEncode(fileurl));
+//        //            jObject.Put("title", "文件下载");
+//        //            jObject.Put("desc", "请点击打开附件：");
+//        //            jObject.Put("urltitle", "这是文件名");
+//        //            this.View.AddAction(JSAction.openUrlWindow, new JSONArray { jObject });
+//        //        }
 //    }
 //}
 

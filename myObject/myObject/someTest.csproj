@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="K3Cloud.WebApi.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\K3Cloud.WebApi.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.BOS.App, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.App.dll</HintPath>
@@ -53,6 +57,10 @@
       <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\bin\Kingdee.BOS.Core.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.DataEntity, Version=8.0.235.9, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Kingdee.BOS.FileServer.Core, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.BOS.FileServer.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.BOS.Model">
       <HintPath>..\..\xkSDK\Kingdee.BOS.Model.dll</HintPath>
     </Reference>
@@ -168,6 +176,7 @@
   <ItemGroup>
     <Compile Include="api保存物料接口测试.cs" />
     <Compile Include="上传附件.cs" />
+    <Compile Include="上传附件到单据.cs" />
     <Compile Include="修改销售订单默认组织.cs" />
     <Compile Include="入库成本调整单按钮插件.cs" />
     <Compile Include="列表固定读取本地文件.cs" />

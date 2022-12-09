@@ -2,13 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using Kingdee.K3.SCM.Purchase.Business.PlugIn;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
 using Kingdee.BOS;
-using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.WebApi.FormService;
 using Newtonsoft.Json.Linq;
+using Kingdee.BOS.WebApi.Client;
 
 namespace myObject
 {
@@ -22,9 +21,85 @@ namespace myObject
             base.BarItemClick(e);
             if (e.BarItemKey.ToUpperInvariant() == "VBDA_TBBUTTON9")
             {
-                var renum = pushGYLX();
+                var renum = updFileToBill();
                 this.View.ShowMessage("生成单据编号:" + renum);
             }
+        }
+
+        private string updFileToBill()
+        {
+            //K3CloudApiClient client = new K3CloudApiClient("http://ps2020kbwqdywz/k3cloud/");
+            //var loginResult = client.ValidateLogin("610bbd142a6e15", "Administrator", "kingdee@123", 2052);
+            //var resultType = JObject.Parse(loginResult)["LoginResultType"].Value<int>();
+
+            initCtx();
+            
+            var dataDicObj = new Dictionary<string, object>();
+
+            dataDicObj["FileName"] = "0616.txt";
+            dataDicObj["FormId"] = "BD_Currency";
+            dataDicObj["IsLast"] = "true";
+            dataDicObj["InterId"] = "1";
+            dataDicObj["BillNO"] = "PRE001";
+            dataDicObj["AliasFileName"] = "fuJianTest";
+            dataDicObj["SendByte"] = "56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
+            //dataDicObj["SendByte"] = "data:text/plain;base64,56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
+
+            //if (resultType == 1)
+            //{
+            //    var ret = client.Execute<Dictionary<string, object>>("Kingdee.BOS.WebApi.ServicesStub.DynamicFormService.AttachmentUpLoad", new Object[]{ JObject.FromObject(dataDicObj).ToString() });
+            //    return JObject.FromObject(ret).ToString();
+            //}
+
+
+            var reDic = WebApiServiceCall.UploadFile(cloneCtx, JObject.FromObject(dataDicObj).ToString()) as Dictionary<string, object>;
+            var reStrParse = getErrorMess(reDic);
+            if (!reStrParse.Equals(successFlag))
+            {
+                return "下推失败:" + reStrParse + "\r\n" + "\r\n" + JObject.FromObject(dataDicObj).ToString();
+            }
+            string fid;
+            try
+            {
+                fid = getFileId(reDic).Replace(successFlag, "");
+                if (fid == null || fid.Equals(""))
+                {
+                    return "fileId获取失败";
+                }
+            } catch(Exception e)
+            {
+                return "fileId获取失败\r\n" + e;
+            }
+            
+            var dataBillDicObj = new Dictionary<string, object>();
+
+            var ModelDicObj = new Dictionary<string, object>();
+
+
+            ModelDicObj["FFileId"] = fid;
+            ModelDicObj["FAttachmentName"] = dataDicObj["FileName"];
+            ModelDicObj["FBillType"] = dataDicObj["FormId"];
+            ModelDicObj["FInterID"] = "1";
+            ModelDicObj["FBillNo"] = "PRE001";
+            ModelDicObj["FAttachmentSize"] = (decimal)(dataDicObj["SendByte"].ToString().Length / (8 / 2 * 1024)) + 1;
+            //ModelDicObj["FAttachmentSize"] = 1.0;
+            ModelDicObj["FExtName"] = dataDicObj["FileName"].ToString().SubStr(dataDicObj["FileName"].ToString().LastIndexOf("."), 99);
+            //ModelDicObj["FExtName"] = ".txt";
+            ModelDicObj["FEntryinterId"] = "-1";
+            ModelDicObj["FEntrykey"] = " ";
+            ModelDicObj["FaliasFileName"] = dataDicObj["AliasFileName"];
+            ModelDicObj["FCreateMen"] = getKVDis("FUserID", cloneCtx.UserId.ToString());
+            ModelDicObj["FCreateTime"] = DateTime.Now.ToString();
+
+            dataBillDicObj["Model"] = ModelDicObj;
+            
+            reDic = WebApiServiceCall.Save(cloneCtx, "BOS_Attachment", JObject.FromObject(dataBillDicObj).ToString()) as Dictionary<string, object>;
+            reStrParse = getErrorMess(reDic);
+            if (!reStrParse.Equals(successFlag))
+            {
+                return "下推失败:" + reStrParse + "\r\n" + "\r\n" + JObject.FromObject(dataBillDicObj).ToString();
+            }
+            return successFlag + "\r\n" + JObject.FromObject(reDic).ToString();
         }
 
         private void initCtx()
@@ -79,7 +154,6 @@ namespace myObject
             modelDicObj["FFailAutoInStore"] = "A";
             
             modelDicObj["FEntity"] = getGYLXChild();
-
             var reDic = WebApiServiceCall.Save(cloneCtx, "ENG_Route", JObject.FromObject(gylxDicObj).ToString()) as Dictionary<string, object>;
             var reStrParse = getErrorMess(reDic);
             if (!reStrParse.Equals(successFlag))
@@ -319,6 +393,29 @@ namespace myObject
                     return "返回json没有编码信息";
                 }
                 return successFlag + "\r\n-->" + /*JObject.FromObject(dis).ToString() + "\r\n-->" +*/ num;
+            }
+            catch (Exception e)
+            {
+                return "解析返回值异常:" + e.ToString();
+            }
+        }
+
+        //获取文件id
+        private string getFileId(Dictionary<string, object> dis)
+        {
+            try
+            {
+                var result = (dis["Result"] as Dictionary<string, object>)["ResponseStatus"] as Dictionary<string, object>;
+                if (!result["IsSuccess"].ToString().ToLower().Equals("true"))
+                {
+                    return JObject.FromObject(dis).ToString();
+                }
+                var num = (dis["Result"] as Dictionary<string, object>)["FileId"] as string;
+                if (num == null || num == "")
+                {
+                    return "返回json没有编码信息";
+                }
+                return successFlag + /*JObject.FromObject(dis).ToString() + "\r\n-->" +*/ num;
             }
             catch (Exception e)
             {

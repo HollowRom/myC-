@@ -710,3 +710,4 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.Purchase.Business.Plug
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.SCM.Web.Client.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\System.Net.Http.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\System.Net.Http.pdb
+D:\mySome\myC-\myObject\myObject\bin\Debug\K3Cloud.WebApi.Client.dll
