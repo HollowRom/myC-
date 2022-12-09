@@ -8,6 +8,7 @@ using Kingdee.BOS;
 using Kingdee.BOS.WebApi.FormService;
 using Newtonsoft.Json.Linq;
 using Kingdee.BOS.WebApi.Client;
+using System.Text.RegularExpressions;
 
 namespace myObject
 {
@@ -16,6 +17,8 @@ namespace myObject
     {
         private const string successFlag = "success";
         private Context cloneCtx = null;
+        private Regex regex = new Regex("base64,");
+
         public override void BarItemClick(BarItemClickEventArgs e)
         {
             base.BarItemClick(e);
@@ -42,8 +45,10 @@ namespace myObject
             dataDicObj["InterId"] = "1";
             dataDicObj["BillNO"] = "PRE001";
             dataDicObj["AliasFileName"] = "fuJianTest";
-            dataDicObj["SendByte"] = "56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
-            //dataDicObj["SendByte"] = "data:text/plain;base64,56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
+            //dataDicObj["SendByte"] = "56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
+            dataDicObj["SendByte"] = "data:text/plain;base64,56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
+
+            dataDicObj["SendByte"] = regex.Split(dataDicObj["SendByte"].ToString())[1];
 
             //if (resultType == 1)
             //{
