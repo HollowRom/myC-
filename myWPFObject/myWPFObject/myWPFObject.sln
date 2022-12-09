@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.2017
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myWPFObject", "myWPFObject\myWPFObject.csproj", "{C022E37A-19CE-4C53-93C5-90294A7E6685}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C022E37A-19CE-4C53-93C5-90294A7E6685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C022E37A-19CE-4C53-93C5-90294A7E6685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C022E37A-19CE-4C53-93C5-90294A7E6685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C022E37A-19CE-4C53-93C5-90294A7E6685}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {192B7B4E-AEAE-4184-B450-BAD2111E637C}
+	EndGlobalSection
+EndGlobal

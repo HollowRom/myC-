@@ -48,6 +48,9 @@
       <HintPath>..\..\xkSDK\Kingdee.BOS.Business.Bill.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.BusinessEntity, Version=8.0.277.11, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Kingdee.BOS.Client.Core">
+      <HintPath>..\..\xkSDK\K3CloudClient\Kingdee.BOS.Client.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.BOS.Contracts, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.Contracts.dll</HintPath>
@@ -78,6 +81,9 @@
     <Reference Include="Kingdee.BOS.WebApi.FormService, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.XPF.ControlPlugins.Contracts">
+      <HintPath>..\..\xkSDK\K3CloudClient\Kingdee.BOS.XPF.ControlPlugins.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.K3.BD.Common.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
