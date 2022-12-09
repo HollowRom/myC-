@@ -9,6 +9,8 @@ using Kingdee.BOS.WebApi.FormService;
 using Newtonsoft.Json.Linq;
 using Kingdee.BOS.WebApi.Client;
 using System.Text.RegularExpressions;
+using Kingdee.BOS.DataEntity;
+using Kingdee.BOS.Core.DynamicForm.PlugIn.ControlModel;
 
 namespace myObject
 {
@@ -29,6 +31,19 @@ namespace myObject
             }
         }
 
+        //private void otherTest()
+        //{
+        //    var cfg = new KDSerialPortConfig();
+        //    cfg.PortName = "COM2";
+        //    cfg.Rate = 9600;
+        //    cfg.Parity = 0;
+        //    cfg.Bits = 8;
+        //    cfg.StopBits = 1;
+        //    cfg.Timeout = -1;
+        //    cfg.EncodingName = "ASCII";
+        //    this.View.GetControl<SerialPortControl>("F_VBDA_SerialPortCtrl").Init(cfg);
+        //}
+
         private string updFileToBill()
         {
             //K3CloudApiClient client = new K3CloudApiClient("http://ps2020kbwqdywz/k3cloud/");
@@ -40,10 +55,10 @@ namespace myObject
             var dataDicObj = new Dictionary<string, object>();
 
             dataDicObj["FileName"] = "0616.txt";
-            dataDicObj["FormId"] = "BD_Currency";
+            dataDicObj["FormId"] = "PUR_PurchaseOrder";
             dataDicObj["IsLast"] = "true";
-            dataDicObj["InterId"] = "1";
-            dataDicObj["BillNO"] = "PRE001";
+            dataDicObj["InterId"] = "100137";
+            dataDicObj["BillNO"] = "CGDD000060";
             dataDicObj["AliasFileName"] = "fuJianTest";
             //dataDicObj["SendByte"] = "56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
             dataDicObj["SendByte"] = "data:text/plain;base64,56KN5LqL5rOV5biI5ZiO5ZiO6JCo5ZiO";
@@ -84,8 +99,8 @@ namespace myObject
             ModelDicObj["FFileId"] = fid;
             ModelDicObj["FAttachmentName"] = dataDicObj["FileName"];
             ModelDicObj["FBillType"] = dataDicObj["FormId"];
-            ModelDicObj["FInterID"] = "1";
-            ModelDicObj["FBillNo"] = "PRE001";
+            ModelDicObj["FInterID"] = dataDicObj["InterId"];
+            ModelDicObj["FBillNo"] = dataDicObj["BillNO"];
             ModelDicObj["FAttachmentSize"] = (decimal)(dataDicObj["SendByte"].ToString().Length / (8 / 2 * 1024)) + 1;
             //ModelDicObj["FAttachmentSize"] = 1.0;
             ModelDicObj["FExtName"] = dataDicObj["FileName"].ToString().SubStr(dataDicObj["FileName"].ToString().LastIndexOf("."), 99);
