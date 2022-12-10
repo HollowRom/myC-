@@ -46,7 +46,7 @@ namespace myWPFObject
         {
             this.Dispatcher.BeginInvoke(new Action(() =>
             {
-                int reInt = KDGWRFID.Sum2(3, 9);
+                int reInt = KDGWRFID.Sum3(3, 9);
                 this._txtDsp.Text = reInt.ToString();
             }));
         }
@@ -57,7 +57,8 @@ namespace myWPFObject
             {
                 if (this._txtDsp != null)
                 {
-                    this._txtDsp.Text = data + "---"+ KDGWRFID.Sum2(3, 9);
+                    this._txtDsp.Text = data + "---"+ KDGWRFID.Sum3(3, 9);
+                    MessageBox.Show("用户名或者密码不能为空");
                     this.Proxy.FireCustomEvent(new CustomEventArgs("", "Success", "{message:'WriteString() Success!'}"));
                 }
                 else
@@ -143,8 +144,8 @@ namespace myWPFObject
 
     public static class KDGWRFID
     {
-        [DllImport("doNothingObject2.dll")]
-        public static extern int Sum2(int a, int b);
+        [DllImport("doNothingObject3.dll")]
+        public static extern int Sum3(int a, int b);
 
     }
 
