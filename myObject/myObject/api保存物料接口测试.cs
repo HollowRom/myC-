@@ -11,6 +11,8 @@ using Kingdee.BOS.WebApi.Client;
 using System.Text.RegularExpressions;
 using Kingdee.BOS.DataEntity;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.ControlModel;
+using System.Runtime.InteropServices;
+using System.Text;
 
 namespace myObject
 {
@@ -26,8 +28,30 @@ namespace myObject
             base.BarItemClick(e);
             if (e.BarItemKey.ToUpperInvariant() == "VBDA_TBBUTTON9")
             {
-                var renum = updFileToBill();
-                this.View.ShowMessage("生成单据编号:" + renum);
+                if (Context.ClientType != ClientType.Silverlight && Context.ClientType != ClientType.WPF)
+                {
+                    this.View.ShowMessage("只能在客户端上使用此功能");
+                    return;
+                }
+                var args = new object[1];
+                args[0] = "asfzxzfdsf";
+                //this.View.GetControl("F_VBDA_CustomCtl").InvokeControlMethod("DoCustomMethod", "sumInt", null);
+                this.View.GetControl("F_VBDA_CustomCtl").InvokeControlMethod("DoCustomMethod", "WriteString", args);
+                //this.View.ShowMessage("sumInt = " + sumInt);
+                //StringBuilder sData = new StringBuilder();
+                //StringBuilder sPassWord = new StringBuilder();
+                //try
+                //{
+                //    KDGWRFID.WriteCardData(0, sData, 0, sPassWord);
+                //    this.View.ShowMessage(sData + "----" + sPassWord);
+                //} catch(Exception err)
+                //{
+                //    this.View.ShowMessage(err.ToString());
+
+                //}
+
+                //var renum = updFileToBill();
+                //this.View.ShowMessage("生成单据编号:" + renum);
             }
         }
 
@@ -443,4 +467,63 @@ namespace myObject
             }
         }
     }
+
+
+    //public static class KDGWRFID
+    //{
+    //    [DllImport("doNothingObject.dll")]
+    //    public static extern int Sum(int a, int b);
+        
+    //}
+
+
+    //public static class KDGWRFID
+    //{
+    //    [DllImport("noThingObject.dll")]
+    //    public static extern bool LinkCard();
+
+    //    //初试化        
+    //    [DllImport("noThingObject.dll")]
+    //    public static extern bool UnlinkCard();  //初始化       
+
+    //    [DllImport("noThingObject.dll")]
+    //    public static extern int ReadCardID(StringBuilder sCardId);  //初始化    
+
+    //    [DllImport("noThingObject.dll")]
+    //    public static extern bool WriteCardData(int nBlock, StringBuilder sData, int sPassType, StringBuilder sPassWord);
+
+    //    [DllImport("noThingObject.dll")]
+    //    public static extern bool ReadCardData(StringBuilder sData, int nBlock, int sPassType, StringBuilder sPassWord);
+
+    //    [DllImport("noThingObject.dll")]
+    //    public static extern void GetErr(StringBuilder ErrStr);
+
+    //    public static string ReadCardID()
+    //    {
+    //        string retStr = "";
+    //        var retb = LinkCard();
+    //        if (!retb) return retStr;
+    //        var sb = new StringBuilder();
+    //        var sbRet = new StringBuilder();
+    //        var ret = ReadCardID(sb);
+    //        if (ret == 0)
+    //        {
+    //            GetErr(sbRet);
+    //        }
+    //        else
+    //        {
+    //            var chrs = Encoding.Default.GetBytes(sb.ToString().Substring(0, ret));
+    //            for (int i = 0; i < chrs.Length; i++)
+    //            {
+    //                var chr = chrs;
+    //                var chrX2 = chr.ToString();
+    //                //var chrX2 = chr.ToString("X2");
+    //                sbRet.Append(chrX2);
+    //            }
+    //        }
+    //        retStr = sbRet.ToString();
+    //        retb = UnlinkCard();
+    //        return retStr;
+    //    }
+    //}
 }
