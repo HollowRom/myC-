@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+
 /// 有界面插件    ///     
 namespace myWPFObject
 {
@@ -13,6 +14,7 @@ namespace myWPFObject
     {
         public IKDCustomControlProxy Proxy { get; set; }
         TextBlock _txtDsp = null;
+
         protected void FireOnCustomEvent(CustomEventArgs e)
         {
             if (this.Proxy != null)
@@ -38,7 +40,9 @@ namespace myWPFObject
             };
         }
 
-        public void Release() { this.Content = null; }
+        public void Release()
+        {
+            this.Content = null; }
         ///************************* 以下是客制化控件自定义函数入口 ****************************///        ///         
         /// 定制控件入口，服务端调用方法：this.View.GetControl("FCUSTOMCONTROL").InvokeControlMethod("DoCustomMethod","WriteString",args)，args是对象数组        ///        
         
