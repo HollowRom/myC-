@@ -1,8 +1,8 @@
 ﻿//客制化控件集成读卡器代码实例：
 using Kingdee.BOS.Client.Core;
+using Kingdee.BOS;
 using System;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -62,15 +62,16 @@ namespace myWPFObject
                 if (this._txtDsp != null)
                 {
                     this._txtDsp.Text = data + "---"+ KDGWRFID.Sum3(3, 9);
-                    MessageBox.Show("用户名或者密码不能为空");
-                    this.Proxy.FireCustomEvent(new CustomEventArgs("", "Success", "{message:'WriteString() Success!'}"));
+                    // MessageBox.Show("用户名或者密码不能为空");
+                    this.Proxy.FireCustomEvent(new CustomEventArgs("F_VBDA_CustomCtl", "Success", "{message:'WriteString() Success!'}"));
                 }
                 else
                 {
-                    this.Proxy.FireCustomEvent(new CustomEventArgs("", "Error", "{message:'WriteString() Error, component uninitilization!'}"));
+                    this.Proxy.FireCustomEvent(new CustomEventArgs("F_VBDA_CustomCtl", "Error", "{message:'WriteString() Error, component uninitilization!'}"));
                 }
             }));
         }
+
         ///// 获取Card ID        ///         ///      
         //public void ReadCardID()
         //{
@@ -148,7 +149,7 @@ namespace myWPFObject
 
     public static class KDGWRFID
     {
-        [DllImport("doNothingObject3.dll")]
+        [DllImport("C:/Program Files (x86)/Kingdee/K3Cloud/DeskClient/K3CloudClient/controlplugins/doNothingObject3.dll")]
         public static extern int Sum3(int a, int b);
 
     }

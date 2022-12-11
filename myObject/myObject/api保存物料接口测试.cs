@@ -16,7 +16,8 @@ using System.Text;
 
 namespace myObject
 {
-    [Description("api保存物料接口测试"), HotUpdate]
+    [Description("api保存物料接口测试")]
+    [HotUpdate]
     public class api_save_number : PurchaseBillEdit
     {
         private const string successFlag = "success";
@@ -33,11 +34,14 @@ namespace myObject
                     this.View.ShowMessage("只能在客户端上使用此功能");
                     return;
                 }
-                var args = new object[1];
-                args[0] = "asfzxzfdsf";
+                initCtx();
+                var args = new object[2];
+                args[0] = "vxzvd22撒";
+                // args[1] = cloneCtx;
                 //this.View.GetControl("F_VBDA_CustomCtl").InvokeControlMethod("DoCustomMethod", "sumInt", null);
                 this.View.GetControl("F_VBDA_CustomCtl").InvokeControlMethod("DoCustomMethod", "WriteString", args);
-                //this.View.ShowMessage("sumInt = " + sumInt);
+
+                //this.View.ShowMessage("sumInt = " + sumInt);       
                 //StringBuilder sData = new StringBuilder();
                 //StringBuilder sPassWord = new StringBuilder();
                 //try
@@ -52,6 +56,23 @@ namespace myObject
 
                 //var renum = updFileToBill();
                 //this.View.ShowMessage("生成单据编号:" + renum);
+            }
+        }
+
+        public override void CustomEvents(CustomEventsArgs e)
+        {
+            base.CustomEvents(e);
+            if (e.Key == "F_VBDA_CustomCtl")
+            {
+                var recData = e.EventArgs;
+                if (e.EventName == "失败")
+                {
+                    this.View.ShowMessage("自定义组件调用失败：" + e.EventArgs);
+                }
+                else
+                {
+                    this.View.ShowMessage("自定义组件调用成功：" + e.EventArgs);
+                }
             }
         }
 
