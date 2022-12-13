@@ -13,6 +13,8 @@ using Kingdee.BOS.DataEntity;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.ControlModel;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace myObject
 {
@@ -29,12 +31,22 @@ namespace myObject
             base.BarItemClick(e);
             if (e.BarItemKey.ToUpperInvariant() == "VBDA_TBBUTTON9")
             {
+                initCtx();
+                //string cloneCtxStr = objectToStr(cloneCtx);
+                //cloneCtx = null;
+                //cloneCtx = parseStrToObject<Context>(cloneCtxStr);
+                //if (cloneCtx == null)
+                //{
+                //    this.View.ShowMessage("cloneCtx解析失败");
+                //    return;
+                //}
+                //updFileToBill();
+                //return;
                 if (Context.ClientType != ClientType.Silverlight && Context.ClientType != ClientType.WPF)
                 {
                     this.View.ShowMessage("只能在客户端上使用此功能");
                     return;
                 }
-                initCtx();
                 var args = new object[2];
                 args[0] = "vxzvd22撒";
                 // args[1] = cloneCtx;
@@ -89,6 +101,24 @@ namespace myObject
         //    this.View.GetControl<SerialPortControl>("F_VBDA_SerialPortCtrl").Init(cfg);
         //}
 
+        private static string objectToStr(object o)
+        {
+            return JObject.FromObject(o).ToString();
+        }
+
+        private static T parseStrToObject<T>(string s)
+        {
+            try
+            {
+                return JsonConvert.DeserializeObject<T>(s);
+            }
+            catch (Exception e)
+            {
+                return default(T);
+            }
+        }
+
+
         private string updFileToBill()
         {
             //K3CloudApiClient client = new K3CloudApiClient("http://ps2020kbwqdywz/k3cloud/");
@@ -115,8 +145,7 @@ namespace myObject
             //    var ret = client.Execute<Dictionary<string, object>>("Kingdee.BOS.WebApi.ServicesStub.DynamicFormService.AttachmentUpLoad", new Object[]{ JObject.FromObject(dataDicObj).ToString() });
             //    return JObject.FromObject(ret).ToString();
             //}
-
-
+            
             var reDic = WebApiServiceCall.UploadFile(cloneCtx, JObject.FromObject(dataDicObj).ToString()) as Dictionary<string, object>;
             var reStrParse = getErrorMess(reDic);
             if (!reStrParse.Equals(successFlag))
