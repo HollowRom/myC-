@@ -188,6 +188,7 @@
     <Compile Include="列表固定读取本地文件.cs" />
     <Compile Include="列表读取文件.cs" />
     <Compile Include="创建结算清单覆盖插件.cs" />
+    <Compile Include="加载其他单据并修改.cs" />
     <Compile Include="委外订单解锁bom版本号.cs" />
     <Compile Include="定时更新表头单据值.cs" />
     <Compile Include="客户对账单明细增加列.cs" />
