@@ -52,8 +52,19 @@
     <Reference Include="Kingdee.BOS.DataEntity">
       <HintPath>..\..\..\xkSDK\Kingdee.BOS.DataEntity.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceEntity, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\xkSDK\K3CloudClient\Kingdee.BOS.ServiceFacade.KDServiceEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceFx, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceFx.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.BOS.ServiceHelper">
       <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.WebApi.ServicesStub">
+      <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.ServicesStub.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,7 +75,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="auto_clean_mat.cs" />
+    <Compile Include="cleanBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

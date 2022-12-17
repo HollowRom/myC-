@@ -14,9 +14,9 @@ namespace autoClean
             const string userName = "administrator";
             const string password = "kingdee@123";*/
 
-            const string dbid = "631b68f12f6250";
+            const string dbid = "610bbd142a6e15";
             const string userName = "administrator";
-            const string password = "kd@123456";
+            const string password = "kingdee@123";
 
             const int lcid = 2052;
             const int sleepTime = 300;
@@ -34,7 +34,7 @@ namespace autoClean
                         {
                             times--;
                             apiClient.Execute<bool>(
-                                "shoudongClean.CacheManagerWebApiService.ClearCacheByFormIds,shoudongClean",
+                                "autoCleanObject.cleanBase,autoCleanObject",
                                 new object[] { new List<string>(new[] { "BD_MATERIAL" }) });
                             Console.WriteLine("执行了一次清理:" + DateTime.Now.ToLocalTime());
                             Thread.Sleep(1000 * sleepTime);
@@ -49,6 +49,7 @@ namespace autoClean
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
+                    Thread.Sleep(1000 * sleepTime);
                 }
 
             }
