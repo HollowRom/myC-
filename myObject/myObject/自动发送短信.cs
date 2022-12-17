@@ -2,16 +2,11 @@
 using Kingdee.BOS.BusinessEntity.CloudPlatform;
 using Kingdee.BOS.Contracts;
 using Kingdee.BOS.Core;
-using Kingdee.BOS.Core.DynamicForm.PlugIn;
-using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
 using Kingdee.BOS.Msg;
 using Kingdee.BOS.ServiceHelper;
 using Kingdee.BOS.Util;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 
 namespace myObject
 {
