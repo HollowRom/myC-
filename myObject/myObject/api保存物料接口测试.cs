@@ -15,6 +15,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.IO;
 using Newtonsoft.Json;
+using Kingdee.BOS.ServiceHelper;
+using Kingdee.BOS.Core.Const;
+using Kingdee.BOS.Cache;
 
 namespace myObject
 {
@@ -32,6 +35,21 @@ namespace myObject
             if (e.BarItemKey.ToUpperInvariant() == "VBDA_TBBUTTON9")
             {
                 initCtx();
+                try
+                {
+                    ClearCache();
+                    //if (!ClearCacheByFormIds(cloneCtx, new List<string>(new[] { "BD_MATERIAL" })))
+                    //{
+                    //    View.ShowMessage("清理缓存失败");
+                    //}
+                    //else
+                    //{
+                    //    View.ShowMessage("清理了缓存一次2");
+                    //}
+                } catch(Exception err)
+                {
+                    View.ShowMessage(err.ToString());
+                }
                 //string cloneCtxStr = objectToStr(cloneCtx);
                 //cloneCtx = null;
                 //cloneCtx = parseStrToObject<Context>(cloneCtxStr);
@@ -42,16 +60,16 @@ namespace myObject
                 //}
                 //updFileToBill();
                 //return;
-                if (Context.ClientType != ClientType.Silverlight && Context.ClientType != ClientType.WPF)
-                {
-                    this.View.ShowMessage("只能在客户端上使用此功能");
-                    return;
-                }
-                var args = new object[2];
-                args[0] = "vxzvd22撒";
+                //if (Context.ClientType != ClientType.Silverlight && Context.ClientType != ClientType.WPF)
+                //{
+                //    this.View.ShowMessage("只能在客户端上使用此功能");
+                //    return;
+                //}
+                //var args = new object[2];
+                //args[0] = "vxzvd22撒";
                 // args[1] = cloneCtx;
                 //this.View.GetControl("F_VBDA_CustomCtl").InvokeControlMethod("DoCustomMethod", "sumInt", null);
-                this.View.GetControl("F_VBDA_CustomCtl").InvokeControlMethod("DoCustomMethod", "WriteString", args);
+                //this.View.GetControl("F_VBDA_CustomCtl").InvokeControlMethod("DoCustomMethod", "WriteString", args);
 
                 //this.View.ShowMessage("sumInt = " + sumInt);       
                 //StringBuilder sData = new StringBuilder();
@@ -69,6 +87,39 @@ namespace myObject
                 //var renum = updFileToBill();
                 //this.View.ShowMessage("生成单据编号:" + renum);
             }
+        }
+
+        private void ClearCache()
+        {
+            var kcmgr = KCacheManagerFactory.Instance.GetCacheManager("T_BD_MATERIAL", cloneCtx.DBId + "True");
+            if (kcmgr != null)
+            {
+                kcmgr.ClearRegion();
+            }
+            View.ShowMessage("清理了缓存一次3");
+        }
+
+        private bool ClearCacheByFormIds(Context ctx, List<string> formIds)
+        {
+            if (formIds == null || formIds.Count == 0)
+            {
+                return false;
+            }
+            var area = ctx.GetAreaCacheKey();
+            if (area == null || area.Equals(""))
+            {
+                return false;
+            }
+            foreach (var formId in formIds)
+            {
+                var metadata = FormMetaDataCache.GetCachedFormMetaData(ctx, formId);
+                if (metadata != null)
+                {
+                    CacheUtil.ClearCache(area, metadata.BusinessInfo.GetEntity(0).TableName);
+                    CacheUtil.ClearCache(ctx.DBId + formId, CacheRegionConst.BOS_QuickBaseDataCache);
+                }
+            }
+            return true;
         }
 
         public override void CustomEvents(CustomEventsArgs e)
