@@ -219,6 +219,7 @@
     <Compile Include="采购订单执行明细表合计开票金额干预插件.cs" />
     <Compile Include="采购订单输入查询报价单锁定部分字段.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="销售出库修改结算组织更改全部组织-废弃.cs" />
     <Compile Include="销售出库毛利润报表干预插件.cs" />
     <Compile Include="销售订单加载更新分录.cs" />
     <Compile Include="销售订单审核自动生成出库单.cs" />
