@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/K3CloudApp/Initialization.aspx" hash="fffffffebd86b965" filehash="431a68fccc" flags="110000" assembly="App_Web_hiwvrear" type="ASP.initialization_aspx">
-    <filedeps>
-        <filedep name="/K3CloudApp/Initialization.aspx" />
-    </filedeps>
-</preserve>

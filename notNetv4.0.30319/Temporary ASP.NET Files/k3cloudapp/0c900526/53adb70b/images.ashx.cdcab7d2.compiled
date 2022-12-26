@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="2" virtualPath="/K3CloudApp/Images.ashx" hash="fffffffff7d99bd1" filehash="fffff46b28915b43" flags="130000" assembly="Kingdee.BOS.Web" type="Kingdee.BOS.Web.Images">
-    <filedeps>
-        <filedep name="/K3CloudApp/Images.ashx" />
-    </filedeps>
-</preserve>

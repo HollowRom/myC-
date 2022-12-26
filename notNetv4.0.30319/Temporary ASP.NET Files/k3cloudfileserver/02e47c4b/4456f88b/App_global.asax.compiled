@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="8" virtualPath="/K3CloudFileServer/global.asax" hash="ffffffffebc6d5bc" filehash="ffffff9adb4b65a7" flags="150000" assembly="App_global.asax.fa3t44ux" type="ASP.global_asax">
-    <filedeps>
-        <filedep name="/K3CloudFileServer/global.asax" />
-    </filedeps>
-</preserve>
