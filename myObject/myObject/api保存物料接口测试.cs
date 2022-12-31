@@ -18,6 +18,10 @@ using Newtonsoft.Json;
 using Kingdee.BOS.ServiceHelper;
 using Kingdee.BOS.Core.Const;
 using Kingdee.BOS.Cache;
+using Kingdee.BOS.Contracts;
+using Kingdee.BOS.App;
+using Kingdee.BOS.Core.Metadata;
+using Kingdee.BOS.App.Core;
 
 namespace myObject
 {
@@ -91,12 +95,29 @@ namespace myObject
 
         private void ClearCache()
         {
-            var kcmgr = KCacheManagerFactory.Instance.GetCacheManager("T_BD_MATERIAL", cloneCtx.DBId + "True");
-            if (kcmgr != null)
+            IMetaDataService metaService = ServiceHelper.GetService<IMetaDataService>();
+
+            FormMetadata meta = metaService.Load(Context, "BD_MATERIAL") as FormMetadata; //加载基础属性的元数据
+
+            DataEntityCacheManager cacheManager = new DataEntityCacheManager(Context, meta.BusinessInfo.GetDynamicObjectType());
+
+            cacheManager.RemoveCacheByDt();
+
+            var area = Context.GetAreaCacheKey();
+            var formId = "BD_MATERIAL";
+            var metadata = FormMetaDataCache.GetCachedFormMetaData(Context, formId);
+
+            if (metadata != null)
             {
-                kcmgr.ClearRegion();
+                CacheUtil.ClearCache(area, metadata.BusinessInfo.GetEntity(0).TableName);
+                CacheUtil.ClearCache(Context.DBId + formId, CacheRegionConst.BOS_QuickBaseDataCache);
             }
-            View.ShowMessage("清理了缓存一次3");
+            //var kcmgr = KCacheManagerFactory.Instance.GetCacheManager("T_BD_MATERIAL", cloneCtx.DBId + "True");
+            //if (kcmgr != null)
+            //{
+            //    kcmgr.ClearRegion();
+            //}
+            View.ShowMessage("清理了缓存一次4");
         }
 
         private bool ClearCacheByFormIds(Context ctx, List<string> formIds)
