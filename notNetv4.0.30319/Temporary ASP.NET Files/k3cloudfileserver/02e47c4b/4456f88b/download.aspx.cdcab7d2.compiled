@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/K3CloudFileServer/download.aspx" hash="fffffffd2a2a21a8" filehash="c7de8678ae0" flags="110000" assembly="App_Web_hhb4vefc" type="ASP.download_aspx">
-    <filedeps>
-        <filedep name="/K3CloudFileServer/download.aspx" />
-    </filedeps>
-</preserve>
