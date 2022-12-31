@@ -33,10 +33,15 @@ namespace autoClean
                         while (times > 0)
                         {
                             times--;
-                            apiClient.Execute<bool>(
-                                "autoCleanObject.cleanBase,autoCleanObject",
-                                new object[] { new List<string>(new[] { "BD_MATERIAL" }) });
-                            Console.WriteLine("执行了一次清理:" + DateTime.Now.ToLocalTime());
+                            if (apiClient.Execute<bool>(
+                                "shoudongClean.CacheManagerWebApiService.ClearCacheByFormIds,shoudongClean",
+                                new object[] { new List<string>(new[] { "BD_MATERIAL" }) })) {
+                                Console.WriteLine("执行了一次清理:" + DateTime.Now.ToLocalTime());
+                            } else
+                            {
+                                Console.WriteLine("执行清理失败:" + DateTime.Now.ToLocalTime());
+                            }
+                            
                             Thread.Sleep(1000 * sleepTime);
                         }
                     }

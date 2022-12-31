@@ -32,39 +32,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Kingdee.BOS">
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.App">
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.App.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.App.Core">
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.App.Core.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.App.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Kingdee.BOS.BusinessEntity">
-      <HintPath>..\..\..\xkSDK\K3CloudClient\Kingdee.BOS.BusinessEntity.dll</HintPath>
+    <Reference Include="Kingdee.BOS.BusinessEntity, Version=8.0.361.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\xkSDK\K3CloudClient\Kingdee.BOS.BusinessEntity.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.Contracts">
-      <HintPath>..\..\..\xkSDK\K3CloudClient\Kingdee.BOS.Contracts.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\K3CloudClient\Kingdee.BOS.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.Core">
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.Core.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\K3CloudClient\Kingdee.BOS.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Kingdee.BOS.DataEntity">
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.DataEntity.dll</HintPath>
-    </Reference>
-    <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceEntity, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Kingdee.BOS.DataEntity, Version=8.0.361.9, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\xkSDK\K3CloudClient\Kingdee.BOS.ServiceFacade.KDServiceEntity.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.DataEntity.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceFx, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceFx.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.ServiceFacade.KDServiceFx.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.ServiceHelper">
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.ServiceHelper.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.WebApi.Client, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.WebApi.Client.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.BOS.WebApi.ServicesStub">
-      <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.ServicesStub.dll</HintPath>
+      <HintPath>..\..\..\..\xkSDK\Kingdee.BOS.WebApi.ServicesStub.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="auto_clean_mat.cs" />
-    <Compile Include="cleanBase.cs" />
+    <Compile Include="cleanCacheBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
