@@ -36,7 +36,7 @@ namespace autoCleanObject
                 apiClient.Execute<bool>(
                     // "shoudongClean.CacheManagerWebApiService.ClearCacheByFormIds,shoudongClean",
                     "autoCleanObject.CacheManagerWebApiService.ClearCacheByFormIds,autoCleanObject",
-                    new object[] { new List<string>(new[] { /*"BD_MATERIAL"*/ "BD_UNIT" }) });
+                    new object[] { new List<string>(new[] { "BD_MATERIAL" /*"BD_UNIT"*/ }) });
                 Console.WriteLine("执行了一次清理:" + DateTime.Now.ToLocalTime());
             }
             else
