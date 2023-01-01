@@ -124,6 +124,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.MFG.ENG.Business.PlugIn.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.MFG.PRD.Business.PlugIn">
+      <HintPath>..\..\xkSDK\Kingdee.K3.MFG.PRD.Business.PlugIn.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.MFG.ServiceHelper, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.MFG.ServiceHelper.dll</HintPath>
