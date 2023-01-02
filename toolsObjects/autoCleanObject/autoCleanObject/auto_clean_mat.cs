@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Kingdee.BOS.WebApi.Client;
+using Kingdee.BOS.WebApi.FormService;
 
 namespace autoCleanObject
 {
@@ -14,6 +15,25 @@ namespace autoCleanObject
     {
         public void Run(Context ctx, Schedule schedule)
         {
+            /*
+             * if (ctx.CurrentOrganizationInfo == null || ctx.CurrentOrganizationInfo.ID < 0)
+            {
+                Organization curOrg = OrganizationServiceHelper.ReadOrgInfoByOrgId(ctx, 16394); //管理员默认组织
+                List<long> functions = new List<long>();
+                if (!curOrg.OrgFunctions.IsNullOrEmptyOrWhiteSpace())
+                {
+                    functions = Array.ConvertAll(curOrg.OrgFunctions.Split(','), (a) => { return Convert.ToInt64(a); }).ToList();
+                }
+                var CurrentOrganizationInfo = new OrganizationInfo()
+                { ID = curOrg.Id, Name = curOrg.Name, FunctionIds = functions, AcctOrgType = curOrg.AcctOrgType };
+                ctx.CurrentOrganizationInfo = CurrentOrganizationInfo;
+            }
+
+            WebApiServiceCall.Execute(ctx,
+                    // "shoudongClean.CacheManagerWebApiService.ClearCacheByFormIds,shoudongClean",
+                    "autoCleanObject.CacheManagerWebApiService.ClearCacheByFormIds,autoCleanObject",
+                    new object[] { new List<string>(new[] { "BD_MATERIAL"}) });*/
+
             //读取Common.config配置
             const string url = "http://127.0.0.1/k3cloud/";
             
@@ -28,7 +48,6 @@ namespace autoCleanObject
                 throw new Exception("Common.config内未配置api账号密码");
             }
             const int lcid = 2052;
-            
             var apiClient = new K3CloudApiClient(url);
             var isLoginOk = apiClient.Login(dbid, userName, password, lcid);
             if (isLoginOk)

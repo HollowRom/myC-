@@ -58,6 +58,10 @@
     <Reference Include="Kingdee.BOS.WebApi.Client">
       <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.Client.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.BOS.WebApi.FormService, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.BOS.WebApi.ServicesStub">
       <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.ServicesStub.dll</HintPath>
     </Reference>
