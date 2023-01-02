@@ -197,6 +197,7 @@
     <Compile Include="客户对账单明细增加列.cs" />
     <Compile Include="客户对账单明细增加列2.cs" />
     <Compile Include="客户对账单明细过滤框增加列.cs" />
+    <Compile Include="应付单解锁采购部门.cs" />
     <Compile Include="往来对账明细增加合同号插件.cs" />
     <Compile Include="手工核销测试插件.cs" />
     <Compile Include="执行带参数exe.cs" />
