@@ -74,6 +74,10 @@
     <Reference Include="Kingdee.BOS.VerificationHelper">
       <HintPath>..\..\xkSDK\Kingdee.BOS.VerificationHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.BOS.Web, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.BOS.Web.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.BOS.WebApi.Client, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.BOS.WebApi.Client.dll</HintPath>
@@ -201,6 +205,7 @@
     <Compile Include="往来对账明细增加合同号插件.cs" />
     <Compile Include="手工核销测试插件.cs" />
     <Compile Include="执行带参数exe.cs" />
+    <Compile Include="直接sql报表双击打开单据.cs" />
     <Compile Include="自动发送短信.cs" />
     <Compile Include="打开单据弹窗.cs" />
     <Compile Include="操作校验.cs" />
