@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="应收应付单解锁业务日期.cs" />
     <Compile Include="物料清单汇总查询新增列.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
