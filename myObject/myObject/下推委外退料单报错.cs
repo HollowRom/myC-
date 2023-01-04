@@ -21,18 +21,28 @@ namespace myObject
         {
             try
             {
-                var rebl = e.GetPropertyValue("supBackFlush");
-                if (rebl == null)
-                {
-                    e.SetPropertyValue("supBackFlush", true);
-                }
+                var rebl = this.Option.GetVariableValue<bool>("supBackFlush");
             }
             catch (Exception ex)
             {
-                e.SetPropertyValue("supBackFlush", true);
+                this.Option.SetPropertyValue("supBackFlush", true);
             }
 
             base.OnPrepareProperty(e);
+        }
+
+        public override void OnInSelectedRow(InSelectedRowEventArgs e)
+        {
+            try
+            {
+                var rebl = this.Option.GetVariableValue<bool>("supBackFlush");
+            }
+            catch (Exception ex)
+            {
+                this.Option.SetPropertyValue("supBackFlush", true);
+            }
+
+            base.OnInSelectedRow(e);
         }
     }
 }
