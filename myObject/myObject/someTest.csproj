@@ -123,6 +123,10 @@
     <Reference Include="Kingdee.K3.FIN.ServiceHelper">
       <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\k3cloud\fa51a684\6841f5f\assembly\dl3\1b6855e8\00bbd193_54ced801\Kingdee.K3.FIN.ServiceHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.MFG.App, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.MFG.App.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.MFG.BusinessCommon, Version=8.0.277.11, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Kingdee.K3.MFG.ENG.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -134,6 +138,10 @@
     <Reference Include="Kingdee.K3.MFG.ServiceHelper, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\xkSDK\Kingdee.K3.MFG.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.MFG.SUB.App.BillConvertServicePlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xkSDK\Kingdee.K3.MFG.SUB.App.BillConvertServicePlugIn.dll</HintPath>
     </Reference>
     <Reference Include="Kingdee.K3.MFG.SUB.Business.PlugIn, Version=8.0.277.11, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -190,6 +198,7 @@
     <Compile Include="api保存物料接口测试.cs" />
     <Compile Include="上传附件.cs" />
     <Compile Include="上传附件到单据.cs" />
+    <Compile Include="下推委外退料单报错.cs" />
     <Compile Include="修改销售订单默认组织.cs" />
     <Compile Include="入库成本调整单按钮插件.cs" />
     <Compile Include="列表固定读取本地文件.cs" />

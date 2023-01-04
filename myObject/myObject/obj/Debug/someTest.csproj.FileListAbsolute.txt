@@ -713,3 +713,4 @@ D:\mySome\myC-\myObject\myObject\bin\Debug\iTrusClient.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.PRD.Business.PlugIn.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.PRD.Common.BusinessEntity.dll
 D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.DependencyCore.dll
+D:\mySome\myC-\myObject\myObject\bin\Debug\Kingdee.K3.MFG.SUB.App.BillConvertServicePlugIn.dll
