@@ -8,6 +8,7 @@ using Kingdee.BOS.WebApi.FormService;
 using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.App.Data;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 
 namespace ytObject
 {
@@ -103,9 +104,10 @@ namespace ytObject
             for (int idx = 0; idx < Dyobj.Count; idx++)
             {
                 var parJsonStr = "{\"Ids\":\"\",\"Numbers\":[\"" + Dyobj[idx][fieldKey].ToString() + "\"],\"EntryIds\":\"\",\"RuleId\":\"" + ruleId + "\",\"TargetBillTypeId\":\"\",\"TargetOrgId\":0,\"TargetFormId\":\"\",\"IsEnableDefaultRule\":\"false\",\"IsDraftWhenSaveFail\":\"false\",\"CustomParams\":{}}";
+                Dictionary<string, object> reDic = new Dictionary<string, object>();
                 try
                 {
-                    var reDic = WebApiServiceCall.Push(cloneCtx, ylqdFormStr, parJsonStr) as Dictionary<string, object>;
+                    reDic = WebApiServiceCall.Push(cloneCtx, ylqdFormStr, parJsonStr) as Dictionary<string, object>;
                     var reStrParse = getErrorMess(reDic);
                     if (!reStrParse.Equals(successFlag))
                     {
@@ -114,7 +116,7 @@ namespace ytObject
                 }
                 catch (Exception e)
                 {
-                    return "下推异常:" + e.ToString() + ":::发送json返回内容:" + parJsonStr;
+                    return "下推异常:" + e.ToString() + ":::发送json返回内容:" + JObject.FromObject(reDic).ToString();
                 }
 
             }
@@ -134,9 +136,10 @@ namespace ytObject
             for (int idx = 0; idx < Dyobj.Count; idx++)
             {
                 var parJsonStr = "{\"Numbers\":[\"" + Dyobj[idx][fieldKey].ToString() + "\"]}";
+                Dictionary<string, object> reDic = new Dictionary<string, object>();
                 try
                 {
-                    var reDic = WebApiServiceCall.Submit(cloneCtx, wwllFormStr, parJsonStr) as Dictionary<string, object>;
+                    reDic = WebApiServiceCall.Submit(cloneCtx, wwllFormStr, parJsonStr) as Dictionary<string, object>;
                     var reStrParse = getErrorMess(reDic);
                     if (!reStrParse.Equals(successFlag))
                     {
@@ -152,7 +155,7 @@ namespace ytObject
                 }
                 catch (Exception e)
                 {
-                    return "提交审核异常:" + e.ToString() + ":::发送json返回内容:" + parJsonStr;
+                    return "提交审核异常:" + e.ToString() + ":::发送json返回内容:" + JObject.FromObject(reDic).ToString();
                 }
             }
             return successFlag;
@@ -171,7 +174,7 @@ namespace ytObject
                 var reList = result["Errors"] as List<Dictionary<string, object>>;
                 if (reList == null || reList.Count < 1)
                 {
-                    return "返回json没有错误信息";
+                    return "返回json没有错误信息:原始异常信息:" + JObject.FromObject(dis).ToString();
                 }
                 return (reList[0] as Dictionary<string, object>)["Message"].ToString();
             }
