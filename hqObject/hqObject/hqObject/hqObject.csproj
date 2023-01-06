@@ -53,6 +53,12 @@
     <Reference Include="Kingdee.BOS.WebApi.FormService">
       <HintPath>..\..\..\xkSDK\Kingdee.BOS.WebApi.FormService.dll</HintPath>
     </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.App.Report">
+      <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.AP.App.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.App.Core">
+      <HintPath>..\..\..\xkSDK\Kingdee.K3.FIN.App.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Kingdee.K3.SCM.App.Sal.Report">
       <HintPath>..\..\..\xkSDK\Kingdee.K3.SCM.App.Sal.Report.dll</HintPath>
     </Reference>
@@ -65,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="往来对账明细增加旧物料名称规格.cs" />
     <Compile Include="销售排名明细表增加订单备注字段.cs" />
     <Compile Include="销售订单审核自动生成出库单.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
