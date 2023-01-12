@@ -12,6 +12,7 @@
   &lt;Assembly Path="D:\mySome\myC-\xkSDK\Kingdee.K3.FIN.AR.Business.PlugIn.dll" /&gt;&#xD;
   &lt;Assembly Path="\Users\hollorom\myCodes\myC-\xkSDK\Kingdee.K3.MFG.PRD.Business.PlugIn.dll" /&gt;&#xD;
   &lt;Assembly Path="D:\mySome\myC-\xkSDK\Kingdee.K3.MFG.SUB.App.BillConvertServicePlugIn.dll" /&gt;&#xD;
+  &lt;Assembly Path="D:\mySome\myC-\xkSDK\Kingdee.K3.FIN.AP.App.Report.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">/Users/hollorom/Library/Caches/VisualStudio/8.0/MsBuild/18508_1/MSBuild.dll</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/DotNetCliExePath/@EntryValue">/Users/hollorom/.dotnet/dotnet</s:String>

@@ -556,7 +556,7 @@ namespace myObject
                 var num = (dis["Result"] as Dictionary<string, object>)["Number"] as string;
                 if (num == null || num == "")
                 {
-                    return "返回json没有编码信息";
+                    return "返回json没有编码信息" + JObject.FromObject(dis).ToString();
                 }
                 return successFlag + "\r\n-->" + /*JObject.FromObject(dis).ToString() + "\r\n-->" +*/ num;
             }
@@ -579,7 +579,7 @@ namespace myObject
                 var num = (dis["Result"] as Dictionary<string, object>)["FileId"] as string;
                 if (num == null || num == "")
                 {
-                    return "返回json没有编码信息";
+                    return "返回json没有编码信息" + JObject.FromObject(dis).ToString();
                 }
                 return successFlag + /*JObject.FromObject(dis).ToString() + "\r\n-->" +*/ num;
             }
